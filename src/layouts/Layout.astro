@@ -1,656 +1,1068 @@
 ---
 import "../styles/global.css";
 
-export interface Props {
+interface Props {
   title?: string;
   description?: string;
 }
 
-const { title, description } = Astro.props;
+const props = Astro.props as Props;
 
-const siteTitle = title ? `${title} · YOGOTOCHINA` : 'YOGOTOCHINA · China Travel Guide';
-const siteDescription = description || 'Plan your China trip with ease. Visa info, travel guides, routes, real stories, and trusted tours.';
+const pageTitle =
+  typeof props.title === "string" ? props.title.trim() : "";
+
+const pageDescription =
+  typeof props.description === "string"
+    ? props.description.trim()
+    : "";
+
+const siteTitle = pageTitle
+  ? `${pageTitle} · YOGOTOCHINA`
+  : "YOGOTOCHINA · China Travel Guide";
+
+const siteDescription =
+  pageDescription ||
+  "Plan your China trip with ease. Visa info, travel guides, routes, real stories, and trusted tours.";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
     <title>{siteTitle}</title>
-    <meta name="description" content={siteDescription} />
-    
-    <meta property="og:title" content={siteTitle} />
-    <meta property="og:description" content={siteDescription} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url.href} />
-    <meta property="og:image" content="https://yogotochina.com/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={siteTitle} />
-    <meta name="twitter:description" content={siteDescription} />
-    <meta name="twitter:image" content="https://yogotochina.com/og-image.jpg" />
-    
-    <link rel="canonical" href={Astro.url.href} />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    
-    <!-- ===== 预加载 LCP 图片 ===== -->
-    <link rel="preload" as="image" href="/images/hero/tech-chongqing-hongyadong-night-stilt-houses-river-china.webp" fetchpriority="high">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 
-    <!-- ===== GTranslate 核心脚本 ===== -->
-    <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
+    <meta
+      name="description"
+      content={siteDescription}
+    />
 
-    <style>
-      /* ===== 全局重置 ===== */
+    <meta
+      property="og:title"
+      content={siteTitle}
+    />
+
+    <meta
+      property="og:description"
+      content={siteDescription}
+    />
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:url"
+      content={Astro.url.href}
+    />
+
+    <meta
+      property="og:image"
+      content="https://yogotochina.com/og-image.jpg"
+    />
+
+    <meta
+      property="og:image:width"
+      content="1200"
+    />
+
+    <meta
+      property="og:image:height"
+      content="630"
+    />
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content={siteTitle}
+    />
+
+    <meta
+      name="twitter:description"
+      content={siteDescription}
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://yogotochina.com/og-image.jpg"
+    />
+
+    <link
+      rel="canonical"
+      href={Astro.url.href}
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon.png"
+    />
+
+    <!-- 预加载首页主要图片 -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero/tech-chongqing-hongyadong-night-stilt-houses-river-china.webp"
+      fetchpriority="high"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      GTranslate 设置 - 使用 dropdown.js（纯文字语言名称，无国旗）
+      
+      共 15 种语言（已移除 繁體中文）：
+      1. English
+      2. हिन्दी
+      3. Español
+      4. Bahasa Indonesia
+      5. العربية
+      6. Português
+      7. Русский
+      8. 日本語
+      9. Français
+      10. Deutsch
+      11. Italiano
+      12. 한국어
+      13. Tiếng Việt
+      14. ไทย
+      15. Nederlands
+      
+      关键配置：
+      - 使用 dropdown.js 而非 globe.js
+      - native_language_names: true 用本国语显示
+      - CSS 隐藏所有国旗
+    -->
+    <script is:inline>
+      window.gtranslateSettings = {
+        default_language: "en",
+        languages: [
+          "en",
+          "hi",
+          "es",
+          "id",
+          "ar",
+          "pt",
+          "ru",
+          "ja",
+          "fr",
+          "de",
+          "it",
+          "ko",
+          "vi",
+          "th",
+          "nl"
+        ],
+        wrapper_selector: ".gtranslate_wrapper",
+        native_language_names: true,
+        detect_browser_language: false,
+      };
+    </script>
+
+    <!-- 
+      使用 dropdown.js 而非 globe.js
+      dropdown.js 更容易控制显示样式
+    -->
+    <script
+      is:inline
+      defer
+      src="https://cdn.gtranslate.net/widgets/latest/dropdown.js"
+    ></script>
+
+    <style is:global>
+      /* ========================================
+         全局设置
+         ======================================== */
+
       * {
         box-sizing: border-box;
       }
-      body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background: #F8F6F0;
-        color: #1F2A2E;
+
+      html {
+        min-height: 100%;
       }
+
+      body {
+        min-height: 100%;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        color: #1f2a2e;
+        background: #f8f6f0;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
       a {
         text-decoration: none;
       }
+
       img {
+        display: block;
         max-width: 100%;
         height: auto;
+      }
+
+      button,
+      select {
+        font: inherit;
+      }
+
+      /* ========================================
+         导航栏
+         ======================================== */
+
+      .navbar {
+        position: relative;
+        z-index: 1000;
+        padding: 0.75rem 1rem;
+        background-color: #ffffff;
+        border-bottom: 1px solid #edeae0;
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        min-height: 44px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        flex: 0 0 auto;
+      }
+
+      .logo a {
         display: block;
       }
 
-      /* ===== 导航栏 ===== */
-      .navbar {
-        background-color: #FFFFFF;
-        padding: 0.75rem 1rem;
-        position: relative;
-        z-index: 100;
-        border-bottom: 1px solid #EDEAE0;
-      }
-      .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
       .logo img {
-        height: 40px;
         width: auto;
+        height: 40px;
       }
 
-      /* 桌面菜单 */
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+
+      /* ========================================
+         电脑端导航菜单
+         ======================================== */
+
       .nav-menu {
         display: flex;
-        gap: 0.5rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
         align-items: center;
-      }
-      .nav-menu li a {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        color: #1F2A2E;
-        text-decoration: none;
-        border-radius: 30px;
-        font-size: 0.95rem;
-        transition: background 0.2s;
-      }
-      .nav-menu li a:hover {
-        background: #F0EDE5;
+        gap: 0.2rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
       }
 
-      /* 语言按钮样式 */
-      .lang-wrapper {
-        position: relative;
-        display: inline-block;
+      .nav-menu li {
+        display: flex;
+        align-items: center;
       }
-      .lang-btn {
-        background: transparent;
-        border: 1px solid #EDEAE0;
-        border-radius: 30px;
-        padding: 0.3rem 0.8rem;
-        font-size: 0.85rem;
-        color: #1F2A2E;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: 'Inter', sans-serif;
+
+      .nav-menu li a {
         display: inline-flex;
         align-items: center;
-        gap: 0.3rem;
-      }
-      .lang-btn:hover {
-        border-color: #C49E3A;
-        background: rgba(196, 158, 58, 0.06);
+        min-height: 40px;
+        padding: 0.5rem 0.85rem;
+        color: #1f2a2e;
+        font-size: 0.92rem;
+        font-weight: 500;
+        white-space: nowrap;
+        border-radius: 30px;
+        transition:
+          color 0.2s ease,
+          background-color 0.2s ease;
       }
 
-      .lang-dropdown {
-        position: absolute;
-        top: calc(100% + 8px);
-        right: 0;
-        background: #FFFFFF;
-        border-radius: 12px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-        border: 1px solid #EDEAE0;
-        padding: 0.5rem 0;
-        min-width: 160px;
-        display: none;
-        z-index: 200;
-        max-height: 300px;
-        overflow-y: auto;
+      .nav-menu li a:hover,
+      .nav-menu li a:focus-visible {
+        color: #1f2a2e;
+        background: #f0ede5;
+        outline: none;
       }
-      .lang-dropdown.open {
-        display: block;
-      }
-      .lang-dropdown a {
-        display: block;
-        padding: 0.4rem 1rem;
+
+      /* ========================================
+         翻译按钮 - 纯文字下拉菜单
+         使用 dropdown.js，CSS 隐藏所有国旗
+         ======================================== */
+
+      .gtranslate_wrapper {
+        position: relative;
+        z-index: 1100;
+        display: inline-block;
+        padding: 0 12px;
+        height: 42px;
+        line-height: 42px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: background-color 0.2s ease;
         font-size: 0.85rem;
-        color: #1F2A2E;
-        text-decoration: none;
-        transition: background 0.2s;
-      }
-      .lang-dropdown a:hover {
-        background: #F8F6F0;
-        color: #C49E3A;
+        font-weight: 500;
+        color: #1f2a2e;
+        background: transparent;
+        user-select: none;
       }
 
-      /* 汉堡按钮（默认隐藏） */
+      .gtranslate_wrapper:hover,
+      .gtranslate_wrapper:focus-within {
+        background: #f0ede5;
+      }
+
+      /*
+        隐藏所有国旗图片
+        纯文字显示
+      */
+      .gtranslate_wrapper img {
+        display: none !important;
+      }
+
+      /*
+        当前选中的语言 - 纯文字
+      */
+      .gtranslate_wrapper .gt-current-lang {
+        display: inline !important;
+      }
+
+      .gtranslate_wrapper .gt-current-lang span {
+        display: inline !important;
+      }
+
+      /*
+        下拉菜单 - 纯文字
+      */
+      .gtranslate_wrapper .gt_options,
+      .gtranslate_wrapper .gt_languages,
+      .gtranslate_wrapper [class*="gt_options"] {
+        position: absolute !important;
+        top: calc(100% + 6px) !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 99999 !important;
+        min-width: 160px !important;
+        max-height: min(70vh, 440px) !important;
+        overflow-y: auto !important;
+        background: #ffffff !important;
+        border: 1px solid #e5e1d7 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 14px 38px rgb(31 42 46 / 16%) !important;
+        padding: 6px 0 !important;
+      }
+
+      /*
+        下拉菜单选项 - 纯文字
+      */
+      .gtranslate_wrapper .gt_options a,
+      .gtranslate_wrapper .gt_languages a {
+        display: block !important;
+        padding: 8px 20px !important;
+        color: #1f2a2e !important;
+        font-size: 0.9rem !important;
+        font-weight: 400 !important;
+        background: #ffffff !important;
+        border: 0 !important;
+        text-align: left !important;
+        transition: background-color 0.15s ease !important;
+        white-space: nowrap !important;
+      }
+
+      .gtranslate_wrapper .gt_options a:hover,
+      .gtranslate_wrapper .gt_languages a:hover {
+        background: #f0ede5 !important;
+        color: #1f2a2e !important;
+      }
+
+      /*
+        隐藏 GTranslate 品牌信息
+      */
+      .gtranslate_wrapper .gt-powered-by,
+      .gtranslate_wrapper .gt_powered_by,
+      .gtranslate_wrapper [class*="powered"] {
+        display: none !important;
+      }
+
+      /*
+        隐藏下拉菜单中的语言代码
+      */
+      .gtranslate_wrapper .gt_options .gt-lang-code,
+      .gtranslate_wrapper .gt_languages .gt-lang-code {
+        display: none !important;
+      }
+
+      /* ========================================
+         汉堡菜单按钮
+         ======================================== */
+
       .hamburger {
         display: none;
         flex-direction: column;
-        cursor: pointer;
-        padding: 0.25rem;
-        background: none;
-        border: none;
-      }
-      .hamburger .bar {
-        width: 28px;
-        height: 3px;
-        background-color: #1F2A2E;
-        margin: 3px 0;
-        border-radius: 2px;
-        transition: 0.3s;
-      }
-
-      /* 全屏菜单（默认隐藏） */
-      .fullscreen-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #FFFFFF;
-        z-index: 999;
         align-items: center;
         justify-content: center;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        border-radius: 50%;
+      }
+
+      .hamburger:hover,
+      .hamburger:focus-visible {
+        background: #f0ede5;
+        outline: none;
+      }
+
+      .hamburger .bar {
+        width: 25px;
+        height: 2.5px;
+        margin: 2.5px 0;
+        background-color: #1f2a2e;
+        border-radius: 2px;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+      }
+
+      .hamburger.open .bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+      }
+
+      .hamburger.open .bar:nth-child(2) {
         opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
       }
-      .fullscreen-menu.open {
+
+      .hamburger.open .bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+      }
+
+      /* ========================================
+         移动端全屏菜单
+         ======================================== */
+
+      .fullscreen-menu {
+        position: fixed;
+        inset: 0;
+        z-index: 900;
         display: flex;
-        opacity: 1;
-        visibility: visible;
+        align-items: center;
+        justify-content: center;
+        padding: 90px 1.5rem 2rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background: #ffffff;
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease;
       }
+
+      .fullscreen-menu.open {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
       .fullscreen-menu ul {
-        list-style: none;
-        text-align: center;
+        width: 100%;
+        max-width: 420px;
         padding: 0;
         margin: 0;
-      }
-      .fullscreen-menu ul li {
-        margin: 1.5rem 0;
-      }
-      .fullscreen-menu ul li a {
-        font-size: 1.8rem;
-        color: #1F2A2E;
-        text-decoration: none;
-        transition: color 0.2s;
-      }
-      .fullscreen-menu ul li a:hover {
-        color: #C49E3A;
+        text-align: center;
+        list-style: none;
       }
 
-      /* 全屏菜单中移动端语言按钮 */
-      .mobile-lang-btn {
-        background: transparent;
-        border: 1px solid #EDEAE0;
-        border-radius: 30px;
-        padding: 0.4rem 1.2rem;
-        font-size: 0.85rem;
-        color: #1F2A2E;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
-        transition: all 0.2s;
-      }
-      .mobile-lang-btn:hover {
-        border-color: #C49E3A;
-        background: rgba(196, 158, 58, 0.06);
-      }
-      .mobile-lang-link {
-        font-size: 0.8rem;
-        color: #1F2A2E;
-        background: #F8F6F0;
-        padding: 0.3rem 0.8rem;
-        border-radius: 30px;
-        text-decoration: none;
-        border: 1px solid #EDEAE0;
-        transition: all 0.2s;
-        display: inline-block;
-      }
-      .mobile-lang-link:hover {
-        background: #EDEAE0;
-        border-color: #C49E3A;
+      .fullscreen-menu li {
+        margin: 0.35rem 0;
       }
 
-      /* ===== 移动端 ===== */
-      @media (max-width: 768px) {
-        .nav-menu {
-          display: none !important;
-        }
-        .hamburger {
-          display: flex !important;
-        }
-        .fullscreen-menu {
-          display: flex !important;
-          opacity: 0;
-          visibility: hidden;
-        }
-        .fullscreen-menu.open {
-          opacity: 1;
-          visibility: visible;
-        }
-        .lang-btn {
-          font-size: 0.75rem;
-          padding: 0.2rem 0.6rem;
-        }
-        .lang-dropdown {
-          min-width: 130px;
-          right: -10px;
-        }
+      .fullscreen-menu a {
+        display: block;
+        padding: 0.65rem 1rem;
+        color: #1f2a2e;
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+        font-weight: 500;
+        border-radius: 14px;
+        transition:
+          color 0.2s ease,
+          background-color 0.2s ease;
       }
 
-      /* ===== 通用卡片 ===== */
+      .fullscreen-menu a:hover,
+      .fullscreen-menu a:focus-visible {
+        color: #a47b17;
+        background: #f8f6f0;
+        outline: none;
+      }
+
+      /* ========================================
+         通用内容
+         ======================================== */
+
       .card-item {
-        background: #FFFFFF;
-        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
       }
+
       .card-item:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+        box-shadow: 0 12px 28px rgb(0 0 0 / 10%);
       }
 
-      /* ===== 电脑端图片修复 ===== */
-      /* 普通内容图片自适应 */
       .content img {
         max-width: 100%;
         height: auto;
       }
 
-      /* 网格卡片图片强制恢复 */
       #grid-start img {
-        max-width: none !important;
         width: 100% !important;
+        max-width: none !important;
         height: 100% !important;
         object-fit: cover !important;
       }
 
-      /* ===== 容器 ===== */
       .container {
+        width: 100%;
         max-width: 1200px;
-        margin: 0 auto;
         padding: 2rem 1.5rem;
+        margin: 0 auto;
       }
 
-      /* ===== 响应式辅助 ===== */
+      /* ========================================
+         页脚
+         ======================================== */
+
+      .site-footer {
+        padding: 3rem 1rem 1rem;
+        margin-top: 4rem;
+        color: #f9f7f1;
+        background-color: #1f2a2e;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns:
+          repeat(auto-fit, minmax(180px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-brand {
+        color: #ffd700;
+      }
+
+      .footer-brand h3 {
+        margin: 0 0 0.5rem;
+        color: #ffd700;
+      }
+
+      .footer-description {
+        color: #ffffff;
+        opacity: 0.8;
+      }
+
+      .site-footer h4 {
+        color: #ffd700;
+      }
+
+      .site-footer ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .site-footer li {
+        margin-bottom: 0.55rem;
+      }
+
+      .site-footer a {
+        color: #f9f7f1;
+      }
+
+      .site-footer a:hover,
+      .site-footer a:focus-visible {
+        text-decoration: underline;
+        outline: none;
+      }
+
+      .footer-bottom {
+        padding-top: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+        border-top: 1px solid rgb(255 255 255 / 10%);
+      }
+
+      .footer-bottom p {
+        margin: 0;
+        color: #f9f7f1;
+      }
+
+      /* ========================================
+         较窄电脑屏幕
+         ======================================== */
+
+      @media (max-width: 980px) {
+        .nav-menu {
+          gap: 0;
+        }
+
+        .nav-menu li a {
+          padding-right: 0.58rem;
+          padding-left: 0.58rem;
+          font-size: 0.84rem;
+        }
+      }
+
+      /* ========================================
+         移动端
+         ======================================== */
+
       @media (max-width: 768px) {
+        .navbar {
+          padding: 0.65rem 1rem;
+        }
+
+        /*
+          隐藏普通导航链接
+          翻译按钮保留在 nav-right 中
+        */
+        .nav-menu {
+          display: none;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        /*
+          移动端翻译按钮适配
+        */
+        .gtranslate_wrapper {
+          height: 40px !important;
+          line-height: 40px !important;
+          padding: 0 10px !important;
+          font-size: 0.78rem !important;
+        }
+
+        /*
+          下拉菜单在移动端适配
+        */
+        .gtranslate_wrapper .gt_options,
+        .gtranslate_wrapper .gt_languages,
+        .gtranslate_wrapper [class*="gt_options"] {
+          min-width: 150px !important;
+          max-height: 50vh !important;
+        }
+
+        .gtranslate_wrapper .gt_options a,
+        .gtranslate_wrapper .gt_languages a {
+          padding: 8px 16px !important;
+          font-size: 0.85rem !important;
+        }
+
         .container {
           padding: 1rem;
         }
       }
 
-      /* 隐藏 GTranslate 默认渲染 */
-      .gt_credit {
-        display: none !important;
+      @media (max-width: 380px) {
+        .navbar {
+          padding-right: 0.75rem;
+          padding-left: 0.75rem;
+        }
+
+        .logo img {
+          width: auto;
+          max-width: 165px;
+          height: 36px;
+          object-fit: contain;
+        }
+
+        .nav-right {
+          gap: 0.1rem;
+        }
+
+        .gtranslate_wrapper {
+          height: 36px !important;
+          line-height: 36px !important;
+          padding: 0 8px !important;
+          font-size: 0.7rem !important;
+        }
+
+        .gtranslate_wrapper .gt_options a,
+        .gtranslate_wrapper .gt_languages a {
+          padding: 6px 14px !important;
+          font-size: 0.8rem !important;
+        }
       }
-      .gtranslate_wrapper {
-        display: none !important;
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
       }
     </style>
   </head>
+
   <body>
     <!-- 导航栏 -->
-    <nav class="navbar">
+    <nav
+      class="navbar"
+      aria-label="Main navigation"
+    >
       <div class="nav-container">
         <div class="logo">
-          <a href="/">
-            <img src="/logo.png" alt="YOGOTOCHINA" height="40">
+          <a
+            href="/"
+            aria-label="YOGOTOCHINA home"
+          >
+            <img
+              src="/logo.png"
+              alt="YOGOTOCHINA"
+              width="200"
+              height="40"
+            />
           </a>
         </div>
 
-        <ul class="nav-menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/stories">Only in China</a></li>
-          <li><a href="/myths">Myths</a></li>
-          <li><a href="/findway">Routes</a></li>
-          <li><a href="/tours">Tours</a></li>
-          <li><a href="/tools">Before You Go</a></li>
-          <li><a href="/visa">Visa</a></li>
-          <!-- 语言按钮 -->
-          <li class="lang-wrapper">
-            <button class="lang-btn" id="langToggle" aria-label="Select language">
-              <span>🌐</span> <span id="langCurrent">English</span> <span>▾</span>
-            </button>
-            <div class="lang-dropdown" id="langDropdown">
-              <a href="#" data-lang="en">English</a>
-              <a href="#" data-lang="zh-TW">繁體中文</a>
-              <a href="#" data-lang="hi">हिन्दी</a>
-              <a href="#" data-lang="es">Español</a>
-              <a href="#" data-lang="id">Bahasa Indonesia</a>
-              <a href="#" data-lang="ar">العربية</a>
-              <a href="#" data-lang="pt">Português</a>
-              <a href="#" data-lang="ru">Русский</a>
-              <a href="#" data-lang="ja">日本語</a>
-              <a href="#" data-lang="fr">Français</a>
-              <a href="#" data-lang="de">Deutsch</a>
-              <a href="#" data-lang="it">Italiano</a>
-              <a href="#" data-lang="ko">한국어</a>
-              <a href="#" data-lang="vi">Tiếng Việt</a>
-              <a href="#" data-lang="th">ภาษาไทย</a>
-              <a href="#" data-lang="nl">Nederlands</a>
-            </div>
-          </li>
-        </ul>
+        <div class="nav-right">
+          <!-- 电脑端菜单 -->
+          <ul class="nav-menu">
+            <li>
+              <a href="/">Home</a>
+            </li>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+            <li>
+              <a href="/stories">Only in China</a>
+            </li>
+
+            <li>
+              <a href="/myths">Myths</a>
+            </li>
+
+            <li>
+              <a href="/findway">Routes</a>
+            </li>
+
+            <li>
+              <a href="/tours">Tours</a>
+            </li>
+
+            <li>
+              <a href="/tools">Before You Go</a>
+            </li>
+
+            <li>
+              <a href="/visa">Visa</a>
+            </li>
+          </ul>
+
+          <!--
+            翻译按钮 - 纯文字下拉菜单
+            使用 dropdown.js
+            显示本国语语言名称（如 "Español"、"Deutsch"）
+            无国旗，纯文字
+            桌面端：在 Visa 右边
+            移动端：在汉堡菜单左边
+          -->
+          <div
+            class="gtranslate_wrapper"
+            aria-label="Translate website"
+            title="Translate website"
+          ></div>
+
+          <!-- 移动端汉堡按钮 -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="fullscreenMenu"
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
       </div>
     </nav>
 
-    <!-- 全屏菜单 -->
-    <div class="fullscreen-menu" id="fullscreenMenu">
+    <!-- 移动端全屏菜单 -->
+    <div
+      class="fullscreen-menu"
+      id="fullscreenMenu"
+      aria-hidden="true"
+    >
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/stories">Only in China</a></li>
-        <li><a href="/myths">Myths</a></li>
-        <li><a href="/findway">Routes</a></li>
-        <li><a href="/tours">Tours</a></li>
-        <li><a href="/tools">Before You Go</a></li>
-        <li><a href="/visa">Visa</a></li>
-        <!-- 移动端语言切换（折叠按钮） -->
-        <li style="margin-top: 1.5rem;">
-          <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-            <button class="mobile-lang-btn" id="mobileLangToggle">
-              🌐 <span id="mobileLangCurrent">English</span> ▾
-            </button>
-            <div id="mobileLangList" style="display: none; flex-wrap: wrap; justify-content: center; gap: 0.4rem; max-width: 350px; margin-top: 0.5rem; max-height: 50vh; overflow-y: auto; padding: 0.5rem;">
-              <a href="#" data-lang="en" class="mobile-lang-link">English</a>
-              <a href="#" data-lang="zh-TW" class="mobile-lang-link">繁體中文</a>
-              <a href="#" data-lang="hi" class="mobile-lang-link">हिन्दी</a>
-              <a href="#" data-lang="es" class="mobile-lang-link">Español</a>
-              <a href="#" data-lang="id" class="mobile-lang-link">Bahasa Indonesia</a>
-              <a href="#" data-lang="ar" class="mobile-lang-link">العربية</a>
-              <a href="#" data-lang="pt" class="mobile-lang-link">Português</a>
-              <a href="#" data-lang="ru" class="mobile-lang-link">Русский</a>
-              <a href="#" data-lang="ja" class="mobile-lang-link">日本語</a>
-              <a href="#" data-lang="fr" class="mobile-lang-link">Français</a>
-              <a href="#" data-lang="de" class="mobile-lang-link">Deutsch</a>
-              <a href="#" data-lang="it" class="mobile-lang-link">Italiano</a>
-              <a href="#" data-lang="ko" class="mobile-lang-link">한국어</a>
-              <a href="#" data-lang="vi" class="mobile-lang-link">Tiếng Việt</a>
-              <a href="#" data-lang="th" class="mobile-lang-link">ภาษาไทย</a>
-              <a href="#" data-lang="nl" class="mobile-lang-link">Nederlands</a>
-            </div>
-          </div>
+        <li>
+          <a href="/">Home</a>
+        </li>
+
+        <li>
+          <a href="/stories">Only in China</a>
+        </li>
+
+        <li>
+          <a href="/myths">Myths</a>
+        </li>
+
+        <li>
+          <a href="/findway">Routes</a>
+        </li>
+
+        <li>
+          <a href="/tours">Tours</a>
+        </li>
+
+        <li>
+          <a href="/tools">Before You Go</a>
+        </li>
+
+        <li>
+          <a href="/visa">Visa</a>
         </li>
       </ul>
     </div>
 
-    <!-- 主要内容 -->
+    <!-- 页面主要内容 -->
     <main>
       <slot />
     </main>
 
     <!-- 页脚 -->
-    <footer style="background-color: #1F2A2E; color: #F9F7F1; padding: 3rem 1rem 1rem; margin-top: 4rem;">
-      <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem;">
+    <footer class="site-footer">
+      <div class="footer-grid">
         <div>
-          <a href="/" style="color: #FFD700; text-decoration: none;">
-            <h3 style="color: #FFD700; margin-bottom: 0.5rem;">YOGOTOCHINA</h3>
+          <a
+            class="footer-brand"
+            href="/"
+          >
+            <h3>YOGOTOCHINA</h3>
           </a>
-          <p style="color: #FFFFFF; opacity: 0.8;">China travel, simple and real.</p>
+
+          <p class="footer-description">
+            China travel, simple and real.
+          </p>
         </div>
+
         <div>
-          <h4 style="color: #FFD700;">Explore</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="/stories" style="color: #F9F7F1;">Only in China</a></li>
-            <li><a href="/myths" style="color: #F9F7F1;">Myths</a></li>
-            <li><a href="/findway" style="color: #F9F7F1;">Routes</a></li>
-            <li><a href="/tours" style="color: #F9F7F1;">Tours</a></li>
-            <li><a href="/tools" style="color: #F9F7F1;">Before You Go</a></li>
-            <li><a href="/visa" style="color: #F9F7F1;">Visa</a></li>
+          <h4>Explore</h4>
+
+          <ul>
+            <li>
+              <a href="/stories">Only in China</a>
+            </li>
+
+            <li>
+              <a href="/myths">Myths</a>
+            </li>
+
+            <li>
+              <a href="/findway">Routes</a>
+            </li>
+
+            <li>
+              <a href="/tours">Tours</a>
+            </li>
+
+            <li>
+              <a href="/tools">Before You Go</a>
+            </li>
+
+            <li>
+              <a href="/visa">Visa</a>
+            </li>
           </ul>
         </div>
+
         <div>
-          <h4 style="color: #FFD700;">Support</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="/contact" style="color: #F9F7F1;">Contact Us</a></li>
-            <li><a href="/privacy" style="color: #F9F7F1;">Privacy Policy</a></li>
-            <li><a href="/disclaimer" style="color: #F9F7F1;">Disclaimer</a></li>
-            <li><a href="/about" style="color: #F9F7F1;">About</a></li>
+          <h4>Support</h4>
+
+          <ul>
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+
+            <li>
+              <a href="/privacy">Privacy Policy</a>
+            </li>
+
+            <li>
+              <a href="/disclaimer">Disclaimer</a>
+            </li>
+
+            <li>
+              <a href="/about">About</a>
+            </li>
           </ul>
         </div>
       </div>
-      <div style="text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-        <p style="color: #F9F7F1;">&copy; 2026 YOGOTOCHINA. All rights reserved.</p>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 YOGOTOCHINA. All rights reserved.
+        </p>
       </div>
     </footer>
 
-    <!-- ===== 汉堡菜单 ===== -->
-    <script>
-      // 汉堡菜单
-      const hamburger = document.getElementById('hamburger');
-      const fullscreenMenu = document.getElementById('fullscreenMenu');
+    <!-- 移动端菜单逻辑 -->
+    <script is:inline>
+      function initializeNavigation() {
+        const hamburger =
+          document.getElementById("hamburger");
 
-      function toggleMenu() {
-        fullscreenMenu.classList.toggle('open');
-        document.body.style.overflow = fullscreenMenu.classList.contains('open') ? 'hidden' : '';
-      }
+        const fullscreenMenu =
+          document.getElementById("fullscreenMenu");
 
-      function closeMenu() {
-        fullscreenMenu.classList.remove('open');
-        document.body.style.overflow = '';
-      }
+        if (!hamburger || !fullscreenMenu) {
+          return;
+        }
 
-      if (hamburger) {
-        hamburger.addEventListener('click', toggleMenu);
-      }
+        if (hamburger.dataset.initialized === "true") {
+          return;
+        }
 
-      document.querySelectorAll('.fullscreen-menu a:not([data-lang])').forEach(function(link) {
-        link.addEventListener('click', closeMenu);
-      });
-    </script>
+        hamburger.dataset.initialized = "true";
 
-    <!-- ===== 语言切换控制 ===== -->
-    <script>
-      (function() {
-        // ===== 桌面端语言切换 =====
-        const langBtn = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const langCurrent = document.getElementById('langCurrent');
-        let isOpen = false;
-        let isTranslating = false;
+        function setMenuState(isOpen) {
+          fullscreenMenu.classList.toggle(
+            "open",
+            isOpen
+          );
 
-        // ===== 移动端语言切换（折叠按钮） =====
-        const mobileLangToggle = document.getElementById('mobileLangToggle');
-        const mobileLangList = document.getElementById('mobileLangList');
-        const mobileLangCurrent = document.getElementById('mobileLangCurrent');
-        let isMobileOpen = false;
+          hamburger.classList.toggle(
+            "open",
+            isOpen
+          );
 
-        // 语言名称映射
-        const langNames = {
-          'en': 'English',
-          'zh-TW': '繁體中文',
-          'hi': 'हिन्दी',
-          'es': 'Español',
-          'id': 'Bahasa Indonesia',
-          'ar': 'العربية',
-          'pt': 'Português',
-          'ru': 'Русский',
-          'ja': '日本語',
-          'fr': 'Français',
-          'de': 'Deutsch',
-          'it': 'Italiano',
-          'ko': '한국어',
-          'vi': 'Tiếng Việt',
-          'th': 'ภาษาไทย',
-          'nl': 'Nederlands'
-        };
+          hamburger.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
 
-        // 切换语言
-        function changeLanguage(langCode) {
-          if (isTranslating) return;
-          isTranslating = true;
+          hamburger.setAttribute(
+            "aria-label",
+            isOpen
+              ? "Close navigation menu"
+              : "Open navigation menu"
+          );
 
-          const langName = langNames[langCode] || langCode;
-          
-          // 更新按钮文字（桌面端和移动端）
-          if (langCurrent) langCurrent.textContent = langName;
-          if (mobileLangCurrent) mobileLangCurrent.textContent = langName;
+          fullscreenMenu.setAttribute(
+            "aria-hidden",
+            String(!isOpen)
+          );
 
-          // 关闭下拉菜单
-          if (langDropdown) langDropdown.classList.remove('open');
-          if (mobileLangList) mobileLangList.style.display = 'none';
-          isOpen = false;
-          isMobileOpen = false;
+          document.body.classList.toggle(
+            "menu-open",
+            isOpen
+          );
+        }
 
-          if (langCode === 'en') {
-            if (fullscreenMenu) fullscreenMenu.classList.remove('open');
-            document.body.style.overflow = '';
-            location.reload();
-            return;
-          }
+        function toggleMenu() {
+          const willOpen =
+            !fullscreenMenu.classList.contains("open");
 
-          try {
-            if (window.gtranslate && typeof window.gtranslate.changeLanguage === 'function') {
-              window.gtranslate.changeLanguage(langCode);
-              isTranslating = false;
-              return;
+          setMenuState(willOpen);
+        }
+
+        function closeMenu() {
+          setMenuState(false);
+        }
+
+        hamburger.addEventListener(
+          "click",
+          toggleMenu
+        );
+
+        fullscreenMenu
+          .querySelectorAll("a")
+          .forEach(function (link) {
+            link.addEventListener(
+              "click",
+              closeMenu
+            );
+          });
+
+        fullscreenMenu.addEventListener(
+          "click",
+          function (event) {
+            if (event.target === fullscreenMenu) {
+              closeMenu();
             }
-            const currentUrl = window.location.href.split('?')[0].split('#')[0];
-            window.location.href = currentUrl + '?lang=' + langCode;
-          } catch (e) {
-            console.error('GTranslate error:', e);
-            isTranslating = false;
           }
+        );
 
-          setTimeout(function() {
-            isTranslating = false;
-          }, 3000);
-        }
-
-        // ===== 桌面端下拉菜单 =====
-        if (langBtn) {
-          langBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            isOpen = !isOpen;
-            if (langDropdown) langDropdown.classList.toggle('open', isOpen);
-          });
-        }
-
-        document.addEventListener('click', function(e) {
-          const wrapper = document.querySelector('.lang-wrapper');
-          if (wrapper && !wrapper.contains(e.target)) {
-            if (langDropdown) langDropdown.classList.remove('open');
-            isOpen = false;
-          }
-        });
-
-        document.querySelectorAll('.lang-dropdown a').forEach(function(link) {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
-            if (lang) changeLanguage(lang);
-          });
-        });
-
-        // ===== 移动端折叠按钮 =====
-        if (mobileLangToggle && mobileLangList) {
-          mobileLangToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            isMobileOpen = !isMobileOpen;
-            mobileLangList.style.display = isMobileOpen ? 'flex' : 'none';
-            mobileLangToggle.innerHTML = isMobileOpen 
-              ? '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▴' 
-              : '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▾';
-          });
-        }
-
-        document.querySelectorAll('.fullscreen-menu .mobile-lang-link').forEach(function(link) {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
-            if (lang) {
-              // 关闭全屏菜单
-              if (fullscreenMenu) fullscreenMenu.classList.remove('open');
-              document.body.style.overflow = '';
-              // 关闭移动端语言列表
-              if (mobileLangList) mobileLangList.style.display = 'none';
-              isMobileOpen = false;
-              if (mobileLangToggle) {
-                mobileLangToggle.innerHTML = '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▾';
-              }
-              changeLanguage(lang);
+        document.addEventListener(
+          "keydown",
+          function (event) {
+            if (event.key === "Escape") {
+              closeMenu();
             }
-          });
-        });
-
-        // ===== 检测当前语言 =====
-        function detectCurrentLang() {
-          const urlParams = new URLSearchParams(window.location.search);
-          const langParam = urlParams.get('lang');
-          if (langParam && langNames[langParam]) {
-            if (langCurrent) langCurrent.textContent = langNames[langParam];
-            if (mobileLangCurrent) mobileLangCurrent.textContent = langNames[langParam];
-            return langParam;
           }
-          return 'en';
-        }
+        );
 
-        detectCurrentLang();
-
-        if (window.gtranslate && window.gtranslate.getCurrentLanguage) {
-          const current = window.gtranslate.getCurrentLanguage();
-          if (current && langNames[current]) {
-            if (langCurrent) langCurrent.textContent = langNames[current];
-            if (mobileLangCurrent) mobileLangCurrent.textContent = langNames[current];
+        window.addEventListener(
+          "resize",
+          function () {
+            if (window.innerWidth > 768) {
+              closeMenu();
+            }
           }
-        }
+        );
+      }
 
-        window.changeLanguage = changeLanguage;
+      initializeNavigation();
 
-      })();
+      document.addEventListener(
+        "astro:page-load",
+        initializeNavigation
+      );
     </script>
-
   </body>
 </html>
