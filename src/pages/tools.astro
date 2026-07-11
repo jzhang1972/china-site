@@ -1,0 +1,282 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="China Travel Prep · Essential Apps & Guide" 
+  description="Everything you need before you go — documents, payment, essential apps, internet, and safety tips."
+>
+  <div style="max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem;">
+    <!-- 返回链接 -->
+    <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">
+      <span>←</span> Back to Home
+    </a>
+
+    <!-- ===== 标题区 ===== -->
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <p style="font-size: 2rem; font-weight: 700; color: #1F2A2E; letter-spacing: -0.5px; margin: 0;">Everything you need to know before you arrive.</p>
+    </div>
+
+    <!-- ===== 信息卡片网格 ===== -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+
+      <!-- 卡片1：Documents -->
+      <div style="grid-column: 1 / 2; background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="font-size: 1.5rem;">📄</span>
+          <h3 style="color: #1F2A2E; margin: 0; font-size: 1.2rem; font-weight: 600;">Documents</h3>
+        </div>
+
+        <!-- 两栏：Visa-Free vs Visa -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem;">
+
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 0.3rem; margin-bottom: 0.3rem;">
+              <span style="color: #2D6A4F;">✓</span>
+              <strong style="font-size: 0.85rem; color: #1F2A2E;">Visa-Free</strong>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #4a4a4a; line-height: 1.6;">
+              <li>• Passport (6+ months)</li>
+              <li>• Return ticket</li>
+              <li>• Hotel booking</li>
+              <li>• Arrival card</li>
+              <li>• Entry stamp — check your allowed days</li>
+            </ul>
+          </div>
+
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 0.3rem; margin-bottom: 0.3rem;">
+              <span style="color: #C49E3A;">✦</span>
+              <strong style="font-size: 0.85rem; color: #1F2A2E;">With Visa</strong>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #4a4a4a; line-height: 1.6;">
+              <li>• Passport + valid visa</li>
+              <li>• Return ticket</li>
+              <li>• Hotel booking</li>
+              <li>• Arrival card</li>
+              <li>• Entry stamp — check your allowed days</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div style="background: #FFF8E7; border-radius: 8px; padding: 0.5rem 0.75rem; font-size: 0.85rem; color: #8B7A3A; display: flex; align-items: center; gap: 0.4rem;">
+          <span>⚠️</span> Passport must be valid for at least 6 months. The entry stamp is what matters — double-check your allowed stay.
+        </div>
+      </div>
+
+      <!-- 卡片2：Payment -->
+      <div style="grid-column: 2 / 3; background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="font-size: 1.5rem;">💳</span>
+          <h3 style="color: #1F2A2E; margin: 0; font-size: 1.2rem; font-weight: 600;">Payment</h3>
+        </div>
+        <p style="color: #4a4a4a; font-size: 0.9rem; line-height: 1.6; margin: 0 0 0.5rem 0;">Your phone is your wallet in China.</p>
+
+        <!-- Alipay + WeChat 并排 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <div style="background: #F0F7F0; border-radius: 6px; padding: 0.4rem 0.6rem; text-align: center; font-size: 0.8rem; color: #2D6A4F;">
+            <div style="font-weight: 600; color: #1F2A2E;">Alipay (Zhīfùbǎo)</div>
+            <div style="font-size: 0.75rem; color: #6c757d; margin: 0.15rem 0;">Pay · Ride-hailing · Hotels</div>
+            <a href="https://www.alipayplus.com/" target="_blank" rel="noopener noreferrer" style="color: #C49E3A; font-size: 0.75rem; border-bottom: 1px solid #C49E3A; text-decoration: none;">Official site →</a>
+          </div>
+          <div style="background: #F0F7F0; border-radius: 6px; padding: 0.4rem 0.6rem; text-align: center; font-size: 0.8rem; color: #2D6A4F;">
+            <div style="font-weight: 600; color: #1F2A2E;">WeChat (Wēixìn)</div>
+            <div style="font-size: 0.75rem; color: #6c757d; margin: 0.15rem 0;">Chat · Pay · Mini Apps</div>
+            <a href="https://www.wechat.com" target="_blank" rel="noopener noreferrer" style="color: #C49E3A; font-size: 0.75rem; border-bottom: 1px solid #C49E3A; text-decoration: none;">Official site →</a>
+          </div>
+        </div>
+
+        <!-- 支付说明 -->
+        <div style="font-size: 0.85rem; color: #4a4a4a; line-height: 1.5; margin-bottom: 0.5rem;">
+          <p style="margin: 0.25rem 0;"><strong>💡 Both support foreign Visa / Mastercard.</strong></p>
+          <p style="margin: 0.25rem 0; color: #6c757d; font-size: 0.8rem;">⚠️ Daily limits apply. Keep cash as backup.</p>
+        </div>
+
+        <!-- 现金 + 信用卡说明 -->
+        <div style="font-size: 0.85rem; color: #4a4a4a; line-height: 1.5; padding-top: 0.5rem; border-top: 1px solid #EDEAE0;">
+          <p style="margin: 0.25rem 0;"><strong>💵 Cash</strong></p>
+          <p style="margin: 0.25rem 0; font-size: 0.8rem; color: #6c757d;">ATMs at the airport work with foreign cards. Keep <strong>500-1000 RMB</strong> for small shops.</p>
+          <p style="margin: 0.25rem 0;"><strong>💳 Credit Card</strong></p>
+          <p style="margin: 0.25rem 0; font-size: 0.8rem; color: #6c757d;">Accepted at high-end hotels and malls. Not for daily use.</p>
+        </div>
+
+      </div>
+
+      <!-- ===== Apps 卡片 ===== -->
+      <div id="apps-section" style="grid-column: 1 / 3; background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="font-size: 1.5rem;">📱</span>
+          <h3 style="color: #1F2A2E; margin: 0; font-size: 1.2rem; font-weight: 600;">Essential Apps</h3>
+        </div>
+        <p style="color: #6c757d; font-size: 0.9rem; margin: 0 0 1rem 0;">Download before you arrive — not after.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;">
+
+          <!-- Alipay -->
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem;">
+            <div style="font-weight: 600; color: #1F2A2E; font-size: 0.95rem;">Alipay (Zhīfùbǎo)</div>
+            <div style="font-size: 0.8rem; color: #6c757d; margin: 0.15rem 0 0.3rem 0;">Pay · Ride-hailing · Hotels</div>
+            <div style="display: flex; gap: 0.3rem; flex-wrap: wrap;">
+              <a href="https://apps.apple.com/us/app/alipay-simplify-your-life/id333206289" target="_blank" rel="noopener noreferrer" aria-label="Download Alipay on the App Store">
+                <img src="/images/badges/app-store-badge.svg" alt="Download Alipay on the App Store" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Download Alipay on Google Play">
+                <img src="/images/badges/google-play-badge.svg" alt="Download Alipay on Google Play" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- WeChat -->
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem;">
+            <div style="font-weight: 600; color: #1F2A2E; font-size: 0.95rem;">WeChat (Wēixìn)</div>
+            <div style="font-size: 0.8rem; color: #6c757d; margin: 0.15rem 0 0.3rem 0;">Chat · Pay · Mini Apps</div>
+            <div style="display: flex; gap: 0.3rem; flex-wrap: wrap;">
+              <a href="https://apps.apple.com/us/app/wechat/id414478124" target="_blank" rel="noopener noreferrer" aria-label="Download WeChat on the App Store">
+                <img src="/images/badges/app-store-badge.svg" alt="Download WeChat on the App Store" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.tencent.mm&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Download WeChat on Google Play">
+                <img src="/images/badges/google-play-badge.svg" alt="Download WeChat on Google Play" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Amap -->
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem;">
+            <div style="font-weight: 600; color: #1F2A2E; font-size: 0.95rem;">Amap (Gāodé Dìtú)</div>
+            <div style="font-size: 0.8rem; color: #6c757d; margin: 0.15rem 0 0.3rem 0;">Maps · Navigation · 14 languages</div>
+            <div style="display: flex; gap: 0.3rem; flex-wrap: wrap;">
+              <a href="https://apps.apple.com/us/app/amap-global/id461703208" target="_blank" rel="noopener noreferrer" aria-label="Download Amap on the App Store">
+                <img src="/images/badges/app-store-badge.svg" alt="Download Amap on the App Store" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.autonavi.minimap&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Download Amap on Google Play">
+                <img src="/images/badges/google-play-badge.svg" alt="Download Amap on Google Play" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Didi -->
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem;">
+            <div style="font-weight: 600; color: #1F2A2E; font-size: 0.95rem;">Didi (Dīdi)</div>
+            <div style="font-size: 0.8rem; color: #6c757d; margin: 0.15rem 0 0.3rem 0;">Ride-hailing · Cash accepted</div>
+            <div style="display: flex; gap: 0.3rem; flex-wrap: wrap;">
+              <a href="https://apps.apple.com/us/app/didi-rider-affordable-rides/id1362398401" target="_blank" rel="noopener noreferrer" aria-label="Download Didi on the App Store">
+                <img src="/images/badges/app-store-badge.svg" alt="Download Didi on the App Store" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.sdu.didi.psnger" target="_blank" rel="noopener noreferrer" aria-label="Download Didi on Google Play">
+                <img src="/images/badges/google-play-badge.svg" alt="Download Didi on Google Play" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Pleco -->
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem;">
+            <div style="font-weight: 600; color: #1F2A2E; font-size: 0.95rem;">Pleco</div>
+            <div style="font-size: 0.8rem; color: #6c757d; margin: 0.15rem 0 0.3rem 0;">Dictionary · Camera translate · Offline</div>
+            <div style="display: flex; gap: 0.3rem; flex-wrap: wrap;">
+              <a href="https://apps.apple.com/us/app/pleco-chinese-dictionary/id341922306" target="_blank" rel="noopener noreferrer" aria-label="Download Pleco on the App Store">
+                <img src="/images/badges/app-store-badge.svg" alt="Download Pleco on the App Store" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.pleco.chinesesystem" target="_blank" rel="noopener noreferrer" aria-label="Download Pleco on Google Play">
+                <img src="/images/badges/google-play-badge.svg" alt="Download Pleco on Google Play" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- VPN -->
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem;">
+            <div style="font-weight: 600; color: #1F2A2E; font-size: 0.95rem;">VPN</div>
+            <div style="font-size: 0.8rem; color: #6c757d; margin: 0.15rem 0 0.3rem 0;">Access Google / Instagram</div>
+            <div style="display: flex; gap: 0.3rem; flex-wrap: wrap;">
+              <a href="https://nordvpn.com/" target="_blank" rel="noopener noreferrer" aria-label="Download VPN on the App Store">
+                <img src="/images/badges/app-store-badge.svg" alt="Download VPN on the App Store" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+              <a href="https://surfshark.com/" target="_blank" rel="noopener noreferrer" aria-label="Download VPN on Google Play">
+                <img src="/images/badges/google-play-badge.svg" alt="Download VPN on Google Play" style="height: 28px; width: auto;" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- VPN 提醒 -->
+        <div style="background: #FFF8E7; border-radius: 8px; padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 0.8rem; color: #8B7A3A; display: flex; align-items: center; gap: 0.4rem;">
+          <span>💡</span> Download and set up your VPN <strong>before</strong> you arrive — it's blocked inside China.
+        </div>
+      </div>
+
+      <!-- 卡片4：Internet -->
+      <div style="grid-column: 1 / 2; background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04); border-left: 4px solid #2D6A4F;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="font-size: 1.5rem;">🌐</span>
+          <h3 style="color: #1F2A2E; margin: 0; font-size: 1.2rem; font-weight: 600;">Internet</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.9rem; color: #4a4a4a; line-height: 1.6;">
+
+          <!-- eSIM -->
+          <div style="background: #F0F7F0; border-radius: 8px; padding: 0.75rem; border-left: 3px solid #2D6A4F;">
+            <div style="font-weight: 600; color: #1F2A2E;">📱 eSIM <span style="color: #2D6A4F; font-size: 0.75rem; font-weight: 400;">(best)</span></div>
+            <div style="font-size: 0.85rem; color: #6c757d;">Install before you go. No VPN needed for Google/Instagram.</div>
+            <a href="https://www.trip.com/t/ky9ljcf1TV2" target="_blank" rel="noopener noreferrer" style="color: #C49E3A; font-size: 0.8rem; border-bottom: 1px solid #C49E3A; text-decoration: none; display: inline-block; margin-top: 0.3rem;">Buy eSIM →</a>
+          </div>
+
+          <!-- Local SIM -->
+          <div style="background: #F8F6F0; border-radius: 8px; padding: 0.75rem; border-left: 3px solid #C49E3A;">
+            <div style="font-weight: 600; color: #1F2A2E;">📱 Local SIM</div>
+            <div style="font-size: 0.85rem; color: #6c757d; margin: 0.25rem 0 0.3rem 0;">
+              Available at airport arrival halls. Valid passport required.
+            </div>
+            <div style="font-size: 0.75rem; color: #6c757d; margin-top: 0.2rem;">
+              ⚠️ You'll need a VPN to access Google, Instagram, and WhatsApp.
+            </div>
+          </div>
+
+        </div>
+        <div style="background: #F0F7F0; border-radius: 8px; padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 0.8rem; color: #2D6A4F; display: flex; align-items: center; gap: 0.4rem;">
+          <span>✓</span> Travel eSIMs work without VPN. Use Google, Instagram, WhatsApp.
+        </div>
+      </div>
+
+      <!-- 卡片5：Safety & Emergencies -->
+      <div style="grid-column: 2 / 3; background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04); border-left: 4px solid #C49E3A;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <span style="font-size: 1.5rem;">🛡️</span>
+          <h3 style="color: #1F2A2E; margin: 0; font-size: 1.2rem; font-weight: 600;">Safety & Emergencies</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div><strong>🚔 110</strong><br><span style="font-size: 0.85rem; color: #6c757d;">Police</span></div>
+          <div><strong>🚑 120</strong><br><span style="font-size: 0.85rem; color: #6c757d;">Ambulance</span></div>
+          <div><strong>🔥 119</strong><br><span style="font-size: 0.85rem; color: #6c757d;">Fire</span></div>
+        </div>
+        <div style="font-size: 0.85rem; color: #4a4a4a; line-height: 1.6; border-top: 1px solid #EDEAE0; padding-top: 0.5rem;">
+          <p style="margin: 0.25rem 0;"><strong>✅ China is very safe.</strong> Walking at night is normal and comfortable.</p>
+          <p style="margin: 0.25rem 0; font-size: 0.85rem; color: #6c757d;">Most people are helpful to travelers. Ask for directions or help — someone will always stop.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== 底部 CTA ===== -->
+    <div style="margin-top: 3rem; background: #2D6A4F; border-radius: 16px; padding: 2rem; text-align: center; color: white;">
+      <p style="margin: 0 0 1rem 0; font-size: 1rem; color: rgba(255,255,255,0.9);">Ready to plan your trip?</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/visa" style="background-color: #FFD700; color: #1F2A2E; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-block; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#E6C200'" onmouseout="this.style.backgroundColor='#FFD700'">
+          Check visa →
+        </a>
+        <a href="/findway" style="background-color: rgba(255,255,255,0.12); color: white; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.12)'">
+          Explore routes →
+        </a>
+        <a href="/tours" style="background-color: rgba(255,255,255,0.12); color: white; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.12)'">
+          Find a tour →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</Layout>
+
+<style is:global>
+  body {
+    background: #F8F6F0;
+  }
+</style>

@@ -1,0 +1,202 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="Only in China · Real Travel Stories" 
+  description="Street barbecue at 2 AM, high-speed rail at 350 km/h, mobile payments everywhere. Real stories from travelers in China."
+>
+  <!-- 原有内容 -->
+
+    <!-- 返回链接 -->
+    <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">
+      <span>←</span> Back to Home
+    </a>
+    
+    <!-- ===== 标题区 ===== -->
+    <div style="text-align: center; margin-bottom: 0.5rem;">
+
+      <h1 style="font-size: 3rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0; letter-spacing: -1px;">Can you do this at home?</h1>
+      <p style="font-size: 1.1rem; color: #6c757d; margin: 0 0 1.5rem 0;">Things that will make you say "Wait, what?"</p>
+      <p style="font-size: 0.95rem; color: #6c757d; margin-bottom: 2.5rem;">
+        Inspired? <a href="/tours" style="color: #C49E3A; text-decoration: underline; text-underline-offset: 2px; font-weight: 500;">Experience it yourself →</a>
+      </p>
+    </div>
+    
+    <!-- ===== 2列网格（和 Theme 风格一致） ===== -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      
+      <!-- 卡片1：深夜烧烤 -->
+      <a href="/stories/midnight-barbecue" style="text-decoration: none; color: inherit; display: block; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #e8e4dc;">
+          <img src="/images/stories/story-midnight-barbecue-china.jpg" alt="Street barbecue skewers grilling over charcoal at night in China" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.8rem;">
+          <h3 style="margin: 0 0 0.4rem 0; font-size: 1.2rem; font-weight: 700; color: #1F2A2E; line-height: 1.4;">2 AM in Changsha: Street barbecue at midnight</h3>
+          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #6c757d; line-height: 1.6;">How I learned to stop worrying and love the street barbecue.</p>
+          <span style="color: #C49E3A; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid #C49E3A; padding-bottom: 2px;">Read →</span>
+        </div>
+      </a>
+      
+      <!-- 卡片2：Trust -->
+      <a href="/stories/lost-and-found" style="text-decoration: none; color: inherit; display: block; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #e8e4dc;">
+          <img src="/images/stories/story-lost-and-found-china.jpg" alt="Unattended laptop on a cafe table in Shanghai, China" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.8rem;">
+          <h3 style="margin: 0 0 0.4rem 0; font-size: 1.2rem; font-weight: 700; color: #1F2A2E; line-height: 1.4;">Trust is the default</h3>
+          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #6c757d; line-height: 1.6;">I left my bag behind. The system brought it back.</p>
+          <span style="color: #C49E3A; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid #C49E3A; padding-bottom: 2px;">Read →</span>
+        </div>
+      </a>
+      
+      <!-- 卡片3：手机支付 -->
+      <a href="/stories/one-phone-14-days" style="text-decoration: none; color: inherit; display: block; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #e8e4dc;">
+          <img src="/images/stories/story-mobile-payment-china.jpg" alt="QR code payment on a smartphone at a street market in China" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.8rem;">
+          <h3 style="margin: 0 0 0.4rem 0; font-size: 1.2rem; font-weight: 700; color: #1F2A2E; line-height: 1.4;">My wallet stayed home. My phone went everywhere.</h3>
+          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #6c757d; line-height: 1.6;">14 days in China without cash or cards — just a phone.</p>
+          <span style="color: #C49E3A; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid #C49E3A; padding-bottom: 2px;">Read →</span>
+        </div>
+      </a>
+      
+      <!-- 卡片4：高铁 -->
+      <a href="/stories/flying-without-wings" style="text-decoration: none; color: inherit; display: block; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #e8e4dc;">
+          <img src="/images/stories/story-high-speed-train-china.jpg" alt="High-speed train traveling through the countryside in China" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.8rem;">
+          <h3 style="margin: 0 0 0.4rem 0; font-size: 1.2rem; font-weight: 700; color: #1F2A2E; line-height: 1.4;">Flying without wings: Beijing to Shanghai in 4.5 hours</h3>
+          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #6c757d; line-height: 1.6;">1,300 km. 4.5 hours. A coin on the windowsill.</p>
+          <span style="color: #C49E3A; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid #C49E3A; padding-bottom: 2px;">Read →</span>
+        </div>
+      </a>
+      
+      <!-- 卡片5：半夜买药 -->
+      <a href="/stories/cold-medicine-delivery" style="text-decoration: none; color: inherit; display: block; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #e8e4dc;">
+          <img src="/images/stories/story-medicine-delivery-china.jpg" alt="Delivery rider with a bag of medicine on a scooter in China" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.8rem;">
+          <h3 style="margin: 0 0 0.4rem 0; font-size: 1.2rem; font-weight: 700; color: #1F2A2E; line-height: 1.4;">Need cold medicine at midnight? 20 minutes.</h3>
+          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #6c757d; line-height: 1.6;">2 AM. 28 yuan. Delivery in 21 minutes.</p>
+          <span style="color: #C49E3A; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid #C49E3A; padding-bottom: 2px;">Read →</span>
+        </div>
+      </a>
+      
+      <!-- 卡片6：无人便利店 -->
+      <a href="/stories/24h-convenience-store" style="text-decoration: none; color: inherit; display: block; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #e8e4dc;">
+          <img src="/images/stories/story-24h-convenience-store-china.jpg" alt="Fully automated 24-hour convenience store in China at night" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.8rem;">
+          <h3 style="margin: 0 0 0.4rem 0; font-size: 1.2rem; font-weight: 700; color: #1F2A2E; line-height: 1.4;">24/7, no cashier, no lines</h3>
+          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #6c757d; line-height: 1.6;">Walk in. Grab. Scan. Walk out. Total time: 4 minutes.</p>
+          <span style="color: #C49E3A; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid #C49E3A; padding-bottom: 2px;">Read →</span>
+        </div>
+      </a>
+      
+      <!-- 卡片7：当天挂号 -->
+      <a href="/stories/same-day-doctor" style="text-decoration: none; color: inherit; display: block; border-radius: 16px; overflow: hidden; background: #FFFFFF; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #e8e4dc;">
+          <img src="/images/stories/story-same-day-doctor-china.jpg" alt="Hospital appointment screen with patient number display in China" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.8rem;">
+          <h3 style="margin: 0 0 0.4rem 0; font-size: 1.2rem; font-weight: 700; color: #1F2A2E; line-height: 1.4;">Same-day doctor visit? Yes.</h3>
+          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #6c757d; line-height: 1.6;">Booked at 11 AM. Seen at 2 PM. Total time: 25 minutes.</p>
+          <span style="color: #C49E3A; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid #C49E3A; padding-bottom: 2px;">Read →</span>
+        </div>
+      </a>
+      
+    </div>
+    
+    <!-- ===== 底部 CTA ===== -->
+    <div style="margin-top: 3rem; background: #2D6A4F; border-radius: 16px; padding: 2.5rem; text-align: center; color: white;">
+      <div style="font-size: 1.8rem; margin-bottom: 0.3rem;">✦</div>
+      <h2 style="margin: 0 0 0.5rem 0; font-size: 1.6rem; color: white; font-weight: 600;">Ready for your own story?</h2>
+      <p style="margin: 0 0 1.2rem 0; font-size: 1rem; color: rgba(255,255,255,0.8);">Your China story starts here.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/tours" style="background-color: #FFD700; color: #1F2A2E; padding: 0.7rem 2.5rem; border-radius: 30px; text-decoration: none; font-size: 1rem; font-weight: 600; display: inline-block; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#E6C200'" onmouseout="this.style.backgroundColor='#FFD700'">
+          Find your tour →
+        </a>
+        <a href="https://www.trip.com/webapp/tripmap/tripplanner?source=t_online_homepage&locale=en-XX&curr=USD&Allianceid=5609710&SID=130343298&trip_sub1=&trip_sub3=D18535988" target="_blank" rel="noopener noreferrer" style="background-color: rgba(255,255,255,0.12); color: white; padding: 0.7rem 2.5rem; border-radius: 30px; text-decoration: none; font-size: 1rem; font-weight: 500; display: inline-block; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.12)'">
+          Plan with AI →
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</Layout>
+
+<style is:global>
+  body {
+    background: #F8F6F0;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .gallery-item {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.03);
+  }
+  
+  .gallery-item .content {
+    padding: 1.5rem 1.5rem 1.8rem;
+  }
+  
+  .gallery-item h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1F2A2E;
+    line-height: 1.4;
+  }
+  
+  .gallery-item p {
+    margin: 0 0 0.8rem 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.6;
+  }
+  
+  .gallery-item .read-link {
+    color: #C49E3A;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #C49E3A;
+    padding-bottom: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>

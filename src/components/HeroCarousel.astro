@@ -1,0 +1,157 @@
+---
+// src/components/HeroCarousel.astro
+---
+
+<div id="hero-carousel" style="position: relative; overflow: hidden; width: 100%; background: #1a1a1a; height: 80vh; min-height: 400px; max-height: 700px;">
+  <div id="hero-carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); height: 100%;">
+    
+ <!-- 1. 重庆洪崖洞 -->
+<div class="hero-slide" style="min-width: 100%; height: 100%; position: relative;">
+  <img 
+    src="/images/hero/tech-chongqing-hongyadong-night-stilt-houses-river-china.webp" 
+    fetchpriority="high" 
+    loading="eager" 
+    alt="Chongqing Hongyadong stilt houses" 
+    style="width: 100%; height: 100%; object-fit: cover; display: block;">
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+    <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; font-weight: 300;">Chongqing — where neon meets ancient stilt houses</p>
+  </div>
+</div>
+    
+    <!-- 2. 敦煌莫高窟 -->
+    <div class="hero-slide" style="min-width: 100%; height: 100%; position: relative;">
+      <img src="/images/hero/culture-dunhuang-mogao-caves-silk-road-gansu-china.webp" alt="Dunhuang Mogao Caves" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; font-weight: 300;">Laojun Mountain — where mist and temples rise above the world</p>
+      </div>
+    </div>
+    
+    <!-- 3. 成都熊猫 -->
+    <div class="hero-slide" style="min-width: 100%; height: 100%; position: relative;">
+      <img src="/images/hero/family-chengdu-panda-research-base-giant-panda-bamboo.webp" alt="Giant panda in Chengdu" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; font-weight: 300;">Chengdu — where the world meets the giant panda</p>
+      </div>
+    </div>
+    
+    <!-- 4. 成都火锅 -->
+    <div class="hero-slide" style="min-width: 100%; height: 100%; position: relative;">
+      <img src="/images/hero/food-chengdu-sichuan-hotpot-mala-spicy-dinner-table-china.webp" alt="Sichuan hotpot" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; font-weight: 300;">Chongqing — where hotpot brings everyone together</p>
+      </div>
+    </div>
+    
+    <!-- 5. 黄山 -->
+    <div class="hero-slide" style="min-width: 100%; height: 100%; position: relative;">
+      <img src="/images/hero/nature-huangshan-mountains-sea-of-clouds-sunrise-anhui-china.webp" alt="Huangshan mountains" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; font-weight: 300;">Guilin — cobblestones, canals, and snow-capped silence</p>
+      </div>
+    </div>
+    
+    <!-- 6. 四姑娘山 -->
+    <div class="hero-slide" style="min-width: 100%; height: 100%; position: relative;">
+      <img src="/images/hero/outdoor-sichuan-siguniang-mountain-hiking-trail-sichuan-china.webp" alt="Siguniang mountain" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; font-weight: 300;">Mangshan — where the peaks dissolve into clouds and sky</p>
+      </div>
+    </div>
+    
+    <!-- 7. 苏州园林 -->
+    <div class="hero-slide" style="min-width: 100%; height: 100%; position: relative;">
+      <img src="/images/hero/slow-suzhou-classical-garden-pond-rockery-jiangsu-china.webp" alt="Suzhou classical garden" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; font-weight: 300;">Suzhou — a garden built for gathering and contemplation</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- 左右箭头 -->
+  <button id="hero-prev" style="position: absolute; top: 50%; left: 16px; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">‹</button>
+  <button id="hero-next" style="position: absolute; top: 50%; right: 16px; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">›</button>
+  
+  <!-- 圆点指示器 -->
+  <div id="hero-dots" style="position: absolute; bottom: 80px; left: 0; right: 0; display: flex; justify-content: center; gap: 10px; z-index: 10;">
+    <span class="hero-dot active" data-index="0" style="width: 10px; height: 10px; border-radius: 50%; background: #FFD700; cursor: pointer; transition: all 0.3s;"></span>
+    <span class="hero-dot" data-index="1" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="hero-dot" data-index="2" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="hero-dot" data-index="3" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="hero-dot" data-index="4" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="hero-dot" data-index="5" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="hero-dot" data-index="6" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+  </div>
+
+  <!-- 向下箭头 -->
+  <div style="position: absolute; bottom: 1.2rem; left: 0; right: 0; text-align: center; z-index: 10; animation: bounce 2s infinite;">
+    <a href="#grid-start" style="color: rgba(255,255,255,0.6); font-size: 2rem; text-decoration: none; display: inline-block; transition: color 0.3s;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
+      ↓
+    </a>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('hero-carousel-track');
+    const slides = track.querySelectorAll('.hero-slide');
+    const total = slides.length;
+    let current = 0;
+    let interval;
+
+    const prevBtn = document.getElementById('hero-prev');
+    const nextBtn = document.getElementById('hero-next');
+    const dots = document.querySelectorAll('.hero-dot');
+
+    function goTo(index) {
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+      current = index;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(dot, i) {
+        dot.style.background = i === current ? '#FFD700' : 'rgba(255,255,255,0.4)';
+        dot.style.transform = i === current ? 'scale(1.3)' : 'scale(1)';
+      });
+    }
+
+    function nextSlide() { goTo(current + 1); }
+    function prevSlide() { goTo(current - 1); }
+
+    function startAutoPlay() {
+      if (interval) clearInterval(interval);
+      interval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoPlay() {
+      if (interval) { clearInterval(interval); interval = null; }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+    }
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        stopAutoPlay();
+        goTo(parseInt(this.dataset.index));
+        startAutoPlay();
+      });
+    });
+
+    startAutoPlay();
+  });
+</script>
+
+<style is:global>
+  #hero-carousel button:hover {
+    background: rgba(255,255,255,0.2) !important;
+    color: #FFD700 !important;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+</style>

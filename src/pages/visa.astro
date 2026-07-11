@@ -1,0 +1,227 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="China Visa Check · Do I Need a Visa?" 
+  description="Check if you need a visa for China. Free tool — select your country and get instant visa info."
+>
+    <a href="/" style="display: inline-block; margin-bottom: 2rem;">← Back to Home</a>
+    
+    <h1>Do I need a visa?</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 2rem;">Check your country in 5 seconds.</p>
+    
+    <select id="country-select" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem;">
+      <option value="">-- Select your country --</option>
+    </select>
+    <div id="visa-result" style="padding: 1rem; background: #f5f5f5; border-radius: 8px; margin-bottom: 1rem;"></div>
+    <p style="font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem;"> Policy subject to change. Double-check before booking.</p>
+    <a href="https://www.visaforchina.cn" target="_blank" rel="noopener noreferrer">Official visa application site →</a>
+
+  </div>
+</Layout>
+
+<script>
+  // 签证数据：免签（30天）和 240小时过境免签
+ const visaData = {
+  // ===== 30天单方面免签（含互免）=====
+  'fr': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'de': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'it': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'es': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'nl': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ch': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ie': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'gb': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'se': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'at': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'be': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'lu': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'pl': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'pt': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'gr': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'cy': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'si': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'sk': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'no': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'fi': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'dk': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'is': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ad': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'mc': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'li': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'kr': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'bg': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ro': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'hr': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'me': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'mk': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'mt': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ee': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'lv': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'lt': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ru': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'jp': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'bn': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'sa': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'om': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'kw': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'bh': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'qa': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ae': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'my': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'th': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'sg': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ca': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'br': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ar': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'cl': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'pe': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'uy': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'bb': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'bs': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'gd': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'au': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'nz': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'fj': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'ag': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'mu': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'sc': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'sr': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'tz': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+  'tn': '✅ Visa-Free · 30 days\nYou\'re ready to go. No visa needed.',
+
+  // ===== 240小时过境免签 =====
+  'us': '✈️ Transit Without Visa (TWOV) · 10 days\nAvailable if transiting to a third country or region.',
+  'mx': '✈️ Transit Without Visa (TWOV) · 10 days\nAvailable if transiting to a third country or region.',
+  'id': '✈️ Transit Without Visa (TWOV) · 10 days\nAvailable if transiting to a third country or region.',
+};
+
+  // 全球国家列表（ISO代码 + 英文名），按英文名排序
+  const allCountries = [
+    { code: "af", name: "Afghanistan" }, { code: "al", name: "Albania" },
+    { code: "dz", name: "Algeria" }, { code: "ad", name: "Andorra" },
+    { code: "ao", name: "Angola" }, { code: "ag", name: "Antigua and Barbuda" },
+    { code: "ar", name: "Argentina" }, { code: "am", name: "Armenia" },
+    { code: "au", name: "Australia" }, { code: "at", name: "Austria" },
+    { code: "az", name: "Azerbaijan" }, { code: "bs", name: "Bahamas" },
+    { code: "bh", name: "Bahrain" }, { code: "bd", name: "Bangladesh" },
+    { code: "bb", name: "Barbados" }, { code: "by", name: "Belarus" },
+    { code: "be", name: "Belgium" }, { code: "bz", name: "Belize" },
+    { code: "bj", name: "Benin" }, { code: "bt", name: "Bhutan" },
+    { code: "bo", name: "Bolivia" }, { code: "ba", name: "Bosnia and Herzegovina" },
+    { code: "bw", name: "Botswana" }, { code: "br", name: "Brazil" },
+    { code: "bn", name: "Brunei" }, { code: "bg", name: "Bulgaria" },
+    { code: "bf", name: "Burkina Faso" }, { code: "bi", name: "Burundi" },
+    { code: "kh", name: "Cambodia" }, { code: "cm", name: "Cameroon" },
+    { code: "ca", name: "Canada" }, { code: "cv", name: "Cape Verde" },
+    { code: "cf", name: "Central African Republic" }, { code: "td", name: "Chad" },
+    { code: "cl", name: "Chile" }, 
+    { code: "co", name: "Colombia" }, { code: "km", name: "Comoros" },
+    { code: "cg", name: "Congo" }, { code: "cd", name: "Congo (Democratic Republic)" },
+    { code: "cr", name: "Costa Rica" }, { code: "ci", name: "Côte d'Ivoire" },
+    { code: "hr", name: "Croatia" }, { code: "cu", name: "Cuba" },
+    { code: "cy", name: "Cyprus" }, { code: "cz", name: "Czech Republic" },
+    { code: "dk", name: "Denmark" }, { code: "dj", name: "Djibouti" },
+    { code: "dm", name: "Dominica" }, { code: "do", name: "Dominican Republic" },
+    { code: "ec", name: "Ecuador" }, { code: "eg", name: "Egypt" },
+    { code: "sv", name: "El Salvador" }, { code: "gq", name: "Equatorial Guinea" },
+    { code: "er", name: "Eritrea" }, { code: "ee", name: "Estonia" },
+    { code: "sz", name: "Eswatini" }, { code: "et", name: "Ethiopia" },
+    { code: "fj", name: "Fiji" }, { code: "fi", name: "Finland" },
+    { code: "fr", name: "France" }, { code: "ga", name: "Gabon" },
+    { code: "gm", name: "Gambia" }, { code: "ge", name: "Georgia" },
+    { code: "de", name: "Germany" }, { code: "gh", name: "Ghana" },
+    { code: "gr", name: "Greece" }, { code: "gd", name: "Grenada" },
+    { code: "gt", name: "Guatemala" }, { code: "gn", name: "Guinea" },
+    { code: "gw", name: "Guinea-Bissau" }, { code: "gy", name: "Guyana" },
+    { code: "ht", name: "Haiti" }, { code: "hn", name: "Honduras" },
+    { code: "hu", name: "Hungary" }, { code: "is", name: "Iceland" },
+    { code: "in", name: "India" }, { code: "id", name: "Indonesia" },
+    { code: "ir", name: "Iran" }, { code: "iq", name: "Iraq" },
+    { code: "ie", name: "Ireland" }, { code: "il", name: "Israel" },
+    { code: "it", name: "Italy" }, { code: "jm", name: "Jamaica" },
+    { code: "jp", name: "Japan" }, { code: "jo", name: "Jordan" },
+    { code: "kz", name: "Kazakhstan" }, { code: "ke", name: "Kenya" },
+    { code: "ki", name: "Kiribati" }, { code: "kp", name: "Korea (North)" },
+    { code: "kr", name: "Korea (South)" }, { code: "kw", name: "Kuwait" },
+    { code: "kg", name: "Kyrgyzstan" }, { code: "la", name: "Laos" },
+    { code: "lv", name: "Latvia" }, { code: "lb", name: "Lebanon" },
+    { code: "ls", name: "Lesotho" }, { code: "lr", name: "Liberia" },
+    { code: "ly", name: "Libya" }, { code: "li", name: "Liechtenstein" },
+    { code: "lt", name: "Lithuania" }, { code: "lu", name: "Luxembourg" },
+    { code: "mg", name: "Madagascar" }, { code: "mw", name: "Malawi" },
+    { code: "my", name: "Malaysia" }, { code: "mv", name: "Maldives" },
+    { code: "ml", name: "Mali" }, { code: "mt", name: "Malta" },
+    { code: "mh", name: "Marshall Islands" }, { code: "mr", name: "Mauritania" },
+    { code: "mu", name: "Mauritius" }, { code: "mx", name: "Mexico" },
+    { code: "fm", name: "Micronesia" }, { code: "md", name: "Moldova" },
+    { code: "mc", name: "Monaco" }, { code: "mn", name: "Mongolia" },
+    { code: "me", name: "Montenegro" }, { code: "ma", name: "Morocco" },
+    { code: "mz", name: "Mozambique" }, { code: "mm", name: "Myanmar" },
+    { code: "na", name: "Namibia" }, { code: "nr", name: "Nauru" },
+    { code: "np", name: "Nepal" }, { code: "nl", name: "Netherlands" },
+    { code: "nz", name: "New Zealand" }, { code: "ni", name: "Nicaragua" },
+    { code: "ne", name: "Niger" }, { code: "ng", name: "Nigeria" },
+    { code: "mk", name: "North Macedonia" }, { code: "no", name: "Norway" },
+    { code: "om", name: "Oman" }, { code: "pk", name: "Pakistan" },
+    { code: "pw", name: "Palau" }, { code: "ps", name: "Palestine" },
+    { code: "pa", name: "Panama" }, { code: "pg", name: "Papua New Guinea" },
+    { code: "py", name: "Paraguay" }, { code: "pe", name: "Peru" },
+    { code: "ph", name: "Philippines" }, { code: "pl", name: "Poland" },
+    { code: "pt", name: "Portugal" }, { code: "qa", name: "Qatar" },
+    { code: "ro", name: "Romania" }, { code: "ru", name: "Russia" },
+    { code: "rw", name: "Rwanda" }, { code: "kn", name: "Saint Kitts and Nevis" },
+    { code: "lc", name: "Saint Lucia" }, { code: "vc", name: "Saint Vincent and the Grenadines" },
+    { code: "ws", name: "Samoa" }, { code: "sm", name: "San Marino" },
+    { code: "st", name: "Sao Tome and Principe" }, { code: "sa", name: "Saudi Arabia" },
+    { code: "sn", name: "Senegal" }, { code: "rs", name: "Serbia" },
+    { code: "sc", name: "Seychelles" }, { code: "sl", name: "Sierra Leone" },
+    { code: "sg", name: "Singapore" }, { code: "sk", name: "Slovakia" },
+    { code: "si", name: "Slovenia" }, { code: "sb", name: "Solomon Islands" },
+    { code: "so", name: "Somalia" }, { code: "za", name: "South Africa" },
+    { code: "ss", name: "South Sudan" }, { code: "es", name: "Spain" },
+    { code: "lk", name: "Sri Lanka" }, { code: "sd", name: "Sudan" },
+    { code: "sr", name: "Suriname" }, { code: "se", name: "Sweden" },
+    { code: "ch", name: "Switzerland" }, { code: "sy", name: "Syria" },
+    { code: "tj", name: "Tajikistan" },
+    { code: "tz", name: "Tanzania" }, { code: "th", name: "Thailand" },
+    { code: "tl", name: "Timor-Leste" }, { code: "tg", name: "Togo" },
+    { code: "to", name: "Tonga" }, { code: "tt", name: "Trinidad and Tobago" },
+    { code: "tn", name: "Tunisia" }, { code: "tr", name: "Turkey" },
+    { code: "tm", name: "Turkmenistan" }, { code: "tv", name: "Tuvalu" },
+    { code: "ug", name: "Uganda" }, { code: "ua", name: "Ukraine" },
+    { code: "ae", name: "United Arab Emirates" }, { code: "gb", name: "United Kingdom" },
+    { code: "us", name: "United States" }, { code: "uy", name: "Uruguay" },
+    { code: "uz", name: "Uzbekistan" }, { code: "vu", name: "Vanuatu" },
+    { code: "va", name: "Vatican City" }, { code: "ve", name: "Venezuela" },
+    { code: "vn", name: "Vietnam" }, { code: "ye", name: "Yemen" },
+    { code: "zm", name: "Zambia" }, { code: "zw", name: "Zimbabwe" }
+  ];
+
+  const selectEl = document.getElementById('country-select');
+  const resultDiv = document.getElementById('visa-result');
+
+  // 填充全部国家
+  allCountries.forEach(country => {
+    const option = document.createElement('option');
+    option.value = country.code;
+    option.textContent = country.name;
+    selectEl.appendChild(option);
+  });
+
+  selectEl.addEventListener('change', (e) => {
+    const code = e.target.value;
+    if (!code) {
+      resultDiv.style.display = 'none';
+      return;
+    }
+    const text = visaData[code];
+    if (text) {
+      resultDiv.innerHTML = `<strong>${text.replace(/\n/g, '<br>')}</strong>`;
+    } else {
+      resultDiv.innerHTML = '<strong>📋 Visa Required</strong><br>Tourist visa required before travel. Please check the official site for details.';
+    }
+    resultDiv.style.display = 'block';
+  });
+</script>

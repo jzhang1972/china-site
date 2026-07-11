@@ -1,23 +1,340 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+
+const siteTitle = title ? `${title} · YOGOTOCHINA` : 'YOGOTOCHINA · China Travel Guide';
+const siteDescription = description || 'Plan your China trip with ease. Visa info, travel guides, routes, real stories, and trusted tours.';
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content="https://yogotochina.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content="https://yogotochina.com/og-image.jpg" />
+    
+    <link rel="canonical" href={Astro.url.href} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- ===== 预加载 LCP 图片 ===== -->
+    <link rel="preload" as="image" href="/images/hero/tech-chongqing-hongyadong-night-stilt-houses-river-china.webp" fetchpriority="high">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <style>
+      /* ===== 全局重置 ===== */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: #F8F6F0;
+        color: #1F2A2E;
+      }
+      a {
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* ===== 导航栏 ===== */
+      .navbar {
+        background-color: #FFFFFF;
+        padding: 0.75rem 1rem;
+        position: relative;
+        z-index: 100;
+        border-bottom: 1px solid #EDEAE0;
+      }
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo img {
+        height: 40px;
+        width: auto;
+      }
+
+      /* 桌面菜单 */
+      .nav-menu {
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+      .nav-menu li a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        color: #1F2A2E;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 0.95rem;
+        transition: background 0.2s;
+      }
+      .nav-menu li a:hover {
+        background: #F0EDE5;
+      }
+
+      /* 汉堡按钮（默认隐藏） */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.25rem;
+        background: none;
+        border: none;
+      }
+      .hamburger .bar {
+        width: 28px;
+        height: 3px;
+        background-color: #1F2A2E;
+        margin: 3px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+      }
+
+      /* 全屏菜单（默认隐藏） */
+      .fullscreen-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      .fullscreen-menu.open {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+      }
+      .fullscreen-menu ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      .fullscreen-menu ul li {
+        margin: 1.5rem 0;
+      }
+      .fullscreen-menu ul li a {
+        font-size: 1.8rem;
+        color: #1F2A2E;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .fullscreen-menu ul li a:hover {
+        color: #C49E3A;
+      }
+
+      /* ===== 移动端 ===== */
+      @media (max-width: 768px) {
+        .nav-menu {
+          display: none !important;
+        }
+        .hamburger {
+          display: flex !important;
+        }
+        .fullscreen-menu {
+          display: flex !important;
+          opacity: 0;
+          visibility: hidden;
+        }
+        .fullscreen-menu.open {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      /* ===== 通用卡片 ===== */
+      .card-item {
+        background: #FFFFFF;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .card-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+      }
+
+      /* ===== 电脑端图片修复 ===== */
+      /* 普通内容图片自适应 */
+      .content img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* 网格卡片图片强制恢复 */
+      #grid-start img {
+        max-width: none !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+
+      /* ===== 容器 ===== */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+
+      /* ===== 响应式辅助 ===== */
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/">
+            <img src="/logo.png" alt="YOGOTOCHINA" height="40">
+          </a>
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/stories">Only in China</a></li>
+          <li><a href="/myths">Myths</a></li>
+          <li><a href="/findway">Routes</a></li>
+          <li><a href="/tours">Tours</a></li>
+          <li><a href="/tools">Before You Go</a></li>
+          <li><a href="/visa">Visa</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- 全屏菜单 -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/stories">Only in China</a></li>
+        <li><a href="/myths">Myths</a></li>
+        <li><a href="/findway">Routes</a></li>
+        <li><a href="/tours">Tours</a></li>
+        <li><a href="/tools">Before You Go</a></li>
+        <li><a href="/visa">Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- 主要内容 -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- 页脚 -->
+    <footer style="background-color: #1F2A2E; color: #F9F7F1; padding: 3rem 1rem 1rem; margin-top: 4rem;">
+      <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem;">
+        <div>
+          <a href="/" style="color: #FFD700; text-decoration: none;">
+            <h3 style="color: #FFD700; margin-bottom: 0.5rem;">YOGOTOCHINA</h3>
+          </a>
+          <p style="color: #FFFFFF; opacity: 0.8;">China travel, simple and real.</p>
+        </div>
+        <div>
+          <h4 style="color: #FFD700;">Explore</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="/stories" style="color: #F9F7F1;">Only in China</a></li>
+            <li><a href="/myths" style="color: #F9F7F1;">Myths</a></li>
+            <li><a href="/findway" style="color: #F9F7F1;">Routes</a></li>
+            <li><a href="/tours" style="color: #F9F7F1;">Tours</a></li>
+            <li><a href="/tools" style="color: #F9F7F1;">Before You Go</a></li>
+            <li><a href="/visa" style="color: #F9F7F1;">Visa</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFD700;">Support</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="mailto:hello@yogotochina.com" style="color: #F9F7F1;">Email Us</a></li>
+            <li><a href="/privacy" style="color: #F9F7F1;">Privacy Policy</a></li>
+            <li><a href="/disclaimer" style="color: #F9F7F1;">Disclaimer</a></li>
+            <li><a href="/about" style="color: #F9F7F1;">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p style="color: #F9F7F1;">&copy; 2026 YOGOTOCHINA. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // 汉堡菜单
+      const hamburger = document.getElementById('hamburger');
+      const fullscreenMenu = document.getElementById('fullscreenMenu');
+
+      function toggleMenu() {
+        fullscreenMenu.classList.toggle('open');
+        document.body.style.overflow = fullscreenMenu.classList.contains('open') ? 'hidden' : '';
+      }
+
+      function closeMenu() {
+        fullscreenMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+      }
+
+      document.querySelectorAll('.fullscreen-menu a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      fullscreenMenu.addEventListener('click', function(e) {
+        if (e.target === fullscreenMenu) {
+          closeMenu();
+        }
+      });
+    </script>
+  </body>
+</html>

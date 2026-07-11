@@ -1,0 +1,415 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout 
+  title="China Nature Travel · Mountains & Karst" 
+  description="Zhangjiajie, Guilin, Huangshan, Jiuzhaigou. China's most stunning natural landscapes — no CGI, just real."
+>
+
+  <!-- 返回链接 -->
+    <a href="/findway" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">
+      <span>←</span> Back to Themes
+    </a>
+
+    <!-- ===== 主题标题 ===== -->
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <span style="display: inline-block; background: rgba(196, 158, 58, 0.12); color: #C49E3A; padding: 0.15rem 1rem; border-radius: 20px; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.75rem;">Theme</span>
+      <h1 style="font-size: 3.5rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0; letter-spacing: -1px;">Nature</h1>
+      <p style="font-size: 1.2rem; font-style: italic; color: #6c757d; margin-bottom: 0;">"No CGI. This is real."</p>
+    </div>
+    
+    <!-- ===== 轮播图 ===== -->
+<div id="nature-carousel" style="position: relative; overflow: hidden; border-radius: 20px; margin-bottom: 3rem; background: #e8e4dc; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
+  <div id="nature-carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+    
+    <!-- 图片1：天门山 -->
+    <div class="nature-slide" style="min-width: 100%; position: relative;">
+      <img src="/images/theme/nature/nature-zhangjiajie-tianmen-mountain-cave-china.webp" alt="Tianmen Mountain natural arch cave in Zhangjiajie, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Tianmen Mountain — the "Gateway to Heaven" carved into the rock</p>
+      </div>
+    </div>
+    
+    <!-- 图片2：桂林 -->
+    <div class="nature-slide" style="min-width: 100%; position: relative;">
+      <img src="/images/theme/nature/nature-guilin-li-river-karst-peaks-china.webp" alt="Li River karst mountains reflected in the water at sunset, Guilin, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Li River — karst peaks rising from misty waters</p>
+      </div>
+    </div>
+    
+    <!-- 图片3：黄山 -->
+    <div class="nature-slide" style="min-width: 100%; position: relative;">
+      <img src="/images/theme/nature/nature-huangshan-sea-of-clouds-sunrise-china.webp" alt="Sea of clouds rolling over Huangshan mountain peaks at sunrise, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Huangshan — the sea of clouds that inspired a thousand poems</p>
+      </div>
+    </div>
+    
+    <!-- 图片4：九寨沟 -->
+    <div class="nature-slide" style="min-width: 100%; position: relative;">
+      <img src="/images/theme/nature/nature-jiuzhaigou-lake-waterfall-autumn-china.webp" alt="Turquoise lake and waterfall in Jiuzhaigou Valley, Sichuan, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Jiuzhaigou — where the water turns turquoise and time stands still</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- 箭头 -->
+  <button id="nature-prev" style="position: absolute; top: 50%; left: 16px; transform: translateY(-50%); background: rgba(255,255,255,0.85); backdrop-filter: blur(4px); color: #1F2A2E; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s;">‹</button>
+  <button id="nature-next" style="position: absolute; top: 50%; right: 16px; transform: translateY(-50%); background: rgba(255,255,255,0.85); backdrop-filter: blur(4px); color: #1F2A2E; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s;">›</button>
+  
+  <!-- 圆点 -->
+  <div id="nature-dots" style="position: absolute; bottom: 64px; left: 0; right: 0; display: flex; justify-content: center; gap: 10px; z-index: 10;">
+    <span class="nature-dot active" data-index="0" style="width: 10px; height: 10px; border-radius: 50%; background: #FFD700; cursor: pointer; transition: all 0.3s;"></span>
+    <span class="nature-dot" data-index="1" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="nature-dot" data-index="2" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="nature-dot" data-index="3" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="nature-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.88); z-index: 1000; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px);">
+  <img id="nature-lightbox-img" src="" alt="Enlarged view" style="max-width: 90%; max-height: 80%; object-fit: contain; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,0.6);">
+  <p id="nature-lightbox-caption" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.85); font-size: 0.95rem; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); padding: 0.4rem 1.5rem; border-radius: 30px; margin: 0; text-align: center; max-width: 80%;"></p>
+  <button id="nature-lightbox-close" style="position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; opacity: 0.5; transition: opacity 0.3s;">&times;</button>
+</div>
+
+
+    
+    <!-- 简介 -->
+    <p style="color: #4a4a4a; line-height: 1.9; font-size: 1.05rem; max-width: 750px; margin-bottom: 2.5rem; border-left: 3px solid #C49E3A; padding-left: 1.5rem;">
+      Walk where floating mountains inspired a movie. Cruise through misty rivers and karst peaks. This route is pure natural wonder.
+    </p>
+    
+    <!-- ===== 双城 Things to do ===== -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+      
+      <!-- Zhangjiajie -->
+      <div style="background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <h3 style="color: #1F2A2E; font-size: 1.1rem; margin: 0; font-weight: 600;">Zhangjiajie</h3>
+          <span style="margin-left: auto; background: #EDEAE0; color: #6c757d; padding: 0.1rem 0.6rem; border-radius: 12px; font-size: 0.65rem; font-weight: 500;">6 spots</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Bailong+Elevator+Zhangjiajie" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Bailong Elevator
+              </a>
+              — World's tallest outdoor glass elevator — 326m up the cliff in 90 seconds.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Zhangjiajie+Grand+Canyon+Glass+Bridge" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Grand Canyon Glass Bridge
+              </a>
+              — Highest and longest glass bridge in the world.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Tianmen+Mountain+Glass+Skywalk+Zhangjiajie" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Tianmen Mountain Glass Skywalk
+              </a>
+              — 60m glass path bolted to a cliff, 1,400m above ground.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Avatar+Hallelujah+Mountain+Zhangjiajie" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Avatar Hallelujah Mountain
+              </a>
+              — The towering pillar that inspired James Cameron's floating mountains.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Tianmen+Mountain+Cable+Car+Zhangjiajie" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Tianmen Mountain Cable Car
+              </a>
+              — World's longest cable car — 7.5km, 28 minutes.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Tianmen+Cave+Zhangjiajie" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 999 Steps to Heaven's Gate
+              </a>
+              — A steep staircase to a natural arch in the mountain.
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Guilin + Yangshuo -->
+      <div style="background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <h3 style="color: #1F2A2E; font-size: 1.1rem; margin: 0; font-weight: 600;">Guilin + Yangshuo</h3>
+          <span style="margin-left: auto; background: #EDEAE0; color: #6c757d; padding: 0.1rem 0.6rem; border-radius: 12px; font-size: 0.65rem; font-weight: 500;">6 spots</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Yulong+River+Bamboo+Rafting+Yangshuo" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Bamboo Raft on Yulong River
+              </a>
+              — Peaceful rafting with small dams to slide down.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Ten-mile+Gallery+Yangshuo" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Ten-mile Gallery Cycle
+              </a>
+              — Ride through karst peaks, rice fields, and small villages.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=West+Street+Yangshuo" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Yangshuo West Street
+              </a>
+              — Lively pedestrian street with bars, cafes, and street food.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Li+River+Cruise+Guilin+to+Yangshuo" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Li River Cruise
+              </a>
+              — See the view printed on China's 20 yuan banknote.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Xianggong+Mountain+Yangshuo" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Xianggong Mountain Sunrise Hike
+              </a>
+              — A short sunrise hike for the most photographed view of the Li River.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Yangshuo+Rock+Climbing" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Karst Rock Climbing
+              </a>
+              — World-famous climbing spot for beginners to pros.
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <!-- ===== Budget + CTA ===== -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; background: #EDEAE0; border-radius: 16px; padding: 1.5rem 2rem;">
+      
+      <!-- Budget -->
+      <div style="display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.1rem;">💰</span>
+          <span style="color: #6c757d; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">Budget</span>
+        </div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <div>
+            <div style="color: #6c757d; font-size: 0.7rem;">Budget</div>
+            <div style="color: #1F2A2E; font-weight: 600; font-size: 1.1rem;">$28–50 <span style="color: #6c757d; font-weight: 400; font-size: 0.7rem;">/day</span></div>
+          </div>
+          <div>
+            <div style="color: #6c757d; font-size: 0.7rem;">Comfort</div>
+            <div style="color: #C49E3A; font-weight: 600; font-size: 1.1rem;">$70–110 <span style="color: #C49E3A; font-weight: 400; font-size: 0.7rem; opacity: 0.6;">/day</span></div>
+          </div>
+          <div>
+            <div style="color: #6c757d; font-size: 0.7rem;">Luxury</div>
+            <div style="color: #1F2A2E; font-weight: 600; font-size: 1.1rem;">$165+ <span style="color: #6c757d; font-weight: 400; font-size: 0.7rem;">/day</span></div>
+          </div>
+        </div>
+      </div>
+      
+<!-- CTA 按钮 -->
+<div style="display: flex; gap: 1rem; align-items: center; justify-content: flex-end; flex-wrap: wrap;">
+  <a href="/tours" style="background: #4A90D9; color: #FFFFFF; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 1.2rem; border-radius: 30px; border: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.3rem;">
+    Book a similar tour <span style="font-size: 1.1rem;">→</span>
+  </a>
+  <a href="https://www.trip.com/webapp/tripmap/tripplanner?source=t_online_homepage&locale=en-XX&curr=USD&Allianceid=5609710&SID=130343298&trip_sub1=&trip_sub3=D18535988" target="_blank" rel="noopener noreferrer" style="background: #FFD700; color: #1F2A2E; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: 0 4px 16px rgba(255,215,0,0.25);">
+    Plan with AI <span style="font-size: 1.1rem;">→</span>
+  </a>
+</div>
+</Layout>
+
+<script>
+  // 轮播逻辑
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('nature-carousel-track');
+    const slides = track.querySelectorAll('.nature-slide');
+    const total = slides.length;
+    let current = 0;
+    let interval;
+
+    const prevBtn = document.getElementById('nature-prev');
+    const nextBtn = document.getElementById('nature-next');
+    const dots = document.querySelectorAll('.nature-dot');
+    const lightbox = document.getElementById('nature-lightbox');
+    const lightboxImg = document.getElementById('nature-lightbox-img');
+    const lightboxCaption = document.getElementById('nature-lightbox-caption');
+    const closeBtn = document.getElementById('nature-lightbox-close');
+
+    function goTo(index) {
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+      current = index;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.style.background = i === current ? '#FFD700' : 'rgba(255,255,255,0.4)';
+        dot.style.transform = i === current ? 'scale(1.3)' : 'scale(1)';
+      });
+    }
+
+    function nextSlide() { goTo(current + 1); }
+    function prevSlide() { goTo(current - 1); }
+
+    function startAutoPlay() {
+      if (interval) clearInterval(interval);
+      interval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoPlay() {
+      if (interval) { clearInterval(interval); interval = null; }
+    }
+
+    prevBtn.addEventListener('click', () => { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+    nextBtn.addEventListener('click', () => { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        stopAutoPlay();
+        goTo(parseInt(dot.dataset.index));
+        startAutoPlay();
+      });
+    });
+
+    // Lightbox
+    document.querySelectorAll('.nature-slide img').forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        const caption = img.closest('.nature-slide').querySelector('p')?.textContent || '';
+        lightboxCaption.textContent = caption;
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightboxImg) {
+        closeLightbox();
+      }
+    });
+    closeBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+    goTo(0);
+    startAutoPlay();
+  });
+</script>
+
+<style is:global>
+  body {
+    background: #F8F6F0;
+  }
+  
+  a[href]:hover {
+    color: #C49E3A !important;
+  }
+  
+  a[href*="google.com/maps"]:hover {
+    border-bottom-color: #C49E3A !important;
+    color: #1F2A2E !important;
+  }
+  
+  .nature-slide img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .nature-slide img:hover {
+    transform: scale(1.01);
+  }
+  
+  #nature-lightbox {
+    display: none !important;
+  }
+  #nature-lightbox[style*="display: flex"] {
+    display: flex !important;
+  }
+  
+  @media (max-width: 768px) {
+    .nature-slide img {
+      height: 240px !important;
+    }
+    #nature-carousel {
+      border-radius: 12px !important;
+    }
+    #nature-carousel h1 {
+      font-size: 2.2rem !important;
+    }
+    #nature-carousel [style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

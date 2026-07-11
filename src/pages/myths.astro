@@ -1,0 +1,345 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="China Myths Busted · What's Real" 
+  description="Think you know China? Uncover the truth behind the myths — from food to safety to daily life."
+>
+  <!-- 原有内容 -->
+
+    <!-- 返回链接 -->
+    <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">
+      <span>←</span> Back to Home
+    </a>
+    
+    <!-- ===== 标题区 ===== -->
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <h1 style="font-size: 3rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0; letter-spacing: -1px;">Think you know China?</h1>
+      <p style="font-size: 1.1rem; color: #6c757d; margin-bottom: 0;">What you've heard vs. what's real.</p>
+    </div>
+
+    <!-- ===== Myth 1 ===== -->
+    <div style="margin-bottom: 3rem; background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04);">
+      <h2 style="font-size: 1.3rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0;">Myth: "China is just Beijing, Shanghai, and the Great Wall."</h2>
+      
+      <!-- 轮播图 -->
+      <div id="myth1-carousel" style="position: relative; overflow: hidden; border-radius: 12px; margin: 1rem 0 1rem 0; background: #e8e4dc;">
+        <div id="myth1-carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+          
+          <div class="myth1-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-zhangjiajie-avatar-mountains-hiking.webp" alt="Zhangjiajie floating mountains that inspired the movie Avatar" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Zhangjiajie — floating mountains that inspired the movie Avatar</p>
+            </div>
+          </div>
+          
+          <div class="myth1-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-xinjiang-taklamakan-desert-sand-dunes.webp" alt="Xinjiang Taklamakan Desert vast sea of sand" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Xinjiang — the Taklamakan Desert, China's vast sea of sand</p>
+            </div>
+          </div>
+          
+          <div class="myth1-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-yunnan-terraced-rice-fields-yuanyang.webp" alt="Yunnan terraced rice fields carved into mountains" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Yunnan — terraced rice fields carved into the mountains by hand</p>
+            </div>
+          </div>
+          
+          <div class="myth1-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-grassland-lake-snow-mountains-blue-sky.webp" alt="Alpine lake and grassland under a vast blue sky" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Gansu/Qinghai — alpine lake and grassland under a vast blue sky</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <button id="myth1-prev" style="position: absolute; top: 50%; left: 12px; transform: translateY(-50%); background: rgba(255,255,255,0.85); border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">‹</button>
+        <button id="myth1-next" style="position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: rgba(255,255,255,0.85); border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">›</button>
+        
+        <div id="myth1-dots" style="position: absolute; bottom: 40px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; z-index: 10;">
+          <span class="myth1-dot active" data-index="0" style="width: 8px; height: 8px; border-radius: 50%; background: #FFD700; cursor: pointer;"></span>
+          <span class="myth1-dot" data-index="1" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+          <span class="myth1-dot" data-index="2" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+          <span class="myth1-dot" data-index="3" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+        </div>
+      </div>
+      
+      <!-- Lightbox -->
+      <div id="myth1-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.88); z-index: 1000; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px);">
+        <img id="myth1-lightbox-img" src="" alt="Enlarged view" style="max-width: 90%; max-height: 80%; object-fit: contain; border-radius: 8px;">
+        <p id="myth1-lightbox-caption" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.85); font-size: 0.9rem; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); padding: 0.3rem 1.2rem; border-radius: 30px; margin: 0; text-align: center; max-width: 80%;"></p>
+        <button id="myth1-lightbox-close" style="position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; opacity: 0.5;">&times;</button>
+      </div>
+      
+      <div style="margin: 1rem 0 0 0;">
+        <p style="color: #4a4a4a; font-size: 0.95rem; line-height: 1.8; margin: 0 0 0.5rem 0;">
+          <strong>Reality:</strong> China is not just cities. It boasts 60 UNESCO World Heritage sites — more than any other country except Italy. From snow-capped peaks to rainbow-hued deserts, karst mountains that pierce the clouds to terraced fields hand-carved over a millennium, and ancient villages where time seems to have stood still. The China hidden beyond the postcards is an entirely different world.
+        </p>
+        <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">Find tours that show you the real China →</a>
+      </div>
+    </div>
+
+    <!-- ===== Myth 2 ===== -->
+    <div style="margin-bottom: 3rem; background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04);">
+      <h2 style="font-size: 1.3rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0;">Myth: "Chinese food is just fried rice and sweet-and-sour everything."</h2>
+      
+      <div id="myth2-carousel" style="position: relative; overflow: hidden; border-radius: 12px; margin: 1rem 0 1rem 0; background: #e8e4dc;">
+        <div id="myth2-carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+          
+          <div class="myth2-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-sichuan-hotpot-spicy-mala-broth.webp" alt="Sichuan bubbling mala hotpot bold and numbing" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Sichuan — bubbling mala hotpot, bold and numbing</p>
+            </div>
+          </div>
+          
+          <div class="myth2-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-guangzhou-dim-sum-steamed-dumplings.webp" alt="Guangzhou delicate dim sum steamed to perfection" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Guangzhou — delicate dim sum, steamed to perfection</p>
+            </div>
+          </div>
+          
+          <div class="myth2-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-xian-biangbiang-noodles-hand-pulled.webp" alt="Xi'an hand-pulled Biangbiang noodles thick and chewy" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Xi'an — hand-pulled Biangbiang noodles, thick and chewy</p>
+            </div>
+          </div>
+          
+          <div class="myth2-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-night-market-street-food-skewers.webp" alt="Night market skewers grilling over charcoal smoky and savory" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Night market — skewers grilling over charcoal, smoky and savory</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <button id="myth2-prev" style="position: absolute; top: 50%; left: 12px; transform: translateY(-50%); background: rgba(255,255,255,0.85); border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">‹</button>
+        <button id="myth2-next" style="position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: rgba(255,255,255,0.85); border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">›</button>
+        
+        <div id="myth2-dots" style="position: absolute; bottom: 40px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; z-index: 10;">
+          <span class="myth2-dot active" data-index="0" style="width: 8px; height: 8px; border-radius: 50%; background: #FFD700; cursor: pointer;"></span>
+          <span class="myth2-dot" data-index="1" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+          <span class="myth2-dot" data-index="2" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+          <span class="myth2-dot" data-index="3" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+        </div>
+      </div>
+      
+      <div id="myth2-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.88); z-index: 1000; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px);">
+        <img id="myth2-lightbox-img" src="" alt="Enlarged view" style="max-width: 90%; max-height: 80%; object-fit: contain; border-radius: 8px;">
+        <p id="myth2-lightbox-caption" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.85); font-size: 0.9rem; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); padding: 0.3rem 1.2rem; border-radius: 30px; margin: 0; text-align: center; max-width: 80%;"></p>
+        <button id="myth2-lightbox-close" style="position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; opacity: 0.5;">&times;</button>
+      </div>
+      
+      <div style="margin: 1rem 0 0 0;">
+        <p style="color: #4a4a4a; font-size: 0.95rem; line-height: 1.8; margin: 0 0 0.5rem 0;">
+          <strong>Reality:</strong> That's like saying European food is just bread and cheese. China has eight great culinary traditions — Sichuan's fiery mala, Cantonese's delicate dim sum, Jiangnan's sweet elegance, and more. Each region tastes like a different country.
+        </p>
+        <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">Find tours that show you the real China →</a>
+      </div>
+    </div>
+
+    <!-- ===== Myth 3 ===== -->
+    <div style="margin-bottom: 3rem; background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04);">
+      <h2 style="font-size: 1.3rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0;">Myth: "China is smog everywhere. You can't see the sky."</h2>
+      
+      <div id="myth3-carousel" style="position: relative; overflow: hidden; border-radius: 12px; margin: 1rem 0 1rem 0; background: #e8e4dc;">
+        <div id="myth3-carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+          
+          <div class="myth3-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-beijing-forbidden-city-blue-sky.webp" alt="Beijing Forbidden City under a clear blue sky" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Beijing — the Forbidden City under a clear blue sky</p>
+            </div>
+          </div>
+          
+          <div class="myth3-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-alpine-lake-clear-sky-mountains.webp" alt="Yading high-altitude lake reflecting the clouds" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Yading, Sichuan — a high-altitude lake reflecting the clouds</p>
+            </div>
+          </div>
+          
+          <div class="myth3-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-old-town-lanterns-blue-sky.webp" alt="Fenghuang ancient town with lanterns and old streets beneath a bright sky" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Fenghuang, Hunan — ancient town with lanterns and old streets beneath a bright sky</p>
+            </div>
+          </div>
+          
+          <div class="myth3-slide" style="min-width: 100%; position: relative;">
+            <img src="/images/myths/myth-china-mountain-village-terraced-fields.webp" alt="Mountain village with terraced fields and farms nestled in green hills" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Guizhou/Guangxi — mountain village with terraced fields and farms nestled in green hills</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <button id="myth3-prev" style="position: absolute; top: 50%; left: 12px; transform: translateY(-50%); background: rgba(255,255,255,0.85); border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">‹</button>
+        <button id="myth3-next" style="position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: rgba(255,255,255,0.85); border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">›</button>
+        
+        <div id="myth3-dots" style="position: absolute; bottom: 40px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; z-index: 10;">
+          <span class="myth3-dot active" data-index="0" style="width: 8px; height: 8px; border-radius: 50%; background: #FFD700; cursor: pointer;"></span>
+          <span class="myth3-dot" data-index="1" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+          <span class="myth3-dot" data-index="2" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+          <span class="myth3-dot" data-index="3" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer;"></span>
+        </div>
+      </div>
+      
+      <div id="myth3-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.88); z-index: 1000; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px);">
+        <img id="myth3-lightbox-img" src="" alt="Enlarged view" style="max-width: 90%; max-height: 80%; object-fit: contain; border-radius: 8px;">
+        <p id="myth3-lightbox-caption" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.85); font-size: 0.9rem; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); padding: 0.3rem 1.2rem; border-radius: 30px; margin: 0; text-align: center; max-width: 80%;"></p>
+        <button id="myth3-lightbox-close" style="position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; opacity: 0.5;">&times;</button>
+      </div>
+      
+      <div style="margin: 1rem 0 0 0;">
+        <p style="color: #4a4a4a; font-size: 0.95rem; line-height: 1.8; margin: 0 0 0.5rem 0;">
+          <strong>Reality:</strong> Breathe in. The haze has lifted. Beijing's skies are bluer now, and in places like Zhangjiajie, Guilin, and Xinjiang, the wind carries the scent of pine and river stones — not smoke. Stars don't need permission to shine here. They've always been watching. The air feels like a gentle hand on your face. Breathe easy. You're welcome here.
+        </p>
+        <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">Find tours that show you the real China →</a>
+      </div>
+    </div>
+
+    
+
+    <!-- ===== 底部 CTA ===== -->
+    <div style="margin-top: 3rem; background: #2D6A4F; border-radius: 16px; padding: 2.5rem; text-align: center; color: white;">
+      <h2 style="margin: 0 0 0.5rem 0; font-size: 1.6rem; color: white; font-weight: 600;">Ready to see it for yourself?</h2>
+      <p style="margin: 0 0 1.2rem 0; font-size: 1rem; color: rgba(255,255,255,0.8);">Your China story starts here.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/tours" style="background-color: #FFD700; color: #1F2A2E; padding: 0.7rem 2.5rem; border-radius: 30px; text-decoration: none; font-size: 1rem; font-weight: 600; display: inline-block; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#E6C200'" onmouseout="this.style.backgroundColor='#FFD700'">
+          Find your tour →
+        </a>
+
+
+  </div>
+</Layout>
+
+<script>
+  // ===== 通用轮播函数 =====
+  function initCarousel(prefix, slideClass) {
+    const track = document.getElementById(prefix + '-carousel-track');
+    if (!track) return;
+    const slides = track.querySelectorAll('.' + slideClass);
+    const total = slides.length;
+    let current = 0;
+    let interval;
+
+    const prevBtn = document.getElementById(prefix + '-prev');
+    const nextBtn = document.getElementById(prefix + '-next');
+    const dots = document.querySelectorAll('#' + prefix + '-dots .' + prefix + '-dot');
+    const lightbox = document.getElementById(prefix + '-lightbox');
+    const lightboxImg = document.getElementById(prefix + '-lightbox-img');
+    const lightboxCaption = document.getElementById(prefix + '-lightbox-caption');
+    const closeBtn = document.getElementById(prefix + '-lightbox-close');
+
+    function goTo(index) {
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+      current = index;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach((dot, i) => {
+        dot.style.background = i === current ? '#FFD700' : 'rgba(255,255,255,0.4)';
+        dot.style.transform = i === current ? 'scale(1.3)' : 'scale(1)';
+      });
+    }
+
+    function nextSlide() { goTo(current + 1); }
+    function prevSlide() { goTo(current - 1); }
+
+    function startAutoPlay() {
+      if (interval) clearInterval(interval);
+      interval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoPlay() {
+      if (interval) { clearInterval(interval); interval = null; }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        stopAutoPlay();
+        goTo(parseInt(dot.dataset.index));
+        startAutoPlay();
+      });
+    });
+
+    // Lightbox
+    document.querySelectorAll('.' + slideClass + ' img').forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        const caption = img.closest('.' + slideClass).querySelector('p')?.textContent || '';
+        lightboxCaption.textContent = caption;
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    if (lightbox) {
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === lightboxImg) {
+          closeLightbox();
+        }
+      });
+    }
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeLightbox);
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    goTo(0);
+    startAutoPlay();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initCarousel('myth1', 'myth1-slide');
+    initCarousel('myth2', 'myth2-slide');
+    initCarousel('myth3', 'myth3-slide');
+  });
+</script>
+
+<style is:global>
+  body {
+    background: #F8F6F0;
+  }
+  #myth1-lightbox, #myth2-lightbox, #myth3-lightbox {
+    display: none !important;
+  }
+  #myth1-lightbox[style*="display: flex"],
+  #myth2-lightbox[style*="display: flex"],
+  #myth3-lightbox[style*="display: flex"] {
+    display: flex !important;
+  }
+  .myth1-slide img,
+  .myth2-slide img,
+  .myth3-slide img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .myth1-slide img:hover,
+  .myth2-slide img:hover,
+  .myth3-slide img:hover {
+    transform: scale(1.01);
+  }
+</style>

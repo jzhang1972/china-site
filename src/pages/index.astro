@@ -1,11 +1,202 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import HeroCarousel from "../components/HeroCarousel.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+  title="China Travel Guide" 
+  description="Plan your China trip with ease. Visa info, travel guides, routes, real stories, and trusted tours. Start your adventure."
+>
+<!-- 全宽容器（突破 main 限制） -->
+<div style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+
+  <!-- 原有的大标题内容 -->
+  <div style="background-image: url('/images/hero/beijing-daxing-airport-international.webp'); background-size: cover; background-position: center; padding: 4rem 1rem; text-align: center; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <p style="font-size: 2.8rem; font-weight: 600; color: #FFFFFF; text-shadow: 0 2px 12px rgba(0,0,0,0.6); letter-spacing: 4px; margin: 0 0 0.8rem 0;">
+        CHINA IS MORE OPEN THAN YOU THINK.
+      </p>
+      <a href="/visa" style="display: inline-block; background-color: rgba(255,255,255,0.2); backdrop-filter: blur(4px); color: white; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 1rem; border: 1px solid rgba(255,255,255,0.3); transition: background-color 0.2s;">
+        Check your country →
+      </a>
+    </div>
+  </div>
+
+    <!-- ===== 向下箭头（指向轮播图） ===== -->
+    <div style="position: absolute; bottom: 1.5rem; left: 0; right: 0; text-align: center; animation: bounce 2s infinite;">
+      <a href="#carousel" style="color: white; font-size: 2rem; text-decoration: none; opacity: 0.7;">
+        ↓
+      </a>
+    </div>
+
+  </div>
+</div>
+
+  <!-- ===== 核心宣言 ===== -->
+  <div style="text-align: center; padding: 3rem 1rem; background: #F8F6F0;">
+    <p style="font-size: 1rem; font-weight: 300; letter-spacing: 4px; margin-bottom: 0.5rem; color: #1F2A2E;">IS CHINA DIFFICULT?</p>
+    <h1 style="font-size: 3rem; font-weight: 300; margin: 0; color: #1F2A2E; letter-spacing: 4px;">NO, JUST DIFFERENT.</h1>
+  </div>
+
+  <!-- ===== 轮播图 ===== -->
+  <section id="carousel">
+    <HeroCarousel />
+  </section>
+
+  <!-- ===== 不规则网格 ===== -->
+  <div id="grid-start" style="max-width: 1400px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-template-rows: auto auto auto; gap: 1.5rem;">
+
+    <!-- 卡片1：Only in China -->
+    <a href="/stories" style="grid-column: 1 / 3; grid-row: 1 / 2; text-decoration: none; color: white; position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 16 / 9; display: block; background: #1a1a1a;">
+      <img 
+        src="/images/home/can-you-do-this-at-home-china.webp" 
+        alt="Street barbecue at night in Changsha, China" 
+        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <h2 style="font-size: 1.8rem; font-weight: 600; margin: 0 0 0.2rem 0;">Can you do this at home?</h2>
+        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); margin: 0 0 0.5rem 0;">Real stories from real travelers</p>
+        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A;">Learn more →</span>
+      </div>
+    </a>
+
+    <!-- 卡片2：Myths -->
+    <a href="/myths" style="grid-column: 3 / 4; grid-row: 1 / 3; text-decoration: none; color: white; position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 2 / 3; display: block; background: #1a1a1a;">
+      <img 
+        src="/images/home/think-you-know-china-myths.webp" 
+        alt="Forbidden City under blue sky in Beijing, China" 
+        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0;">Think you know China?</h3>
+        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A; font-size: 0.9rem;">Learn more →</span>
+      </div>
+    </a>
+
+    <!-- 卡片3：Tours -->
+    <a href="/tours" style="grid-column: 2 / 4; grid-row: 2 / 3; text-decoration: none; color: white; position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 3 / 2; display: block; background: #1a1a1a;">
+      <img 
+        src="/images/home/china-tours-group-travel-guide.webp" 
+        alt="Group of tourists on the Great Wall of China" 
+        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <h3 style="font-size: 1.5rem; font-weight: 600; margin: 0 0 0.2rem 0;">Prefer a local guide?</h3>
+        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A; font-size: 0.9rem;">Learn more →</span>
+      </div>
+    </a>
+
+    <!-- 卡片4：Routes -->
+    <a href="/findway" style="grid-column: 1 / 2; grid-row: 2 / 3; text-decoration: none; color: white; position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 3 / 4; display: block; background: #1a1a1a;">
+      <img 
+        src="/images/home/china-travel-routes-themes.webp" 
+        alt="Scenic mountain road in rural China" 
+        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <h2 style="font-size: 1.8rem; font-weight: 600; margin: 0 0 0.3rem 0;">Where to go?</h2>
+        <span style="display: inline-block; margin-top: 0.8rem; font-weight: 500; border-bottom: 2px solid #C49E3A;">Learn more →</span>
+      </div>
+    </a>
+
+    <!-- 卡片5：AI Planner -->
+    <div style="grid-column: 1 / 3; grid-row: 3 / 4; border-radius: 20px; overflow: hidden; background-image: url('/images/china-mountains-mist-china.webp'); background-size: cover; background-position: center 50%; padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; aspect-ratio: 16 / 10;">
+      <div style="position: relative; z-index: 2; max-width: 500px;">
+        <h2 style="font-size: 1.8rem; font-weight: 400; color: #FFFFFF; margin: 0 0 0.8rem 0; text-shadow: 0 0 40px rgba(180, 60, 255, 0.7), 0 0 80px rgba(180, 60, 255, 0.35), 0 0 120px rgba(180, 60, 255, 0.15), 0 2px 8px rgba(0,0,0,0.3);">Your trip, your way.</h2>
+        <a href="https://www.trip.com/webapp/tripmap/tripplanner?source=seo_H5_homepage&Allianceid=5609710&SID=130343298&trip_sub1=&trip_sub3=D18508961" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #FFD700; color: #1F2A2E; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: background-color 0.2s;">Plan with AI →</a>
+      </div>
+    </div>
+
+    <!-- 卡片6：Tools + Visa -->
+    <div style="grid-column: 3 / 4; grid-row: 3 / 4; display: flex; flex-direction: column; gap: 1.5rem;">
+
+      <a href="/tools" style="flex: 1; border-radius: 20px; overflow: hidden; background: #1F2A2E; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; text-decoration: none; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img 
+          src="/images/home/china-travel-packing-checklist.webp" 
+          alt="Travel packing checklist icon for China trip" 
+          style="width: 50px; height: 50px; object-fit: contain; margin: 0 auto 0.5rem;">
+        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0; color: #FFFFFF;">What to pack?</h3>
+        <p style="font-size: 0.85rem; color: #FFFFFF; opacity: 0.8; margin: 0;">Free downloads to help you prepare.</p>
+        <span style="display: inline-block; margin-top: 0.5rem; color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A;">Learn more →</span>
+      </a>
+
+      <a href="/visa" style="flex: 1; border-radius: 20px; overflow: hidden; background: #1F2A2E; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; text-decoration: none; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img 
+          src="/images/home/china-visa-requirements-icon.webp" 
+          alt="Chinese visa and passport requirements icon" 
+          style="width: 50px; height: 50px; object-fit: contain; margin: 0 auto 0.5rem;">
+        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0; color: #FFFFFF;">Do I need a visa?</h3>
+        <p style="font-size: 0.85rem; color: #FFFFFF; opacity: 0.8; margin: 0;">Check your country in 5 seconds.</p>
+        <span style="display: inline-block; margin-top: 0.5rem; color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A;">Learn more →</span>
+      </a>
+
+    </div>
+
+  </div>
+
 </Layout>
+
+<style>
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  /* ===== 移动端修复 ===== */
+  @media (max-width: 768px) {
+    #grid-start {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      padding: 1rem !important;
+    }
+
+    #grid-start > * {
+      grid-column: unset !important;
+      grid-row: unset !important;
+      width: 100% !important;
+      aspect-ratio: unset !important;
+      min-height: unset !important;
+      height: auto !important;
+    }
+
+    #grid-start > a,
+    #grid-start > div {
+      min-height: 180px !important;
+    }
+
+    #grid-start img {
+      height: auto !important;
+      aspect-ratio: 16/9 !important;
+      object-fit: cover !important;
+    }
+
+    #grid-start h2 {
+      font-size: 1.3rem !important;
+    }
+    #grid-start h3 {
+      font-size: 1.1rem !important;
+    }
+    #grid-start p {
+      font-size: 0.9rem !important;
+    }
+
+    #grid-start > a > div {
+      position: relative !important;
+      background: #1a1a1a !important;
+      padding: 0.8rem 1rem !important;
+    }
+
+    #grid-start > div[style*="background-image"] {
+      min-height: 180px !important;
+      aspect-ratio: unset !important;
+      padding: 1.5rem !important;
+    }
+
+    #grid-start > div:last-child {
+      flex-direction: row !important;
+      gap: 0.75rem !important;
+    }
+    #grid-start > div:last-child > a {
+      flex: 1 !important;
+      min-height: 100px !important;
+      padding: 0.8rem !important;
+    }
+  }
+</style>

@@ -1,0 +1,411 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout 
+  title="China Culture & History · Travel Guide" 
+  description="Beijing, Xi'an, Dunhuang. 5,000 years of history — Forbidden City, Terracotta Warriors, and the Silk Road."
+>
+      <!-- 返回链接 -->
+    <a href="/findway" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">
+      <span>←</span> Back to Themes
+    </a>
+
+
+    <!-- ===== 主题标题 ===== -->
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+
+<span style="display: inline-block; background: rgba(196, 158, 58, 0.12); color: #C49E3A; padding: 0.15rem 1rem; border-radius: 20px; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.75rem;">Theme</span>
+      <h1 style="font-size: 3.5rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0; letter-spacing: -1px;">Culture</h1>
+      <p style="font-size: 1.2rem; font-style: italic; color: #6c757d; margin-bottom: 0;">"5,000 years old. And still alive."</p>
+    </div>
+    
+<!-- ===== 轮播图 ===== -->
+<div id="culture-carousel" style="position: relative; overflow: hidden; border-radius: 20px; margin-bottom: 3rem; background: #e8e4dc; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
+  <div id="culture-carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+    
+    <!-- 图片1：故宫 -->
+    <div class="culture-slide" style="min-width: 100%; position: relative;">
+      <img src="/images/theme/culture/culture-beijing-forbidden-city-palace-museum-china.jpg" alt="Forbidden City palace architecture at sunset with golden roof tiles, Beijing, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Forbidden City — where 500 years of imperial history live on</p>
+      </div>
+    </div>
+    
+    <!-- 图片2：天坛 -->
+    <div class="culture-slide" style="min-width: 100%; position: relative;">
+      <img src="/images/theme/culture/culture-beijing-temple-of-heaven-architecture-china.jpg" alt="Temple of Heaven circular altar and blue glazed tiles, Beijing, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Temple of Heaven — an architectural masterpiece of the Ming Dynasty</p>
+      </div>
+    </div>
+    
+    <!-- 图片3：兵马俑 -->
+    <div class="culture-slide" style="min-width: 100%; position: relative;">
+      <img src="/images/theme/culture/culture-xian-terracotta-warriors-army-china.jpg" alt="Terracotta Warriors army standing in rows inside the museum hall, Xi'an, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Terracotta Warriors — 8,000 soldiers guarding China's first emperor</p>
+      </div>
+    </div>
+    
+    <!-- 图片4：月牙泉 -->
+    <div class="culture-slide" style="min-width: 100%; position: relative;">
+      <img src="/images/theme/culture/culture-dunhuang-crescent-lake-desert-oasis-china.jpg" alt="Crescent Lake oasis surrounded by sand dunes in the Gobi Desert, Dunhuang, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Crescent Lake — a desert oasis on the ancient Silk Road</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- 箭头 -->
+  <button id="culture-prev" style="position: absolute; top: 50%; left: 16px; transform: translateY(-50%); background: rgba(255,255,255,0.85); backdrop-filter: blur(4px); color: #1F2A2E; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s;">‹</button>
+  <button id="culture-next" style="position: absolute; top: 50%; right: 16px; transform: translateY(-50%); background: rgba(255,255,255,0.85); backdrop-filter: blur(4px); color: #1F2A2E; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s;">›</button>
+  
+  <!-- 圆点 -->
+  <div id="culture-dots" style="position: absolute; bottom: 64px; left: 0; right: 0; display: flex; justify-content: center; gap: 10px; z-index: 10;">
+    <span class="culture-dot active" data-index="0" style="width: 10px; height: 10px; border-radius: 50%; background: #FFD700; cursor: pointer; transition: all 0.3s;"></span>
+    <span class="culture-dot" data-index="1" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="culture-dot" data-index="2" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+    <span class="culture-dot" data-index="3" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s;"></span>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="culture-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.88); z-index: 1000; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px);">
+  <img id="culture-lightbox-img" src="" alt="Enlarged view" style="max-width: 90%; max-height: 80%; object-fit: contain; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,0.6);">
+  <p id="culture-lightbox-caption" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.85); font-size: 0.95rem; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); padding: 0.4rem 1.5rem; border-radius: 30px; margin: 0; text-align: center; max-width: 80%;"></p>
+  <button id="culture-lightbox-close" style="position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; opacity: 0.5; transition: opacity 0.3s;">&times;</button>
+</div>
+
+    <!-- ===== RECOMMENDED CITIES ===== -->
+    <div style="margin-bottom: 1.5rem;">
+      <span style="display: inline-block; background: #2D6A4F; color: #FFFFFF; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.3rem 1.2rem; border-radius: 4px;">RECOMMENDED CITIES</span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; margin-bottom: 3rem;">
+      <span style="background: #EDEAE0; color: #1F2A2E; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">Beijing</span>
+      <span style="background: #EDEAE0; color: #1F2A2E; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">Xi'an</span>
+      <span style="background: #EDEAE0; color: #1F2A2E; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">Chengdu</span>
+      <span style="background: #EDEAE0; color: #1F2A2E; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">Nanjing</span>
+      <span style="background: #EDEAE0; color: #1F2A2E; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">Luoyang</span>
+      <span style="background: #EDEAE0; color: #1F2A2E; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">Dunhuang</span>
+    </div>
+
+    <div style="height: 0.5rem;"></div>
+
+    <!-- ===== FEATURED ROUTE ===== -->
+    <div style="margin-bottom: 1.5rem;">
+      <span style="display: inline-block; background: #2D6A4F; color: #FFFFFF; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.3rem 1.2rem; border-radius: 4px;">FEATURED ROUTE</span>
+    </div>
+
+    <!-- ===== 路线标题区 ===== -->
+    <div style="margin-bottom: 2rem;">
+      <h2 style="font-size: 2.4rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0; letter-spacing: -0.5px;">
+        The <span style="color: #C49E3A;">Dragon's Backbone</span>
+      </h2>
+      <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+        <p style="font-size: 1.05rem; color: #6c757d; font-style: italic; margin: 0;">"From Imperial Capitals to Spicy Capitals"</p>
+        <span style="background: rgba(196, 158, 58, 0.1); color: #C49E3A; padding: 0.15rem 0.8rem; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(196, 158, 58, 0.15);">Beijing → Xi'an → Chengdu · 15–20 days</span>
+      </div>
+    </div>
+    
+    <!-- 简介 -->
+    <p style="color: #4a4a4a; line-height: 1.9; font-size: 1.05rem; max-width: 750px; margin-bottom: 2.5rem; border-left: 3px solid #C49E3A; padding-left: 1.5rem;">
+      From the Great Wall to spicy hotpot. A journey through dynasties, flavors, and pandas.
+    </p>
+    
+    <!-- ===== 三城 Things to do ===== -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+      
+      <!-- 北京 -->
+      <div style="background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <h3 style="color: #1F2A2E; font-size: 1.1rem; margin: 0; font-weight: 600;">Beijing</h3>
+          <span style="margin-left: auto; background: #EDEAE0; color: #6c757d; padding: 0.1rem 0.6rem; border-radius: 12px; font-size: 0.65rem; font-weight: 500;">4 spots</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Mutianyu+Great+Wall+Beijing" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Great Wall at Mutianyu
+              </a>
+              — Less crowded section. Take the cable car up and toboggan down.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Forbidden+City+Beijing" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Forbidden City
+              </a>
+              — 980 buildings, 9,999 rooms. Book tickets online in advance.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Hutongs+Beijing" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Cycle through the Hutongs
+              </a>
+              — Rent a bike and get lost in Beijing's ancient alleyways.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Peking+Opera+Beijing" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Peking Opera
+              </a>
+              — Colorful costumes, acrobatics, and high-pitched singing.
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- 西安 -->
+      <div style="background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <h3 style="color: #1F2A2E; font-size: 1.1rem; margin: 0; font-weight: 600;">Xi'an</h3>
+          <span style="margin-left: auto; background: #EDEAE0; color: #6c757d; padding: 0.1rem 0.6rem; border-radius: 12px; font-size: 0.65rem; font-weight: 500;">3 spots</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Terracotta+Warriors+Xi'an" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Terracotta Warriors
+              </a>
+              — 8,000 life-sized soldiers. Go early (8am) to avoid crowds.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Xi'an+City+Wall" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Xi'an City Wall
+              </a>
+              — Best-preserved ancient city wall. Rent a bike and ride the 14km loop.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Muslim+Quarter+Xi'an" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Muslim Quarter
+              </a>
+              — Narrow alleys filled with food stalls, shops, and the Great Mosque.
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- 成都 -->
+      <div style="background: #FFFFFF; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <h3 style="color: #1F2A2E; font-size: 1.1rem; margin: 0; font-weight: 600;">Chengdu</h3>
+          <span style="margin-left: auto; background: #EDEAE0; color: #6c757d; padding: 0.1rem 0.6rem; border-radius: 12px; font-size: 0.65rem; font-weight: 500;">4 spots</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Chengdu+Panda+Base" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Giant Pandas
+              </a>
+              — Visit the Panda Base in the morning when they are most active.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Chengdu+Hotpot" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Hotpot
+              </a>
+              — Choose spicy mala or mild broth. Don't skip the beef tripe.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Jinli+Ancient+Street+Chengdu" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Jinli Ancient Street
+              </a>
+              — Traditional architecture and snacks. Best at night with red lanterns.
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start; color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+            <span style="color: #C49E3A; font-size: 0.8rem; margin-top: 0.1rem; flex-shrink: 0;">▸</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Sichuan+Opera+Chengdu" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="color: #C49E3A; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;">
+                 Sichuan Opera Face-changing
+              </a>
+              — Masks change in the blink of an eye. A magical performance.
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <!-- ===== Budget + CTA ===== -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; background: #EDEAE0; border-radius: 16px; padding: 1.5rem 2rem;">
+      
+      <!-- Budget -->
+      <div style="display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.1rem;">💰</span>
+          <span style="color: #6c757d; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">Budget</span>
+        </div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <div>
+            <div style="color: #6c757d; font-size: 0.7rem;">Budget</div>
+            <div style="color: #1F2A2E; font-weight: 600; font-size: 1.1rem;">$28–50 <span style="color: #6c757d; font-weight: 400; font-size: 0.7rem;">/day</span></div>
+          </div>
+          <div>
+            <div style="color: #6c757d; font-size: 0.7rem;">Comfort</div>
+            <div style="color: #C49E3A; font-weight: 600; font-size: 1.1rem;">$70–110 <span style="color: #C49E3A; font-weight: 400; font-size: 0.7rem; opacity: 0.6;">/day</span></div>
+          </div>
+          <div>
+            <div style="color: #6c757d; font-size: 0.7rem;">Luxury</div>
+            <div style="color: #1F2A2E; font-weight: 600; font-size: 1.1rem;">$165+ <span style="color: #6c757d; font-weight: 400; font-size: 0.7rem;">/day</span></div>
+          </div>
+        </div>
+      </div>
+      
+<!-- CTA 按钮 -->
+<div style="display: flex; gap: 1rem; align-items: center; justify-content: flex-end; flex-wrap: wrap;">
+  <a href="/tours" style="background: #4A90D9; color: #FFFFFF; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 1.2rem; border-radius: 30px; border: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.3rem;">
+    Book a similar tour <span style="font-size: 1.1rem;">→</span>
+  </a>
+  <a href="https://www.trip.com/webapp/tripmap/tripplanner?source=t_online_homepage&locale=en-XX&curr=USD&Allianceid=5609710&SID=130343298&trip_sub1=&trip_sub3=D18535988" target="_blank" rel="noopener noreferrer" style="background: #FFD700; color: #1F2A2E; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: 0 4px 16px rgba(255,215,0,0.25);">
+    Plan with AI <span style="font-size: 1.1rem;">→</span>
+  </a>
+</div>
+</Layout>
+
+<script>
+  // 轮播逻辑
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('culture-carousel-track');
+    const slides = track.querySelectorAll('.culture-slide');
+    const total = slides.length;
+    let current = 0;
+    let interval;
+
+    const prevBtn = document.getElementById('culture-prev');
+    const nextBtn = document.getElementById('culture-next');
+    const dots = document.querySelectorAll('.culture-dot');
+    const lightbox = document.getElementById('culture-lightbox');
+    const lightboxImg = document.getElementById('culture-lightbox-img');
+    const lightboxCaption = document.getElementById('culture-lightbox-caption');
+    const closeBtn = document.getElementById('culture-lightbox-close');
+
+    function goTo(index) {
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+      current = index;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.style.background = i === current ? '#FFD700' : 'rgba(255,255,255,0.4)';
+        dot.style.transform = i === current ? 'scale(1.3)' : 'scale(1)';
+      });
+    }
+
+    function nextSlide() { goTo(current + 1); }
+    function prevSlide() { goTo(current - 1); }
+
+    function startAutoPlay() {
+      if (interval) clearInterval(interval);
+      interval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoPlay() {
+      if (interval) { clearInterval(interval); interval = null; }
+    }
+
+    prevBtn.addEventListener('click', () => { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+    nextBtn.addEventListener('click', () => { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        stopAutoPlay();
+        goTo(parseInt(dot.dataset.index));
+        startAutoPlay();
+      });
+    });
+
+    // Lightbox
+    document.querySelectorAll('.culture-slide img').forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        const caption = img.closest('.culture-slide').querySelector('p')?.textContent || '';
+        lightboxCaption.textContent = caption;
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightboxImg) {
+        closeLightbox();
+      }
+    });
+    closeBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+    goTo(0);
+    startAutoPlay();
+  });
+</script>
+
+<style is:global>
+  body {
+    background: #F8F6F0;
+  }
+  
+  a[href]:hover {
+    color: #C49E3A !important;
+  }
+  
+  a[href*="google.com/maps"]:hover {
+    border-bottom-color: #C49E3A !important;
+    color: #1F2A2E !important;
