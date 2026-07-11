@@ -187,7 +187,7 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         transform: scale(0.92);
       }
 
-      /* 移动端语言下拉列表（点击 🌐 后出现） */
+      /* 移动端语言下拉列表 */
       #mobileLangDropdown {
         display: none;
         position: absolute;
@@ -219,7 +219,7 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         color: #C49E3A;
       }
 
-      /* 移动端菜单容器（语言按钮 + 汉堡） */
+      /* 移动端菜单容器 */
       .mobile-menu-group {
         display: flex;
         align-items: center;
@@ -530,18 +530,6 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
     <!-- ===== 语言切换控制 ===== -->
     <script>
       (function() {
-        // ===== 桌面端语言切换 =====
-        const langBtn = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const langCurrent = document.getElementById('langCurrent');
-        let isOpen = false;
-        let isTranslating = false;
-
-        // ===== 移动端语言按钮（汉堡旁边） =====
-        const mobileLangBtn = document.getElementById('mobileLangBtn');
-        const mobileLangDropdown = document.getElementById('mobileLangDropdown');
-        let isMobileOpen = false;
-
         // 语言名称映射
         const langNames = {
           'en': 'English',
@@ -562,23 +550,27 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           'nl': 'Nederlands'
         };
 
-        // 切换语言
-        function changeLanguage(langCode) {
+        let isTranslating = false;
+
+        // 统一的切换语言函数
+        window.changeLanguage = function(langCode) {
           if (isTranslating) return;
           isTranslating = true;
 
           const langName = langNames[langCode] || langCode;
           
-          // 更新按钮文字
+          // 更新桌面端按钮文字
+          const langCurrent = document.getElementById('langCurrent');
           if (langCurrent) langCurrent.textContent = langName;
 
           // 关闭所有下拉菜单
+          const langDropdown = document.getElementById('langDropdown');
+          const mobileLangDropdown = document.getElementById('mobileLangDropdown');
           if (langDropdown) langDropdown.classList.remove('open');
           if (mobileLangDropdown) mobileLangDropdown.classList.remove('open');
-          isOpen = false;
-          isMobileOpen = false;
 
           if (langCode === 'en') {
+            const fullscreenMenu = document.getElementById('fullscreenMenu');
             if (fullscreenMenu) fullscreenMenu.classList.remove('open');
             document.body.style.overflow = '';
             location.reload();
@@ -601,14 +593,18 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           setTimeout(function() {
             isTranslating = false;
           }, 3000);
-        }
+        };
 
-        // ===== 桌面端下拉菜单 =====
-        if (langBtn) {
+        // ===== 桌面端语言切换 =====
+        const langBtn = document.getElementById('langToggle');
+        const langDropdown = document.getElementById('langDropdown');
+        let isOpen = false;
+
+        if (langBtn && langDropdown) {
           langBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             isOpen = !isOpen;
-            if (langDropdown) langDropdown.classList.toggle('open', isOpen);
+            langDropdown.classList.toggle('open', isOpen);
           });
         }
 
@@ -624,11 +620,15 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           link.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
-            if (lang) changeLanguage(lang);
+            if (lang) window.changeLanguage(lang);
           });
         });
 
         // ===== 移动端语言按钮（汉堡旁边） =====
+        const mobileLangBtn = document.getElementById('mobileLangBtn');
+        const mobileLangDropdown = document.getElementById('mobileLangDropdown');
+        let isMobileOpen = false;
+
         if (mobileLangBtn && mobileLangDropdown) {
           mobileLangBtn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -644,7 +644,7 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
             if (lang) {
               if (mobileLangDropdown) mobileLangDropdown.classList.remove('open');
               isMobileOpen = false;
-              changeLanguage(lang);
+              window.changeLanguage(lang);
             }
           });
         });
@@ -677,8 +677,6 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
             if (langCurrent) langCurrent.textContent = langNames[current];
           }
         }
-
-        window.changeLanguage = changeLanguage;
 
       })();
     </script>
