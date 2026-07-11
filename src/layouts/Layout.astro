@@ -504,7 +504,6 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
 
     <!-- ===== 汉堡菜单 ===== -->
     <script>
-      // 汉堡菜单
       const hamburger = document.getElementById('hamburger');
       const fullscreenMenu = document.getElementById('fullscreenMenu');
 
@@ -550,54 +549,10 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           'nl': 'Nederlands'
         };
 
-        let isTranslating = false;
-
-        // 统一的切换语言函数
-        window.changeLanguage = function(langCode) {
-          if (isTranslating) return;
-          isTranslating = true;
-
-          const langName = langNames[langCode] || langCode;
-          
-          // 更新桌面端按钮文字
-          const langCurrent = document.getElementById('langCurrent');
-          if (langCurrent) langCurrent.textContent = langName;
-
-          // 关闭所有下拉菜单
-          const langDropdown = document.getElementById('langDropdown');
-          const mobileLangDropdown = document.getElementById('mobileLangDropdown');
-          if (langDropdown) langDropdown.classList.remove('open');
-          if (mobileLangDropdown) mobileLangDropdown.classList.remove('open');
-
-          if (langCode === 'en') {
-            const fullscreenMenu = document.getElementById('fullscreenMenu');
-            if (fullscreenMenu) fullscreenMenu.classList.remove('open');
-            document.body.style.overflow = '';
-            location.reload();
-            return;
-          }
-
-          try {
-            if (window.gtranslate && typeof window.gtranslate.changeLanguage === 'function') {
-              window.gtranslate.changeLanguage(langCode);
-              isTranslating = false;
-              return;
-            }
-            const currentUrl = window.location.href.split('?')[0].split('#')[0];
-            window.location.href = currentUrl + '?lang=' + langCode;
-          } catch (e) {
-            console.error('GTranslate error:', e);
-            isTranslating = false;
-          }
-
-          setTimeout(function() {
-            isTranslating = false;
-          }, 3000);
-        };
-
         // ===== 桌面端语言切换 =====
         const langBtn = document.getElementById('langToggle');
         const langDropdown = document.getElementById('langDropdown');
+        const langCurrent = document.getElementById('langCurrent');
         let isOpen = false;
 
         if (langBtn && langDropdown) {
@@ -616,15 +571,43 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           }
         });
 
+        // ===== 切换语言函数 =====
+        function changeLanguage(langCode) {
+          const langName = langNames[langCode] || langCode;
+          if (langCurrent) langCurrent.textContent = langName;
+          
+          if (langDropdown) langDropdown.classList.remove('open');
+          isOpen = false;
+
+          // 关闭移动端下拉菜单
+          const mobileDropdown = document.getElementById('mobileLangDropdown');
+          if (mobileDropdown) mobileDropdown.classList.remove('open');
+
+          if (langCode === 'en') {
+            if (fullscreenMenu) fullscreenMenu.classList.remove('open');
+            document.body.style.overflow = '';
+            location.reload();
+            return;
+          }
+
+          if (window.gtranslate && typeof window.gtranslate.changeLanguage === 'function') {
+            window.gtranslate.changeLanguage(langCode);
+          } else {
+            const currentUrl = window.location.href.split('?')[0].split('#')[0];
+            window.location.href = currentUrl + '?lang=' + langCode;
+          }
+        }
+
+        // ===== 桌面端下拉菜单选项 =====
         document.querySelectorAll('.lang-dropdown a').forEach(function(link) {
           link.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
-            if (lang) window.changeLanguage(lang);
+            if (lang) changeLanguage(lang);
           });
         });
 
-        // ===== 移动端语言按钮（汉堡旁边） =====
+        // ===== 移动端语言按钮 =====
         const mobileLangBtn = document.getElementById('mobileLangBtn');
         const mobileLangDropdown = document.getElementById('mobileLangDropdown');
         let isMobileOpen = false;
@@ -644,7 +627,7 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
             if (lang) {
               if (mobileLangDropdown) mobileLangDropdown.classList.remove('open');
               isMobileOpen = false;
-              window.changeLanguage(lang);
+              changeLanguage(lang);
             }
           });
         });
@@ -659,17 +642,11 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         });
 
         // ===== 检测当前语言 =====
-        function detectCurrentLang() {
-          const urlParams = new URLSearchParams(window.location.search);
-          const langParam = urlParams.get('lang');
-          if (langParam && langNames[langParam]) {
-            if (langCurrent) langCurrent.textContent = langNames[langParam];
-            return langParam;
-          }
-          return 'en';
+        const urlParams = new URLSearchParams(window.location.search);
+        const langParam = urlParams.get('lang');
+        if (langParam && langNames[langParam]) {
+          if (langCurrent) langCurrent.textContent = langNames[langParam];
         }
-
-        detectCurrentLang();
 
         if (window.gtranslate && window.gtranslate.getCurrentLanguage) {
           const current = window.gtranslate.getCurrentLanguage();
@@ -677,6 +654,8 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
             if (langCurrent) langCurrent.textContent = langNames[current];
           }
         }
+
+        window.changeLanguage = changeLanguage;
 
       })();
     </script>
