@@ -44,6 +44,9 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 
+    <!-- ===== GTranslate 核心脚本 ===== -->
+    <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
+
     <style>
       /* ===== 全局重置 ===== */
       * {
@@ -104,6 +107,64 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
       }
       .nav-menu li a:hover {
         background: #F0EDE5;
+      }
+
+      /* 语言按钮样式 */
+      .lang-btn {
+        background: transparent;
+        border: 1px solid #EDEAE0;
+        border-radius: 30px;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.85rem;
+        color: #1F2A2E;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: 'Inter', sans-serif;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      .lang-btn:hover {
+        border-color: #C49E3A;
+        background: rgba(196, 158, 58, 0.06);
+      }
+
+      /* 语言下拉菜单 */
+      .lang-dropdown {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        background: #FFFFFF;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        border: 1px solid #EDEAE0;
+        padding: 0.5rem 0;
+        min-width: 160px;
+        display: none;
+        z-index: 200;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      .lang-dropdown.open {
+        display: block;
+      }
+      .lang-dropdown a {
+        display: block;
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+        color: #1F2A2E;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .lang-dropdown a:hover {
+        background: #F8F6F0;
+        color: #C49E3A;
+      }
+
+      /* 语言包装器 */
+      .lang-wrapper {
+        position: relative;
+        display: inline-block;
       }
 
       /* 汉堡按钮（默认隐藏） */
@@ -181,6 +242,14 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           opacity: 1;
           visibility: visible;
         }
+        .lang-btn {
+          font-size: 0.75rem;
+          padding: 0.2rem 0.6rem;
+        }
+        .lang-dropdown {
+          min-width: 130px;
+          right: -10px;
+        }
       }
 
       /* ===== 通用卡片 ===== */
@@ -224,6 +293,14 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           padding: 1rem;
         }
       }
+
+      /* 隐藏 GTranslate 默认渲染 */
+      .gt_credit {
+        display: none !important;
+      }
+      .gtranslate_wrapper {
+        display: none !important;
+      }
     </style>
   </head>
   <body>
@@ -244,6 +321,30 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           <li><a href="/tours">Tours</a></li>
           <li><a href="/tools">Before You Go</a></li>
           <li><a href="/visa">Visa</a></li>
+          <!-- 语言按钮 -->
+          <li class="lang-wrapper">
+            <button class="lang-btn" id="langToggle" aria-label="Select language">
+              <span>🌐</span> <span id="langCurrent">English</span> <span>▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <a href="#" data-lang="en">English</a>
+              <a href="#" data-lang="zh-TW">繁體中文</a>
+              <a href="#" data-lang="hi">हिन्दी</a>
+              <a href="#" data-lang="es">Español</a>
+              <a href="#" data-lang="id">Bahasa Indonesia</a>
+              <a href="#" data-lang="ar">العربية</a>
+              <a href="#" data-lang="pt">Português</a>
+              <a href="#" data-lang="ru">Русский</a>
+              <a href="#" data-lang="ja">日本語</a>
+              <a href="#" data-lang="fr">Français</a>
+              <a href="#" data-lang="de">Deutsch</a>
+              <a href="#" data-lang="it">Italiano</a>
+              <a href="#" data-lang="ko">한국어</a>
+              <a href="#" data-lang="vi">Tiếng Việt</a>
+              <a href="#" data-lang="th">ภาษาไทย</a>
+              <a href="#" data-lang="nl">Nederlands</a>
+            </div>
+          </li>
         </ul>
 
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -293,22 +394,21 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           </ul>
         </div>
         <div>
-  <div>
- <div>
-  <h4 style="color: #FFD700;">Support</h4>
-  <ul style="list-style: none; padding: 0;">
-    <li><a href="/contact" style="color: #F9F7F1;">Contact Us</a></li>
-    <li><a href="/privacy" style="color: #F9F7F1;">Privacy Policy</a></li>
-    <li><a href="/disclaimer" style="color: #F9F7F1;">Disclaimer</a></li>
-    <li><a href="/about" style="color: #F9F7F1;">About</a></li>
-  </ul>
-</div>
+          <h4 style="color: #FFD700;">Support</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="/contact" style="color: #F9F7F1;">Contact Us</a></li>
+            <li><a href="/privacy" style="color: #F9F7F1;">Privacy Policy</a></li>
+            <li><a href="/disclaimer" style="color: #F9F7F1;">Disclaimer</a></li>
+            <li><a href="/about" style="color: #F9F7F1;">About</a></li>
+          </ul>
+        </div>
       </div>
       <div style="text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
         <p style="color: #F9F7F1;">&copy; 2026 YOGOTOCHINA. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- ===== 汉堡菜单 ===== -->
     <script>
       // 汉堡菜单
       const hamburger = document.getElementById('hamburger');
@@ -338,5 +438,154 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         }
       });
     </script>
+
+    <!-- ===== 语言切换控制 ===== -->
+    <script>
+      (function() {
+        const langBtn = document.getElementById('langToggle');
+        const langDropdown = document.getElementById('langDropdown');
+        const langCurrent = document.getElementById('langCurrent');
+        let isOpen = false;
+        let isTranslating = false;
+
+        // 语言名称映射（显示在按钮上）
+        const langNames = {
+          'en': 'English',
+          'zh-TW': '繁體中文',
+          'hi': 'हिन्दी',
+          'es': 'Español',
+          'id': 'Bahasa Indonesia',
+          'ar': 'العربية',
+          'pt': 'Português',
+          'ru': 'Русский',
+          'ja': '日本語',
+          'fr': 'Français',
+          'de': 'Deutsch',
+          'it': 'Italiano',
+          'ko': '한국어',
+          'vi': 'Tiếng Việt',
+          'th': 'ภาษาไทย',
+          'nl': 'Nederlands'
+        };
+
+        // 切换下拉菜单
+        function toggleDropdown(e) {
+          e.stopPropagation();
+          isOpen = !isOpen;
+          langDropdown.classList.toggle('open', isOpen);
+        }
+
+        // 切换语言
+        function changeLanguage(langCode) {
+          if (isTranslating) return;
+          isTranslating = true;
+
+          // 更新按钮文字
+          const langName = langNames[langCode] || langCode;
+          langCurrent.textContent = langName;
+
+          // 关闭下拉菜单
+          langDropdown.classList.remove('open');
+          isOpen = false;
+
+          // 如果选择的是英文，刷新页面恢复原始内容
+          if (langCode === 'en') {
+            location.reload();
+            return;
+          }
+
+          // 调用 GTranslate 切换语言
+          try {
+            // 查找 GTranslate 的切换函数
+            if (window.gtranslate && typeof window.gtranslate.changeLanguage === 'function') {
+              window.gtranslate.changeLanguage(langCode);
+              isTranslating = false;
+              return;
+            }
+
+            // 备用方法：通过 URL 参数触发 GTranslate
+            const currentUrl = window.location.href.split('?')[0].split('#')[0];
+            const newUrl = currentUrl + '?lang=' + langCode;
+            window.location.href = newUrl;
+          } catch (e) {
+            console.error('GTranslate error:', e);
+            // 备用方法：直接加载 GTranslate 的切换链接
+            const gtContainer = document.querySelector('.gtranslate_wrapper');
+            if (gtContainer) {
+              const links = gtContainer.querySelectorAll('a');
+              for (let link of links) {
+                if (link.textContent.trim() === langNames[langCode] || 
+                    link.getAttribute('data-lang') === langCode) {
+                  link.click();
+                  break;
+                }
+              }
+            }
+            isTranslating = false;
+          }
+
+          // 超时重置
+          setTimeout(() => {
+            isTranslating = false;
+          }, 3000);
+        }
+
+        // 按钮点击事件
+        if (langBtn) {
+          langBtn.addEventListener('click', toggleDropdown);
+        }
+
+        // 点击外部关闭下拉菜单
+        document.addEventListener('click', function(e) {
+          const wrapper = document.querySelector('.lang-wrapper');
+          if (wrapper && !wrapper.contains(e.target)) {
+            langDropdown.classList.remove('open');
+            isOpen = false;
+          }
+        });
+
+        // 语言选项点击事件
+        document.querySelectorAll('.lang-dropdown a').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            if (lang) {
+              changeLanguage(lang);
+            }
+          });
+        });
+
+        // 检测当前语言（从 URL 参数）
+        function detectCurrentLang() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const langParam = urlParams.get('lang');
+          if (langParam && langNames[langParam]) {
+            langCurrent.textContent = langNames[langParam];
+            return langParam;
+          }
+          // 检测浏览器语言
+          const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+          const langCode = browserLang.split('-')[0];
+          // 如果浏览器语言在支持列表中，默认选中
+          const supportedLangs = Object.keys(langNames);
+          if (supportedLangs.includes(langCode) && langCode !== 'en') {
+            // 但不自动切换，只显示名称
+          }
+          return 'en';
+        }
+
+        detectCurrentLang();
+
+        // 如果 GTranslate 加载完成，获取当前语言
+        if (window.gtranslate && window.gtranslate.getCurrentLanguage) {
+          const current = window.gtranslate.getCurrentLanguage();
+          if (current && langNames[current]) {
+            langCurrent.textContent = langNames[current];
+          }
+        }
+
+      })();
+    </script>
+
   </body>
 </html>
