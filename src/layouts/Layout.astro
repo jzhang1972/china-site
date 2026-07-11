@@ -222,6 +222,41 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         color: #C49E3A;
       }
 
+      /* 全屏菜单中移动端语言按钮 */
+      .mobile-lang-btn {
+        background: transparent;
+        border: 1px solid #EDEAE0;
+        border-radius: 30px;
+        padding: 0.4rem 1.2rem;
+        font-size: 0.85rem;
+        color: #1F2A2E;
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        transition: all 0.2s;
+      }
+      .mobile-lang-btn:hover {
+        border-color: #C49E3A;
+        background: rgba(196, 158, 58, 0.06);
+      }
+      .mobile-lang-link {
+        font-size: 0.8rem;
+        color: #1F2A2E;
+        background: #F8F6F0;
+        padding: 0.3rem 0.8rem;
+        border-radius: 30px;
+        text-decoration: none;
+        border: 1px solid #EDEAE0;
+        transition: all 0.2s;
+        display: inline-block;
+      }
+      .mobile-lang-link:hover {
+        background: #EDEAE0;
+        border-color: #C49E3A;
+      }
+
       /* ===== 移动端 ===== */
       @media (max-width: 768px) {
         .nav-menu {
@@ -246,25 +281,6 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         .lang-dropdown {
           min-width: 130px;
           right: -10px;
-        }
-        /* 全屏菜单中的语言链接样式 */
-        .fullscreen-menu .lang-link {
-          font-size: 0.85rem !important;
-          padding: 0.3rem 0.8rem !important;
-          background: #F8F6F0 !important;
-          border: 1px solid #EDEAE0 !important;
-          border-radius: 30px !important;
-          color: #1F2A2E !important;
-          text-decoration: none !important;
-          display: inline-block !important;
-          transition: all 0.2s !important;
-        }
-        .fullscreen-menu .lang-link:hover {
-          background: #EDEAE0 !important;
-        }
-        .fullscreen-menu .lang-link.active {
-          border-color: #C49E3A !important;
-          background: rgba(196, 158, 58, 0.08) !important;
         }
       }
 
@@ -381,27 +397,29 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         <li><a href="/tours">Tours</a></li>
         <li><a href="/tools">Before You Go</a></li>
         <li><a href="/visa">Visa</a></li>
-        <!-- 移动端语言切换 -->
+        <!-- 移动端语言切换（折叠按钮） -->
         <li style="margin-top: 1.5rem;">
           <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-            <span style="color: #6c757d; font-size: 0.85rem;">🌐 Select Language</span>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; max-width: 400px;">
-              <a href="#" data-lang="en" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">English</a>
-              <a href="#" data-lang="zh-TW" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">繁體中文</a>
-              <a href="#" data-lang="hi" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">हिन्दी</a>
-              <a href="#" data-lang="es" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Español</a>
-              <a href="#" data-lang="id" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Bahasa Indonesia</a>
-              <a href="#" data-lang="ar" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">العربية</a>
-              <a href="#" data-lang="pt" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Português</a>
-              <a href="#" data-lang="ru" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Русский</a>
-              <a href="#" data-lang="ja" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">日本語</a>
-              <a href="#" data-lang="fr" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Français</a>
-              <a href="#" data-lang="de" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Deutsch</a>
-              <a href="#" data-lang="it" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Italiano</a>
-              <a href="#" data-lang="ko" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">한국어</a>
-              <a href="#" data-lang="vi" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Tiếng Việt</a>
-              <a href="#" data-lang="th" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">ภาษาไทย</a>
-              <a href="#" data-lang="nl" class="lang-link" style="font-size: 0.8rem; color: #1F2A2E; background: #F8F6F0; padding: 0.3rem 0.8rem; border-radius: 30px; text-decoration: none; border: 1px solid #EDEAE0; transition: all 0.2s;">Nederlands</a>
+            <button class="mobile-lang-btn" id="mobileLangToggle">
+              🌐 <span id="mobileLangCurrent">English</span> ▾
+            </button>
+            <div id="mobileLangList" style="display: none; flex-wrap: wrap; justify-content: center; gap: 0.4rem; max-width: 350px; margin-top: 0.5rem;">
+              <a href="#" data-lang="en" class="mobile-lang-link">English</a>
+              <a href="#" data-lang="zh-TW" class="mobile-lang-link">繁體中文</a>
+              <a href="#" data-lang="hi" class="mobile-lang-link">हिन्दी</a>
+              <a href="#" data-lang="es" class="mobile-lang-link">Español</a>
+              <a href="#" data-lang="id" class="mobile-lang-link">Bahasa Indonesia</a>
+              <a href="#" data-lang="ar" class="mobile-lang-link">العربية</a>
+              <a href="#" data-lang="pt" class="mobile-lang-link">Português</a>
+              <a href="#" data-lang="ru" class="mobile-lang-link">Русский</a>
+              <a href="#" data-lang="ja" class="mobile-lang-link">日本語</a>
+              <a href="#" data-lang="fr" class="mobile-lang-link">Français</a>
+              <a href="#" data-lang="de" class="mobile-lang-link">Deutsch</a>
+              <a href="#" data-lang="it" class="mobile-lang-link">Italiano</a>
+              <a href="#" data-lang="ko" class="mobile-lang-link">한국어</a>
+              <a href="#" data-lang="vi" class="mobile-lang-link">Tiếng Việt</a>
+              <a href="#" data-lang="th" class="mobile-lang-link">ภาษาไทย</a>
+              <a href="#" data-lang="nl" class="mobile-lang-link">Nederlands</a>
             </div>
           </div>
         </li>
@@ -476,13 +494,20 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
     <!-- ===== 语言切换控制 ===== -->
     <script>
       (function() {
+        // ===== 桌面端语言切换 =====
         const langBtn = document.getElementById('langToggle');
         const langDropdown = document.getElementById('langDropdown');
         const langCurrent = document.getElementById('langCurrent');
         let isOpen = false;
         let isTranslating = false;
 
-        // 语言名称映射（显示在按钮上）
+        // ===== 移动端语言切换（折叠按钮） =====
+        const mobileLangToggle = document.getElementById('mobileLangToggle');
+        const mobileLangList = document.getElementById('mobileLangList');
+        const mobileLangCurrent = document.getElementById('mobileLangCurrent');
+        let isMobileOpen = false;
+
+        // 语言名称映射
         const langNames = {
           'en': 'English',
           'zh-TW': '繁體中文',
@@ -502,47 +527,38 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           'nl': 'Nederlands'
         };
 
-        // 切换下拉菜单
-        function toggleDropdown(e) {
-          e.stopPropagation();
-          isOpen = !isOpen;
-          langDropdown.classList.toggle('open', isOpen);
-        }
-
         // 切换语言
         function changeLanguage(langCode) {
           if (isTranslating) return;
           isTranslating = true;
 
-          // 更新按钮文字
           const langName = langNames[langCode] || langCode;
-          langCurrent.textContent = langName;
+          
+          // 更新按钮文字（桌面端和移动端）
+          if (langCurrent) langCurrent.textContent = langName;
+          if (mobileLangCurrent) mobileLangCurrent.textContent = langName;
 
           // 关闭下拉菜单
-          langDropdown.classList.remove('open');
+          if (langDropdown) langDropdown.classList.remove('open');
+          if (mobileLangList) mobileLangList.style.display = 'none';
           isOpen = false;
+          isMobileOpen = false;
 
-          // 如果选择的是英文，刷新页面恢复原始内容
           if (langCode === 'en') {
-            // 关闭全屏菜单
-            fullscreenMenu.classList.remove('open');
+            if (fullscreenMenu) fullscreenMenu.classList.remove('open');
             document.body.style.overflow = '';
             location.reload();
             return;
           }
 
-          // 调用 GTranslate 切换语言
           try {
             if (window.gtranslate && typeof window.gtranslate.changeLanguage === 'function') {
               window.gtranslate.changeLanguage(langCode);
               isTranslating = false;
               return;
             }
-
-            // 备用方法：通过 URL 参数触发 GTranslate
             const currentUrl = window.location.href.split('?')[0].split('#')[0];
-            const newUrl = currentUrl + '?lang=' + langCode;
-            window.location.href = newUrl;
+            window.location.href = currentUrl + '?lang=' + langCode;
           } catch (e) {
             console.error('GTranslate error:', e);
             isTranslating = false;
@@ -553,52 +569,69 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           }, 3000);
         }
 
-        // 按钮点击事件
+        // ===== 桌面端下拉菜单 =====
         if (langBtn) {
-          langBtn.addEventListener('click', toggleDropdown);
+          langBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            isOpen = !isOpen;
+            if (langDropdown) langDropdown.classList.toggle('open', isOpen);
+          });
         }
 
-        // 点击外部关闭下拉菜单
         document.addEventListener('click', function(e) {
           const wrapper = document.querySelector('.lang-wrapper');
           if (wrapper && !wrapper.contains(e.target)) {
-            langDropdown.classList.remove('open');
+            if (langDropdown) langDropdown.classList.remove('open');
             isOpen = false;
           }
         });
 
-        // 桌面端语言选项点击事件
         document.querySelectorAll('.lang-dropdown a').forEach(function(link) {
           link.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
-            if (lang) {
-              changeLanguage(lang);
-            }
+            if (lang) changeLanguage(lang);
           });
         });
 
-        // 移动端语言切换
-        document.querySelectorAll('.fullscreen-menu a[data-lang]').forEach(function(link) {
+        // ===== 移动端折叠按钮 =====
+        if (mobileLangToggle && mobileLangList) {
+          mobileLangToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            isMobileOpen = !isMobileOpen;
+            mobileLangList.style.display = isMobileOpen ? 'flex' : 'none';
+            mobileLangToggle.innerHTML = isMobileOpen 
+              ? '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▴' 
+              : '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▾';
+          });
+        }
+
+        document.querySelectorAll('.fullscreen-menu .mobile-lang-link').forEach(function(link) {
           link.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
             if (lang) {
               // 关闭全屏菜单
-              fullscreenMenu.classList.remove('open');
+              if (fullscreenMenu) fullscreenMenu.classList.remove('open');
               document.body.style.overflow = '';
-              // 切换语言
+              // 关闭移动端语言列表
+              if (mobileLangList) mobileLangList.style.display = 'none';
+              isMobileOpen = false;
+              if (mobileLangToggle) {
+                mobileLangToggle.innerHTML = '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▾';
+              }
               changeLanguage(lang);
             }
           });
         });
 
-        // 检测当前语言（从 URL 参数）
+        // ===== 检测当前语言 =====
         function detectCurrentLang() {
           const urlParams = new URLSearchParams(window.location.search);
           const langParam = urlParams.get('lang');
           if (langParam && langNames[langParam]) {
-            langCurrent.textContent = langNames[langParam];
+            if (langCurrent) langCurrent.textContent = langNames[langParam];
+            if (mobileLangCurrent) mobileLangCurrent.textContent = langNames[langParam];
             return langParam;
           }
           return 'en';
@@ -609,11 +642,11 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         if (window.gtranslate && window.gtranslate.getCurrentLanguage) {
           const current = window.gtranslate.getCurrentLanguage();
           if (current && langNames[current]) {
-            langCurrent.textContent = langNames[current];
+            if (langCurrent) langCurrent.textContent = langNames[current];
+            if (mobileLangCurrent) mobileLangCurrent.textContent = langNames[current];
           }
         }
 
-        // 暴露 changeLanguage 到全局
         window.changeLanguage = changeLanguage;
 
       })();
