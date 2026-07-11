@@ -164,6 +164,69 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         color: #C49E3A;
       }
 
+      /* 移动端语言按钮（汉堡旁边） */
+      #mobileLangBtn {
+        display: none;
+        background: transparent;
+        border: 1px solid #EDEAE0;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        padding: 0;
+      }
+      #mobileLangBtn:hover {
+        border-color: #C49E3A;
+        background: rgba(196, 158, 58, 0.06);
+      }
+      #mobileLangBtn:active {
+        transform: scale(0.92);
+      }
+
+      /* 移动端语言下拉列表（点击 🌐 后出现） */
+      #mobileLangDropdown {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        background: #FFFFFF;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        border: 1px solid #EDEAE0;
+        padding: 0.5rem 0;
+        min-width: 150px;
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 300;
+      }
+      #mobileLangDropdown.open {
+        display: block;
+      }
+      #mobileLangDropdown a {
+        display: block;
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+        color: #1F2A2E;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      #mobileLangDropdown a:hover {
+        background: #F8F6F0;
+        color: #C49E3A;
+      }
+
+      /* 移动端菜单容器（语言按钮 + 汉堡） */
+      .mobile-menu-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+      }
+
       /* 汉堡按钮（默认隐藏） */
       .hamburger {
         display: none;
@@ -208,6 +271,10 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         text-align: center;
         padding: 0;
         margin: 0;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 1rem 0;
+        width: 100%;
       }
       .fullscreen-menu ul li {
         margin: 1.5rem 0;
@@ -220,41 +287,6 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
       }
       .fullscreen-menu ul li a:hover {
         color: #C49E3A;
-      }
-
-      /* 全屏菜单中移动端语言按钮 */
-      .mobile-lang-btn {
-        background: transparent;
-        border: 1px solid #EDEAE0;
-        border-radius: 30px;
-        padding: 0.4rem 1.2rem;
-        font-size: 0.85rem;
-        color: #1F2A2E;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
-        transition: all 0.2s;
-      }
-      .mobile-lang-btn:hover {
-        border-color: #C49E3A;
-        background: rgba(196, 158, 58, 0.06);
-      }
-      .mobile-lang-link {
-        font-size: 0.8rem;
-        color: #1F2A2E;
-        background: #F8F6F0;
-        padding: 0.3rem 0.8rem;
-        border-radius: 30px;
-        text-decoration: none;
-        border: 1px solid #EDEAE0;
-        transition: all 0.2s;
-        display: inline-block;
-      }
-      .mobile-lang-link:hover {
-        background: #EDEAE0;
-        border-color: #C49E3A;
       }
 
       /* ===== 移动端 ===== */
@@ -281,6 +313,12 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         .lang-dropdown {
           min-width: 130px;
           right: -10px;
+        }
+        #mobileLangBtn {
+          display: flex !important;
+        }
+        .mobile-menu-group {
+          gap: 0.3rem;
         }
       }
 
@@ -353,7 +391,7 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           <li><a href="/tours">Tours</a></li>
           <li><a href="/tools">Before You Go</a></li>
           <li><a href="/visa">Visa</a></li>
-          <!-- 语言按钮 -->
+          <!-- 桌面端语言按钮 -->
           <li class="lang-wrapper">
             <button class="lang-btn" id="langToggle" aria-label="Select language">
               <span>🌐</span> <span id="langCurrent">English</span> <span>▾</span>
@@ -379,11 +417,35 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           </li>
         </ul>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+        <!-- 移动端：🌐 + 汉堡菜单 -->
+        <div class="mobile-menu-group">
+          <button id="mobileLangBtn" aria-label="Select language">
+            🌐
+          </button>
+          <div id="mobileLangDropdown">
+            <a href="#" data-lang="en">English</a>
+            <a href="#" data-lang="zh-TW">繁體中文</a>
+            <a href="#" data-lang="hi">हिन्दी</a>
+            <a href="#" data-lang="es">Español</a>
+            <a href="#" data-lang="id">Bahasa Indonesia</a>
+            <a href="#" data-lang="ar">العربية</a>
+            <a href="#" data-lang="pt">Português</a>
+            <a href="#" data-lang="ru">Русский</a>
+            <a href="#" data-lang="ja">日本語</a>
+            <a href="#" data-lang="fr">Français</a>
+            <a href="#" data-lang="de">Deutsch</a>
+            <a href="#" data-lang="it">Italiano</a>
+            <a href="#" data-lang="ko">한국어</a>
+            <a href="#" data-lang="vi">Tiếng Việt</a>
+            <a href="#" data-lang="th">ภาษาไทย</a>
+            <a href="#" data-lang="nl">Nederlands</a>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -397,32 +459,6 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         <li><a href="/tours">Tours</a></li>
         <li><a href="/tools">Before You Go</a></li>
         <li><a href="/visa">Visa</a></li>
-        <!-- 移动端语言切换（折叠按钮） -->
-        <li style="margin-top: 1.5rem;">
-          <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-            <button class="mobile-lang-btn" id="mobileLangToggle">
-              🌐 <span id="mobileLangCurrent">English</span> ▾
-            </button>
-            <div id="mobileLangList" style="display: none; flex-wrap: wrap; justify-content: center; gap: 0.4rem; max-width: 350px; margin-top: 0.5rem;">
-              <a href="#" data-lang="en" class="mobile-lang-link">English</a>
-              <a href="#" data-lang="zh-TW" class="mobile-lang-link">繁體中文</a>
-              <a href="#" data-lang="hi" class="mobile-lang-link">हिन्दी</a>
-              <a href="#" data-lang="es" class="mobile-lang-link">Español</a>
-              <a href="#" data-lang="id" class="mobile-lang-link">Bahasa Indonesia</a>
-              <a href="#" data-lang="ar" class="mobile-lang-link">العربية</a>
-              <a href="#" data-lang="pt" class="mobile-lang-link">Português</a>
-              <a href="#" data-lang="ru" class="mobile-lang-link">Русский</a>
-              <a href="#" data-lang="ja" class="mobile-lang-link">日本語</a>
-              <a href="#" data-lang="fr" class="mobile-lang-link">Français</a>
-              <a href="#" data-lang="de" class="mobile-lang-link">Deutsch</a>
-              <a href="#" data-lang="it" class="mobile-lang-link">Italiano</a>
-              <a href="#" data-lang="ko" class="mobile-lang-link">한국어</a>
-              <a href="#" data-lang="vi" class="mobile-lang-link">Tiếng Việt</a>
-              <a href="#" data-lang="th" class="mobile-lang-link">ภาษาไทย</a>
-              <a href="#" data-lang="nl" class="mobile-lang-link">Nederlands</a>
-            </div>
-          </div>
-        </li>
       </ul>
     </div>
 
@@ -486,7 +522,7 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         hamburger.addEventListener('click', toggleMenu);
       }
 
-      document.querySelectorAll('.fullscreen-menu a:not([data-lang])').forEach(function(link) {
+      document.querySelectorAll('.fullscreen-menu a').forEach(function(link) {
         link.addEventListener('click', closeMenu);
       });
     </script>
@@ -501,10 +537,9 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
         let isOpen = false;
         let isTranslating = false;
 
-        // ===== 移动端语言切换（折叠按钮） =====
-        const mobileLangToggle = document.getElementById('mobileLangToggle');
-        const mobileLangList = document.getElementById('mobileLangList');
-        const mobileLangCurrent = document.getElementById('mobileLangCurrent');
+        // ===== 移动端语言按钮（汉堡旁边） =====
+        const mobileLangBtn = document.getElementById('mobileLangBtn');
+        const mobileLangDropdown = document.getElementById('mobileLangDropdown');
         let isMobileOpen = false;
 
         // 语言名称映射
@@ -534,13 +569,12 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
 
           const langName = langNames[langCode] || langCode;
           
-          // 更新按钮文字（桌面端和移动端）
+          // 更新按钮文字
           if (langCurrent) langCurrent.textContent = langName;
-          if (mobileLangCurrent) mobileLangCurrent.textContent = langName;
 
-          // 关闭下拉菜单
+          // 关闭所有下拉菜单
           if (langDropdown) langDropdown.classList.remove('open');
-          if (mobileLangList) mobileLangList.style.display = 'none';
+          if (mobileLangDropdown) mobileLangDropdown.classList.remove('open');
           isOpen = false;
           isMobileOpen = false;
 
@@ -594,35 +628,34 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           });
         });
 
-        // ===== 移动端折叠按钮 =====
-        if (mobileLangToggle && mobileLangList) {
-          mobileLangToggle.addEventListener('click', function(e) {
+        // ===== 移动端语言按钮（汉堡旁边） =====
+        if (mobileLangBtn && mobileLangDropdown) {
+          mobileLangBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             isMobileOpen = !isMobileOpen;
-            mobileLangList.style.display = isMobileOpen ? 'flex' : 'none';
-            mobileLangToggle.innerHTML = isMobileOpen 
-              ? '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▴' 
-              : '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▾';
+            mobileLangDropdown.classList.toggle('open', isMobileOpen);
           });
         }
 
-        document.querySelectorAll('.fullscreen-menu .mobile-lang-link').forEach(function(link) {
+        document.querySelectorAll('#mobileLangDropdown a').forEach(function(link) {
           link.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
             if (lang) {
-              // 关闭全屏菜单
-              if (fullscreenMenu) fullscreenMenu.classList.remove('open');
-              document.body.style.overflow = '';
-              // 关闭移动端语言列表
-              if (mobileLangList) mobileLangList.style.display = 'none';
+              if (mobileLangDropdown) mobileLangDropdown.classList.remove('open');
               isMobileOpen = false;
-              if (mobileLangToggle) {
-                mobileLangToggle.innerHTML = '🌐 <span id="mobileLangCurrent">' + (mobileLangCurrent ? mobileLangCurrent.textContent : 'English') + '</span> ▾';
-              }
               changeLanguage(lang);
             }
           });
+        });
+
+        // 点击页面其他区域关闭移动端下拉菜单
+        document.addEventListener('click', function(e) {
+          const mobileGroup = document.querySelector('.mobile-menu-group');
+          if (mobileGroup && !mobileGroup.contains(e.target)) {
+            if (mobileLangDropdown) mobileLangDropdown.classList.remove('open');
+            isMobileOpen = false;
+          }
         });
 
         // ===== 检测当前语言 =====
@@ -631,7 +664,6 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           const langParam = urlParams.get('lang');
           if (langParam && langNames[langParam]) {
             if (langCurrent) langCurrent.textContent = langNames[langParam];
-            if (mobileLangCurrent) mobileLangCurrent.textContent = langNames[langParam];
             return langParam;
           }
           return 'en';
@@ -643,7 +675,6 @@ const siteDescription = description || 'Plan your China trip with ease. Visa inf
           const current = window.gtranslate.getCurrentLanguage();
           if (current && langNames[current]) {
             if (langCurrent) langCurrent.textContent = langNames[current];
-            if (mobileLangCurrent) mobileLangCurrent.textContent = langNames[current];
           }
         }
 
