@@ -1,0 +1,94 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog");
+  return allPosts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+
+
+if (!post) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await render(post);
+
+const categoryMap = {
+  "practical": "Practical Guides",
+  "stories": "Travel Stories",
+  "culture": "Deep Culture"
+};
+
+const wordCount = post.body?.length || 0;
+const readTime = Math.max(1, Math.round(wordCount / 1000));
+---
+
+
+
+<Layout
+  title={`${post.data.title} · YOGOTOCHINA`}
+  description={post.data.description}
+>
+  <div style="max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem;">
+
+    <h1 style="font-size: 2.4rem; font-weight: 700; color: #1F2A2E; margin: 0 0 1rem 0; line-height: 1.2; letter-spacing: -0.5px;">
+      {post.data.title}
+    </h1>
+
+    <!-- ===== 顶部：分类标签 ===== -->
+    <span style="font-size: 0.8rem; font-weight: 600; color: #C49E3A; text-transform: uppercase; letter-spacing: 0.5px;">
+      {categoryMap[post.data.category] || post.data.category}
+    </span>
+
+
+    <div style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2rem; font-size: 0.85rem; color: #6c757d; flex-wrap: wrap;">
+      <span>{new Date(post.data.publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
+      <span>·</span>
+      <span>{readTime} min read</span>
+    </div>
+
+    {post.data.image && (
+      <div style="max-width: 500px; margin: 0 auto 2rem auto;">
+        <img
+          src={post.data.image}
+          alt={post.data.title}
+          style="width: 100%; height: auto; border-radius: 12px; display: block;"
+        />
+      </div>
+    )}
+
+    <div style="font-size: 1.05rem; line-height: 1.8; color: #1F2A2E;">
+      <Content />
+    </div>
+
+    <!-- ===== 底部：返回链接 ===== -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #EDEAE0;">
+      <a
+        href={`/blog/${post.data.category}`}
+        style="display: inline-flex; align-items: center; gap: 0.4rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"
+        onmouseover="this.style.color='#C49E3A'"
+        onmouseout="this.style.color='#6c757d'"
+      >
+        <span>←</span> Back to {categoryMap[post.data.category] || 'Blog'}
+      </a>
+    </div>
+
+    <!-- ===== CTA ===== -->
+    <div style="margin-top: 3rem; background: #F8F6F0; border-radius: 16px; padding: 2rem; text-align: center;">
+      <p style="margin: 0 0 0.5rem 0; font-size: 1rem; color: #1F2A2E; font-weight: 500;">
+        ✦ Ready to explore China?
+      </p>
+      <a href="/tours" style="color: #C49E3A; font-weight: 600; text-decoration: underline; text-underline-offset: 2px;">
+        Find your tour →
+      </a>
+    </div>
+
+  </div>
+</Layout>

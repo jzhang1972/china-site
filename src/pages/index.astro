@@ -7,22 +7,22 @@ import HeroCarousel from "../components/HeroCarousel.astro";
   title="China Travel Guide" 
   description="Plan your China trip with ease. Visa info, travel guides, routes, real stories, and trusted tours. Start your adventure."
 >
-<!-- 全宽容器（突破 main 限制） -->
-<div style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+  <!-- 全宽容器 -->
+  <div style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
 
-  <!-- 原有的大标题内容 -->
-  <div style="background-image: url('/images/hero/beijing-daxing-airport-international.webp'); background-size: cover; background-position: center; padding: 4rem 1rem; text-align: center; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <p style="font-size: 2.8rem; font-weight: 600; color: #FFFFFF; text-shadow: 0 2px 12px rgba(0,0,0,0.6); letter-spacing: 4px; margin: 0 0 0.8rem 0;">
-        CHINA IS MORE OPEN THAN YOU THINK.
-      </p>
-      <a href="/visa" style="display: inline-block; background-color: rgba(255,255,255,0.2); backdrop-filter: blur(4px); color: white; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 1rem; border: 1px solid rgba(255,255,255,0.3); transition: background-color 0.2s;">
-        Check your country →
-      </a>
+    <!-- 大标题 -->
+    <div style="background-image: url('/images/hero/beijing-daxing-airport-international.webp'); background-size: cover; background-position: center; padding: 4rem 1rem; text-align: center; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p style="font-size: 2.8rem; font-weight: 600; color: #FFFFFF; text-shadow: 0 2px 12px rgba(0,0,0,0.6); letter-spacing: 4px; margin: 0 0 0.8rem 0;">
+          CHINA IS MORE OPEN THAN YOU THINK.
+        </p>
+        <a href="/visa" style="display: inline-block; background-color: rgba(255,255,255,0.2); backdrop-filter: blur(4px); color: white; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 1rem; border: 1px solid rgba(255,255,255,0.3); transition: background-color 0.2s;">
+          Check your country →
+        </a>
+      </div>
     </div>
-  </div>
 
-    <!-- ===== 向下箭头（指向轮播图） ===== -->
+    <!-- 向下箭头 -->
     <div style="position: absolute; bottom: 1.5rem; left: 0; right: 0; text-align: center; animation: bounce 2s infinite;">
       <a href="#carousel" style="color: white; font-size: 2rem; text-decoration: none; opacity: 0.7;">
         ↓
@@ -30,20 +30,19 @@ import HeroCarousel from "../components/HeroCarousel.astro";
     </div>
 
   </div>
-</div>
 
-  <!-- ===== 核心宣言 ===== -->
+  <!-- 核心宣言 -->
   <div style="text-align: center; padding: 3rem 1rem; background: #F8F6F0;">
     <p style="font-size: 1rem; font-weight: 300; letter-spacing: 4px; margin-bottom: 0.5rem; color: #1F2A2E;">IS CHINA DIFFICULT?</p>
     <h1 style="font-size: 3rem; font-weight: 300; margin: 0; color: #1F2A2E; letter-spacing: 4px;">NO, JUST DIFFERENT.</h1>
   </div>
 
-  <!-- ===== 轮播图 ===== -->
+  <!-- 轮播图 -->
   <section id="carousel">
     <HeroCarousel />
   </section>
 
-  <!-- ===== 不规则网格 ===== -->
+  <!-- 不规则网格 -->
   <div id="grid-start" style="max-width: 1400px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-template-rows: auto auto auto; gap: 1.5rem;">
 
     <!-- 卡片1：Only in China -->
@@ -51,6 +50,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
       <img 
         src="/images/home/can-you-do-this-at-home-china.webp" 
         alt="Street barbecue at night in Changsha, China" 
+        loading="lazy"
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <h2 style="font-size: 1.8rem; font-weight: 600; margin: 0 0 0.2rem 0;">Can you do this at home?</h2>
@@ -64,6 +64,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
       <img 
         src="/images/home/think-you-know-china-myths.webp" 
         alt="Forbidden City under blue sky in Beijing, China" 
+        loading="lazy"
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0;">Think you know China?</h3>
@@ -76,6 +77,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
       <img 
         src="/images/home/china-tours-group-travel-guide.webp" 
         alt="Group of tourists on the Great Wall of China" 
+        loading="lazy"
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <h3 style="font-size: 1.5rem; font-weight: 600; margin: 0 0 0.2rem 0;">Prefer a local guide?</h3>
@@ -88,6 +90,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
       <img 
         src="/images/home/china-travel-routes-themes.webp" 
         alt="Scenic mountain road in rural China" 
+        loading="lazy"
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <h2 style="font-size: 1.8rem; font-weight: 600; margin: 0 0 0.3rem 0;">Where to go?</h2>
@@ -110,6 +113,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
         <img 
           src="/images/home/china-travel-packing-checklist.webp" 
           alt="Travel packing checklist icon for China trip" 
+          loading="lazy"
           style="width: 50px; height: 50px; object-fit: contain; margin: 0 auto 0.5rem;">
         <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0; color: #FFFFFF;">What to pack?</h3>
         <p style="font-size: 0.85rem; color: #FFFFFF; opacity: 0.8; margin: 0;">Free downloads to help you prepare.</p>
@@ -120,6 +124,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
         <img 
           src="/images/home/china-visa-requirements-icon.webp" 
           alt="Chinese visa and passport requirements icon" 
+          loading="lazy"
           style="width: 50px; height: 50px; object-fit: contain; margin: 0 auto 0.5rem;">
         <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0; color: #FFFFFF;">Do I need a visa?</h3>
         <p style="font-size: 0.85rem; color: #FFFFFF; opacity: 0.8; margin: 0;">Check your country in 5 seconds.</p>
@@ -130,73 +135,71 @@ import HeroCarousel from "../components/HeroCarousel.astro";
 
   </div>
 
+  <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    @media (max-width: 768px) {
+      #grid-start {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+      }
+
+      #grid-start > * {
+        grid-column: unset !important;
+        grid-row: unset !important;
+        width: 100% !important;
+        aspect-ratio: unset !important;
+        min-height: unset !important;
+        height: auto !important;
+      }
+
+      #grid-start > a,
+      #grid-start > div {
+        min-height: 180px !important;
+      }
+
+      #grid-start img {
+        height: auto !important;
+        aspect-ratio: 16/9 !important;
+        object-fit: cover !important;
+      }
+
+      #grid-start h2 {
+        font-size: 1.3rem !important;
+      }
+      #grid-start h3 {
+        font-size: 1.1rem !important;
+      }
+      #grid-start p {
+        font-size: 0.9rem !important;
+      }
+
+      #grid-start > a > div {
+        position: relative !important;
+        background: #1a1a1a !important;
+        padding: 0.8rem 1rem !important;
+      }
+
+      #grid-start > div[style*="background-image"] {
+        min-height: 180px !important;
+        aspect-ratio: unset !important;
+        padding: 1.5rem !important;
+      }
+
+      #grid-start > div:last-child {
+        flex-direction: row !important;
+        gap: 0.75rem !important;
+      }
+      #grid-start > div:last-child > a {
+        flex: 1 !important;
+        min-height: 100px !important;
+        padding: 0.8rem !important;
+      }
+    }
+  </style>
 </Layout>
-
-<style>
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-  }
-
-  /* ===== 移动端修复 ===== */
-  @media (max-width: 768px) {
-    #grid-start {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 1rem !important;
-      padding: 1rem !important;
-    }
-
-    #grid-start > * {
-      grid-column: unset !important;
-      grid-row: unset !important;
-      width: 100% !important;
-      aspect-ratio: unset !important;
-      min-height: unset !important;
-      height: auto !important;
-    }
-
-    #grid-start > a,
-    #grid-start > div {
-      min-height: 180px !important;
-    }
-
-    #grid-start img {
-      height: auto !important;
-      aspect-ratio: 16/9 !important;
-      object-fit: cover !important;
-    }
-
-    #grid-start h2 {
-      font-size: 1.3rem !important;
-    }
-    #grid-start h3 {
-      font-size: 1.1rem !important;
-    }
-    #grid-start p {
-      font-size: 0.9rem !important;
-    }
-
-    #grid-start > a > div {
-      position: relative !important;
-      background: #1a1a1a !important;
-      padding: 0.8rem 1rem !important;
-    }
-
-    #grid-start > div[style*="background-image"] {
-      min-height: 180px !important;
-      aspect-ratio: unset !important;
-      padding: 1.5rem !important;
-    }
-
-    #grid-start > div:last-child {
-      flex-direction: row !important;
-      gap: 0.75rem !important;
-    }
-    #grid-start > div:last-child > a {
-      flex: 1 !important;
-      min-height: 100px !important;
-      padding: 0.8rem !important;
-    }
-  }
-</style>

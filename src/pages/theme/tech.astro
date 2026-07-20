@@ -26,7 +26,11 @@ import Layout from "../../layouts/Layout.astro";
     
     <!-- 图片1：重庆洪崖洞 -->
     <div class="tech-slide" style="min-width: 100%; position: relative;">
-      <img src="/images/theme/tech/tech-chongqing-hongyadong-night-cyberpunk-china.webp" alt="Hongyadong stilt houses lit up at night in Chongqing, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <img src="/images/theme/tech/tech-chongqing-hongyadong-night-cyberpunk-china.webp" alt="Hongyadong stilt houses lit up at night in Chongqing, China" 
+
+loading="eager"
+
+style="width: 100%; height: 420px; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Hongyadong — a 2,000-year-old stilt house complex glowing in neon</p>
       </div>
@@ -34,7 +38,11 @@ import Layout from "../../layouts/Layout.astro";
     
     <!-- 图片2：重庆单轨穿楼 -->
     <div class="tech-slide" style="min-width: 100%; position: relative;">
-      <img src="/images/theme/tech/tech-chongqing-monorail-through-building-china.webp" alt="Monorail passing through a residential building in Chongqing, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <img src="/images/theme/tech/tech-chongqing-monorail-through-building-china.webp" alt="Monorail passing through a residential building in Chongqing, China" 
+
+loading="eager"
+
+style="width: 100%; height: 420px; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Liziba Station — monorail punching straight through a residential tower</p>
       </div>
@@ -42,7 +50,11 @@ import Layout from "../../layouts/Layout.astro";
     
     <!-- 图片3：深圳湾 -->
     <div class="tech-slide" style="min-width: 100%; position: relative;">
-      <img src="/images/theme/tech/tech-shenzhen-bay-skyline-night-china.webp" alt="Shenzhen Bay skyline at night with futuristic city lights, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <img src="/images/theme/tech/tech-shenzhen-bay-skyline-night-china.webp" alt="Shenzhen Bay skyline at night with futuristic city lights, China" 
+
+loading="eager"
+
+style="width: 100%; height: 420px; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Shenzhen Bay — where the future meets the sea</p>
       </div>
@@ -50,7 +62,11 @@ import Layout from "../../layouts/Layout.astro";
     
     <!-- 图片4：腾讯总部 -->
     <div class="tech-slide" style="min-width: 100%; position: relative;">
-      <img src="/images/theme/tech/tech-shenzhen-tencent-headquarters-night-china.webp" alt="Tencent headquarters building illuminated at night in Shenzhen, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <img src="/images/theme/tech/tech-shenzhen-tencent-headquarters-night-china.webp" alt="Tencent headquarters building illuminated at night in Shenzhen, China" 
+
+loading="eager"
+
+style="width: 100%; height: 420px; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Tencent headquarters — China's tech giant, lit up after dark</p>
       </div>
@@ -299,7 +315,6 @@ import Layout from "../../layouts/Layout.astro";
     Plan with AI <span style="font-size: 1.1rem;">→</span>
   </a>
 </div>
-</Layout>
 
 <script>
   // 轮播逻辑
@@ -390,7 +405,6 @@ import Layout from "../../layouts/Layout.astro";
     color: #C49E3A !important;
   }
   
-  /* 链接 hover 下划线 - 只对地图链接生效 */
   a[href*="google.com/maps"]:hover {
     border-bottom-color: #C49E3A !important;
     color: #1F2A2E !important;
@@ -440,4 +454,10 @@ import Layout from "../../layouts/Layout.astro";
     }
     .budget-row {
       justify-content: center !important;
-   
+    }
+  }
+</style>
+
+</div>
+
+</Layout>

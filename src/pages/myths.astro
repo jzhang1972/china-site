@@ -28,7 +28,9 @@ import Layout from "../layouts/Layout.astro";
         <div id="myth1-carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
           
           <div class="myth1-slide" style="min-width: 100%; position: relative;">
-            <img src="/images/myths/myth-china-zhangjiajie-avatar-mountains-hiking.webp" alt="Zhangjiajie floating mountains that inspired the movie Avatar" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <img src="/images/myths/myth-china-zhangjiajie-avatar-mountains-hiking.webp" alt="Zhangjiajie floating mountains that inspired the movie Avatar" 
+loading="eager"
+style="width: 100%; height: 320px; object-fit: cover; display: block;">
             <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
               <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Zhangjiajie — floating mountains that inspired the movie Avatar</p>
             </div>
@@ -74,12 +76,19 @@ import Layout from "../layouts/Layout.astro";
         <p id="myth1-lightbox-caption" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.85); font-size: 0.9rem; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); padding: 0.3rem 1.2rem; border-radius: 30px; margin: 0; text-align: center; max-width: 80%;"></p>
         <button id="myth1-lightbox-close" style="position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; opacity: 0.5;">&times;</button>
       </div>
-      
+
       <div style="margin: 1rem 0 0 0;">
         <p style="color: #4a4a4a; font-size: 0.95rem; line-height: 1.8; margin: 0 0 0.5rem 0;">
           <strong>Reality:</strong> China is not just cities. It boasts 60 UNESCO World Heritage sites — more than any other country except Italy. From snow-capped peaks to rainbow-hued deserts, karst mountains that pierce the clouds to terraced fields hand-carved over a millennium, and ancient villages where time seems to have stood still. The China hidden beyond the postcards is an entirely different world.
         </p>
-        <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">Find tours that show you the real China →</a>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 0.5rem;">
+          <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">
+            Find tours →
+          </a>
+          <a href="/blog" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem; margin-left: auto;">
+            Read on Blog →
+          </a>
+        </div>
       </div>
     </div>
 
@@ -91,7 +100,9 @@ import Layout from "../layouts/Layout.astro";
         <div id="myth2-carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
           
           <div class="myth2-slide" style="min-width: 100%; position: relative;">
-            <img src="/images/myths/myth-china-sichuan-hotpot-spicy-mala-broth.webp" alt="Sichuan bubbling mala hotpot bold and numbing" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <img src="/images/myths/myth-china-sichuan-hotpot-spicy-mala-broth.webp" alt="Sichuan bubbling mala hotpot bold and numbing"
+loading="lazy"
+ style="width: 100%; height: 320px; object-fit: cover; display: block;">
             <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
               <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Sichuan — bubbling mala hotpot, bold and numbing</p>
             </div>
@@ -141,7 +152,14 @@ import Layout from "../layouts/Layout.astro";
         <p style="color: #4a4a4a; font-size: 0.95rem; line-height: 1.8; margin: 0 0 0.5rem 0;">
           <strong>Reality:</strong> That's like saying European food is just bread and cheese. China has eight great culinary traditions — Sichuan's fiery mala, Cantonese's delicate dim sum, Jiangnan's sweet elegance, and more. Each region tastes like a different country.
         </p>
-        <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">Find tours that show you the real China →</a>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 0.5rem;">
+          <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">
+            Find tours →
+          </a>
+          <a href="/blog" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem; margin-left: auto;">
+            Read on Blog →
+          </a>
+        </div>
       </div>
     </div>
 
@@ -167,7 +185,9 @@ import Layout from "../layouts/Layout.astro";
           </div>
           
           <div class="myth3-slide" style="min-width: 100%; position: relative;">
-            <img src="/images/myths/myth-china-old-town-lanterns-blue-sky.webp" alt="Fenghuang ancient town with lanterns and old streets beneath a bright sky" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <img src="/images/myths/myth-china-old-town-lanterns-blue-sky.webp" alt="Fenghuang ancient town with lanterns and old streets beneath a bright sky" 
+loading="lazy"
+style="width: 100%; height: 320px; object-fit: cover; display: block;">
             <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
               <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0; font-weight: 300;">Fenghuang, Hunan — ancient town with lanterns and old streets beneath a bright sky</p>
             </div>
@@ -203,11 +223,16 @@ import Layout from "../layouts/Layout.astro";
         <p style="color: #4a4a4a; font-size: 0.95rem; line-height: 1.8; margin: 0 0 0.5rem 0;">
           <strong>Reality:</strong> Breathe in. The haze has lifted. Beijing's skies are bluer now, and in places like Zhangjiajie, Guilin, and Xinjiang, the wind carries the scent of pine and river stones — not smoke. Stars don't need permission to shine here. They've always been watching. The air feels like a gentle hand on your face. Breathe easy. You're welcome here.
         </p>
-        <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">Find tours that show you the real China →</a>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 0.5rem;">
+          <a href="/tours" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem;">
+            Find tours →
+          </a>
+          <a href="/blog" style="color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A; padding-bottom: 2px; text-decoration: none; font-size: 0.9rem; margin-left: auto;">
+            Read on Blog →
+          </a>
+        </div>
       </div>
     </div>
-
-    
 
     <!-- ===== 底部 CTA ===== -->
     <div style="margin-top: 3rem; background: #2D6A4F; border-radius: 16px; padding: 2.5rem; text-align: center; color: white;">
@@ -217,129 +242,129 @@ import Layout from "../layouts/Layout.astro";
         <a href="/tours" style="background-color: #FFD700; color: #1F2A2E; padding: 0.7rem 2.5rem; border-radius: 30px; text-decoration: none; font-size: 1rem; font-weight: 600; display: inline-block; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#E6C200'" onmouseout="this.style.backgroundColor='#FFD700'">
           Find your routes →
         </a>
+      </div>
+    </div>
 
+    <script>
+      // ===== 通用轮播函数 =====
+      function initCarousel(prefix, slideClass) {
+        const track = document.getElementById(prefix + '-carousel-track');
+        if (!track) return;
+        const slides = track.querySelectorAll('.' + slideClass);
+        const total = slides.length;
+        let current = 0;
+        let interval;
 
-  </div>
-</Layout>
+        const prevBtn = document.getElementById(prefix + '-prev');
+        const nextBtn = document.getElementById(prefix + '-next');
+        const dots = document.querySelectorAll('#' + prefix + '-dots .' + prefix + '-dot');
+        const lightbox = document.getElementById(prefix + '-lightbox');
+        const lightboxImg = document.getElementById(prefix + '-lightbox-img');
+        const lightboxCaption = document.getElementById(prefix + '-lightbox-caption');
+        const closeBtn = document.getElementById(prefix + '-lightbox-close');
 
-<script>
-  // ===== 通用轮播函数 =====
-  function initCarousel(prefix, slideClass) {
-    const track = document.getElementById(prefix + '-carousel-track');
-    if (!track) return;
-    const slides = track.querySelectorAll('.' + slideClass);
-    const total = slides.length;
-    let current = 0;
-    let interval;
-
-    const prevBtn = document.getElementById(prefix + '-prev');
-    const nextBtn = document.getElementById(prefix + '-next');
-    const dots = document.querySelectorAll('#' + prefix + '-dots .' + prefix + '-dot');
-    const lightbox = document.getElementById(prefix + '-lightbox');
-    const lightboxImg = document.getElementById(prefix + '-lightbox-img');
-    const lightboxCaption = document.getElementById(prefix + '-lightbox-caption');
-    const closeBtn = document.getElementById(prefix + '-lightbox-close');
-
-    function goTo(index) {
-      if (index < 0) index = total - 1;
-      if (index >= total) index = 0;
-      current = index;
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
-      dots.forEach((dot, i) => {
-        dot.style.background = i === current ? '#FFD700' : 'rgba(255,255,255,0.4)';
-        dot.style.transform = i === current ? 'scale(1.3)' : 'scale(1)';
-      });
-    }
-
-    function nextSlide() { goTo(current + 1); }
-    function prevSlide() { goTo(current - 1); }
-
-    function startAutoPlay() {
-      if (interval) clearInterval(interval);
-      interval = setInterval(nextSlide, 5000);
-    }
-
-    function stopAutoPlay() {
-      if (interval) { clearInterval(interval); interval = null; }
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => { stopAutoPlay(); prevSlide(); startAutoPlay(); });
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => { stopAutoPlay(); nextSlide(); startAutoPlay(); });
-    }
-
-    dots.forEach((dot) => {
-      dot.addEventListener('click', () => {
-        stopAutoPlay();
-        goTo(parseInt(dot.dataset.index));
-        startAutoPlay();
-      });
-    });
-
-    // Lightbox
-    document.querySelectorAll('.' + slideClass + ' img').forEach((img) => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        const caption = img.closest('.' + slideClass).querySelector('p')?.textContent || '';
-        lightboxCaption.textContent = caption;
-        lightbox.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-
-    if (lightbox) {
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target === lightboxImg) {
-          closeLightbox();
+        function goTo(index) {
+          if (index < 0) index = total - 1;
+          if (index >= total) index = 0;
+          current = index;
+          track.style.transform = 'translateX(-' + (current * 100) + '%)';
+          dots.forEach((dot, i) => {
+            dot.style.background = i === current ? '#FFD700' : 'rgba(255,255,255,0.4)';
+            dot.style.transform = i === current ? 'scale(1.3)' : 'scale(1)';
+          });
         }
+
+        function nextSlide() { goTo(current + 1); }
+        function prevSlide() { goTo(current - 1); }
+
+        function startAutoPlay() {
+          if (interval) clearInterval(interval);
+          interval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoPlay() {
+          if (interval) { clearInterval(interval); interval = null; }
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+        }
+
+        dots.forEach((dot) => {
+          dot.addEventListener('click', () => {
+            stopAutoPlay();
+            goTo(parseInt(dot.dataset.index));
+            startAutoPlay();
+          });
+        });
+
+        // Lightbox
+        document.querySelectorAll('.' + slideClass + ' img').forEach((img) => {
+          img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            const caption = img.closest('.' + slideClass).querySelector('p')?.textContent || '';
+            lightboxCaption.textContent = caption;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+          });
+        });
+
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = '';
+        }
+
+        if (lightbox) {
+          lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxImg) {
+              closeLightbox();
+            }
+          });
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeLightbox);
+        }
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeLightbox();
+        });
+
+        goTo(0);
+        startAutoPlay();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initCarousel('myth1', 'myth1-slide');
+        initCarousel('myth2', 'myth2-slide');
+        initCarousel('myth3', 'myth3-slide');
       });
-    }
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeLightbox);
-    }
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-    });
+    </script>
 
-    goTo(0);
-    startAutoPlay();
-  }
+    <style is:global>
+      body {
+        background: #F8F6F0;
+      }
+      #myth1-lightbox, #myth2-lightbox, #myth3-lightbox {
+        display: none !important;
+      }
+      #myth1-lightbox[style*="display: flex"],
+      #myth2-lightbox[style*="display: flex"],
+      #myth3-lightbox[style*="display: flex"] {
+        display: flex !important;
+      }
+      .myth1-slide img,
+      .myth2-slide img,
+      .myth3-slide img {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .myth1-slide img:hover,
+      .myth2-slide img:hover,
+      .myth3-slide img:hover {
+        transform: scale(1.01);
+      }
+    </style>
 
-  document.addEventListener('DOMContentLoaded', () => {
-    initCarousel('myth1', 'myth1-slide');
-    initCarousel('myth2', 'myth2-slide');
-    initCarousel('myth3', 'myth3-slide');
-  });
-</script>
-
-<style is:global>
-  body {
-    background: #F8F6F0;
-  }
-  #myth1-lightbox, #myth2-lightbox, #myth3-lightbox {
-    display: none !important;
-  }
-  #myth1-lightbox[style*="display: flex"],
-  #myth2-lightbox[style*="display: flex"],
-  #myth3-lightbox[style*="display: flex"] {
-    display: flex !important;
-  }
-  .myth1-slide img,
-  .myth2-slide img,
-  .myth3-slide img {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  .myth1-slide img:hover,
-  .myth2-slide img:hover,
-  .myth3-slide img:hover {
-    transform: scale(1.01);
-  }
-</style>
+</Layout>

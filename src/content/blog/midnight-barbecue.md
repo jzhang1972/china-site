@@ -1,0 +1,56 @@
+---
+title: "2 AM in Changsha: How I learned to stop worrying and love the street barbecue"
+description: "A late-night street food adventure in Changsha, China. How I learned to stop worrying and love the street barbecue."
+publishedAt: 2026-07-16
+category: "stories"
+image: "/images/stories/story-midnight-barbecue-china.webp"
+---
+
+
+
+
+
+
+I never thought I would find myself sitting alone at a roadside stall in China at two in the morning, eating grilled skewers and chatting with strangers.
+
+Before I came to China, my friends' warnings echoed in my head: "Don't go out at night." "Stay away from quiet streets." "Watch your back." They meant well, but their words made me nervous about the dark hours in this country.
+
+On my first night in Changsha, jet lag kept me awake. A rich smell of cumin and chili drifted up from the street below, mixed with the crackle of charcoal fires. Looking out the window, I saw a few barbecue stalls still lit up, groups of people huddled around low tables, laughter floating in the air.
+
+I hesitated for ten minutes. Then hunger and curiosity won.
+
+I put on my jacket and went downstairs. The moment I stepped out of the hotel, a wave of heat hit me, not from the weather, but from life itself. The street wasn't quiet or dangerous. A few young people rode by on shared bikes. Convenience stores glowed brightly. A couple walked hand in hand.
+
+The grill owner looked at me and asked, "Spicy? Not spicy?" in broken English. I pointed at a few skewers that looked safe, then found a corner to sit down.
+
+Within five minutes, a group of girls at the next table started asking me questions via a translation app: "Are you a foreigner? Where are you from?" We chatted. They shared their grilled eggplant and chives with me. One girl spoke good English. She told me they come here for late-night snacks every week. "Two in the morning?" she said. "It's still early."
+
+I laughed. Back in my city in the UK, at two in the morning, the streets are empty. After the pubs close, only fast-food joints are open, and you would never walk alone. But in Changsha, at two in the morning, I saw an elderly man walking his dog, lovers leaning on each other, students carrying backpacks as if they had just finished a study session, and me, eating barbecue alone, feeling completely safe.
+
+The skewers arrived. The beef was tender, the lamb juicy, and the chili powder made my tongue tingle. I learned from the girls to wrap the meat in a lettuce leaf and take a big bite. The satisfaction was indescribable.
+
+When I asked for the bill, the owner charged me only 40 yuan, about £5. At that moment, I realized how silly my earlier fears had been.
+
+On my way back to the hotel, I snapped a photo: Changsha's streets at 2 AM, smoke rising from the grills, skyscrapers glittering in the distance. I posted it on Instagram with a caption: "I was told China is dangerous at night. They were wrong."
+
+That post got more likes than anything I had shared before.
+
+<!-- 视频嵌入代码 -->
+<div style="margin: 2.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+  <iframe 
+    src="https://www.youtube.com/embed/pXVrhFTVEn0" 
+    title="Video: A late-night street food adventure in Changsha, China" 
+    loading="lazy"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen
+  >
+  </iframe>
+</div>
+
+*Video: A late-night street food adventure in Changsha, China.*
+
+From then on, in every Chinese city I visited, I looked for a late-night barbecue stall. Not because I was hungry, but because that scene felt real, people shedding the day's stress, letting their guard down in the smoke and warmth. And I could sit among them, worry-free. No fear of pickpockets, no harassment, no anxiety.
+
+That, I think, is China's biggest surprise. Not the Great Wall. Not the pandas. But the freedom to walk alone at 2 AM, grab a skewer, and feel as safe as a local.

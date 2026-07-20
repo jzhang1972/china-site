@@ -1,0 +1,57 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+const posts = allPosts
+  .filter((p) => p.data.category === "practical")
+  .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime());
+
+const categoryLabel = "Practical Guides";
+const categoryIcon = "📚";
+const DEFAULT_IMAGE = "/images/china-mountains-mist-china-featured.webp";
+
+function truncate(text, length = 120) {
+  return text.length > length ? text.slice(0, length) + "..." : text;
+}
+---
+
+<Layout title={`${categoryLabel} · YOGOTOCHINA Blog`} description={`Browse all ${categoryLabel.toLowerCase()} articles.`}>
+  <div style="max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem;">
+
+    <a href="/blog" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem;">
+      <span>←</span> Back to Blog
+    </a>
+
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+      <span style="font-size: 2.5rem;">{categoryIcon}</span>
+      <h1 style="font-size: 2.8rem; font-weight: 700; color: #1F2A2E; margin: 0; letter-spacing: -1px;">{categoryLabel}</h1>
+    </div>
+    <p style="font-size: 1rem; color: #6c757d; margin: 0 0 2rem 0;">{posts.length} articles</p>
+
+    {posts.length === 0 ? (
+      <div style="text-align: center; padding: 4rem 2rem; color: #6c757d;">
+        <p style="font-size: 1.2rem;">No posts in this category yet. Check back soon!</p>
+      </div>
+    ) : (
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+        {posts.map((post) => (
+          <a href={`/blog/${post.id}`} style="text-decoration: none; color: inherit; display: block; background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
+            <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #2D6A4F;">
+              <img src={post.data.image || DEFAULT_IMAGE} alt={post.data.title} style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 1.5rem;">
+              <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; font-weight: 700; color: #1F2A2E; line-height: 1.4;">{post.data.title}</h3>
+              <p style="font-size: 0.9rem; color: #6c757d; line-height: 1.6;">{truncate(post.data.description)}</p>
+              <div style="display: flex; justify-content: space-between; margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid #F0EDE5;">
+                <time style="font-size: 0.8rem; color: #a0a0a0;">{new Date(post.data.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</time>
+                <span style="font-size: 0.8rem; color: #C49E3A; font-weight: 600;">Read →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+
+  </div>
+</Layout>

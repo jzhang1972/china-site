@@ -26,7 +26,11 @@ import Layout from "../../layouts/Layout.astro";
     
     <!-- 图片1：故宫 -->
     <div class="culture-slide" style="min-width: 100%; position: relative;">
-      <img src="/images/theme/culture/culture-beijing-forbidden-city-palace-museum-china.jpg" alt="Forbidden City palace architecture at sunset with golden roof tiles, Beijing, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <img 
+  src="/images/theme/culture/culture-beijing-forbidden-city-palace-museum-china.webp" 
+  alt="Forbidden City palace architecture at sunset with golden roof tiles, Beijing, China" 
+  loading="eager"
+  style="width: 100%; height: 420px; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Forbidden City — where 500 years of imperial history live on</p>
       </div>
@@ -34,7 +38,11 @@ import Layout from "../../layouts/Layout.astro";
     
     <!-- 图片2：天坛 -->
     <div class="culture-slide" style="min-width: 100%; position: relative;">
-      <img src="/images/theme/culture/culture-beijing-temple-of-heaven-architecture-china.jpg" alt="Temple of Heaven circular altar and blue glazed tiles, Beijing, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+     <img 
+  src="/images/theme/culture/culture-beijing-temple-of-heaven-architecture-china.webp" 
+  alt="Temple of Heaven circular altar and blue glazed tiles, Beijing, China" 
+  loading="eager"
+  style="width: 100%; height: 420px; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Temple of Heaven — an architectural masterpiece of the Ming Dynasty</p>
       </div>
@@ -42,7 +50,11 @@ import Layout from "../../layouts/Layout.astro";
     
     <!-- 图片3：兵马俑 -->
     <div class="culture-slide" style="min-width: 100%; position: relative;">
-      <img src="/images/theme/culture/culture-xian-terracotta-warriors-army-china.jpg" alt="Terracotta Warriors army standing in rows inside the museum hall, Xi'an, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <img 
+  src="/images/theme/culture/culture-xian-terracotta-warriors-army-china.webp" 
+  alt="Terracotta Warriors army standing in rows inside the museum hall, Xi'an, China" 
+  loading="eager"
+  style="width: 100%; height: 420px; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Terracotta Warriors — 8,000 soldiers guarding China's first emperor</p>
       </div>
@@ -50,7 +62,11 @@ import Layout from "../../layouts/Layout.astro";
     
     <!-- 图片4：月牙泉 -->
     <div class="culture-slide" style="min-width: 100%; position: relative;">
-      <img src="/images/theme/culture/culture-dunhuang-crescent-lake-desert-oasis-china.jpg" alt="Crescent Lake oasis surrounded by sand dunes in the Gobi Desert, Dunhuang, China" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+      <img 
+  src="/images/theme/culture/culture-dunhuang-crescent-lake-desert-oasis-china.webp" 
+  alt="Crescent Lake oasis surrounded by sand dunes in the Gobi Desert, Dunhuang, China" 
+  loading="eager"
+  style="width: 100%; height: 420px; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 0; font-weight: 300;">Crescent Lake — a desert oasis on the ancient Silk Road</p>
       </div>
@@ -315,7 +331,9 @@ import Layout from "../../layouts/Layout.astro";
     Plan with AI <span style="font-size: 1.1rem;">→</span>
   </a>
 </div>
-</Layout>
+</div>
+
+
 
 <script>
   // 轮播逻辑
@@ -395,10 +413,10 @@ import Layout from "../../layouts/Layout.astro";
     goTo(0);
     startAutoPlay();
   });
-</script>
+</script>   
 
 <style is:global>
-  body {
+body {
     background: #F8F6F0;
   }
   
@@ -408,4 +426,9 @@ import Layout from "../../layouts/Layout.astro";
   
   a[href*="google.com/maps"]:hover {
     border-bottom-color: #C49E3A !important;
-    color: #1F2A2E !important;
+    color: #1F2A2E !important;  }
+</style>
+
+
+
+</Layout>

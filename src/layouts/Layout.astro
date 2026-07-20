@@ -64,7 +64,7 @@ const siteDescription =
 
     <meta
       property="og:image"
-      content="https://yogotochina.com/og-image.jpg"
+      content="https://yogotochina.com/og-image.webp"
     />
 
     <meta
@@ -94,19 +94,29 @@ const siteDescription =
 
     <meta
       name="twitter:image"
-      content="https://yogotochina.com/og-image.jpg"
+      content="https://yogotochina.com/og-image.webp"
     />
 
-    <link
-      rel="canonical"
-      href={Astro.url.href}
-    />
+<link
+  rel="canonical"
+  href={Astro.url.href}
+/>
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="/favicon.png"
-    />
+<!-- ===== 结构化数据 (JSON-LD) ===== -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "YOGOTOCHINA",
+  "url": "https://yogotochina.com",
+  "description": "Plan your China trip with ease. Visa info, travel guides, routes, real stories, and trusted tours.",
+  "inLanguage": "en"
+})} />
+
+<link
+  rel="icon"
+  type="image/png"
+  href="/favicon.png"
+/>
 
     <!-- 预加载首页主要图片 -->
     <link
@@ -127,10 +137,18 @@ const siteDescription =
       crossorigin
     />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
+<link 
+  rel="stylesheet" 
+  href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" 
+  media="print" 
+  onload="this.media='all'"
+/>
+<noscript>
+  <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" 
+  />
+</noscript>
 
     <!--
       GTranslate 设置 - 使用 dropdown.js（纯文字语言名称，无国旗）
@@ -827,7 +845,13 @@ languages: [
             <li>
               <a href="/visa">Visa</a>
             </li>
-          </ul>
+         
+<li>
+  <a href="/blog">Blog</a>
+</li>
+
+
+ </ul>
 
           <!--
             翻译按钮 - 纯文字下拉菜单
@@ -894,6 +918,11 @@ languages: [
         <li>
           <a href="/visa">Visa</a>
         </li>
+
+	<li>
+  <a href="/blog">Blog</a>
+</li>
+
       </ul>
     </div>
 

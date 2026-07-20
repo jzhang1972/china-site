@@ -1,0 +1,181 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+
+const sortedPosts = allPosts.sort(
+  (a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()
+);
+
+// ===== Featured 筛选（featured: true） =====
+const featuredPosts = sortedPosts.filter((post) => post.data.featured === true).slice(0, 2);
+const latestPosts = sortedPosts.filter((post) => post.data.featured !== true).slice(0, 6);
+
+const categoryMap = {
+  practical: { label: "Practical Guides", icon: "📚", slug: "practical" },
+  stories: { label: "Travel Stories", icon: "✈️", slug: "stories" },
+  culture: { label: "Deep Culture", icon: "🏛️", slug: "culture" },
+};
+
+const categoryColors = {
+  practical: { bg: "#D4EDDA", count: "#2E7D32", desc: "#4CAF50" },
+  stories: { bg: "#FFE8CC", count: "#E65100", desc: "#F57C00" },
+  culture: { bg: "#E8D5EA", count: "#6A1B9A", desc: "#8E24AA" },
+};
+
+const categoryDescriptions = {
+  practical: "Travel tips & how-tos",
+  stories: "Real experiences from travelers",
+  culture: "Insights & understanding",
+};
+
+const DEFAULT_IMAGE = "/images/china-mountains-mist-china-featured.webp";
+
+function truncate(text, length = 120) {
+  return text.length > length ? text.slice(0, length) + "..." : text;
+}
+---
+
+<Layout title="Blog · YOGOTOCHINA" description="Stories, guides, and insights about China.">
+  <div style="max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem;">
+
+    <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem;">
+      <span>←</span> Back to Home
+    </a>
+
+   <!-- Hero -->
+<div style="margin-bottom: 2.5rem;">
+  <img
+    src="/images/china-mountains-mist-china-featured.webp"
+    alt="China mountains mist"
+    width="1100"
+    height="400"
+    style="width: 100%; height: auto; object-fit: cover; border-radius: 16px; margin-bottom: 1.5rem;"
+  />
+  <h1 style="font-size: 2.8rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.3rem 0; letter-spacing: -1px;">
+    Blog
+  </h1>
+  <p style="font-size: 1.1rem; color: #6c757d; margin: 0;">
+    Stories that surprise you. Guides that help you plan. Culture that stays with you.
+  </p>
+</div>
+
+    <!-- ===== Category Cards（动态统计） ===== -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.5rem;">
+      {Object.entries(categoryMap).map(([key, { label, icon, slug }]) => {
+        const count = sortedPosts.filter((p) => p.data.category === key).length;
+        const color = categoryColors[key];
+        const desc = categoryDescriptions[key];
+        return (
+          <a
+            href={`/blog/${slug}`}
+            style={`background: ${color.bg}; 
+
+border: 1px solid rgba(0,0,0,0.06);
+
+border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none; color: #1F2A2E; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease;`}
+            onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';"
+          >
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">{icon}</div>
+            <h3 style="margin: 0 0 0.2rem 0; font-size: 1rem; font-weight: 600; color: #1F2A2E;">{label}</h3>
+            <p style={`margin: 0 0 0.3rem 0; font-size: 0.85rem; color: ${color.count};`}>
+              {count} {count === 1 ? 'article' : 'articles'}
+            </p>
+            <p style={`margin: 0; font-size: 0.8rem; color: ${color.desc};`}>
+              {desc}
+            </p>
+          </a>
+        );
+      })}
+    </div>
+
+<!-- Featured -->
+{featuredPosts.length > 0 && (
+  <>
+    <h2 style="font-size: 1.4rem; font-weight: 700; color: #1F2A2E; margin: 0 0 1rem 0;">
+      ⭐ Editor's Pick
+    </h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+      {featuredPosts.map((post) => (
+        <div style="background: #2D6A4F; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #2D6A4F;">
+            <img
+              src={post.data.image || DEFAULT_IMAGE}
+              alt={post.data.title}
+              width="500"
+              height="280"
+              style="width: 100%; height: 100%; object-fit: cover;"
+            />
+          </div>
+          <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0; line-height: 1.3;">
+              {post.data.title}
+            </h3>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin: 0 0 1rem 0; line-height: 1.5; flex: 1;">
+              {truncate(post.data.description, 100)}
+            </p>
+            <a href={`/blog/${post.id}`} style="display: inline-block; background-color: #FFD700; color: #1F2A2E; padding: 0.4rem 1.5rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.85rem; align-self: flex-start;">
+              Read →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </>
+)}
+
+    <!-- Latest -->
+    {latestPosts.length > 0 && (
+      <>
+        <h2 style="font-size: 1.4rem; font-weight: 700; color: #1F2A2E; margin: 0 0 1rem 0;">📰 Latest Articles</h2>
+        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+          {latestPosts.map((post, i) => (
+            <a
+              key={post.id}
+              href={`/blog/${post.id}`}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "1rem",
+                padding: "0.8rem 1.5rem",
+                textDecoration: "none",
+                color: "#1F2A2E",
+                borderBottom: i < latestPosts.length - 1 ? "1px solid #F0EDE5" : "none",
+                transition: "background-color 0.2s",
+              }}
+              onmouseover="this.style.backgroundColor='#F8F6F0'"
+              onmouseout="this.style.backgroundColor='transparent'"
+            >
+              <img
+                src={post.data.image || DEFAULT_IMAGE}
+                alt={post.data.title}
+                width="300"
+                height="300"
+                style={{ width: "320px", height: "180px", objectFit: "cover", borderRadius: "8px", flexShrink: "0" }}
+              />
+              <div style={{ flex: "1", minWidth: "0" }}>
+                <div style={{ fontSize: "0.95rem", fontWeight: "500" }}>
+                  {post.data.title}
+                </div>
+                <div style={{ fontSize: "0.8rem", color: "#a0a0a0", marginTop: "0.2rem" }}>
+                  {new Date(post.data.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                </div>
+              </div>
+              <span style={{ fontSize: "0.8rem", color: "#C49E3A", fontWeight: "600", whiteSpace: "nowrap" }}>Read →</span>
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+
+    <!-- CTA -->
+    <div style="margin-top: 3rem; background: #2D6A4F; border-radius: 16px; padding: 2.5rem; text-align: center; color: white;">
+      <h2 style="margin: 0 0 0.5rem 0; font-size: 1.4rem; color: white; font-weight: 600;">Plan your China trip with confidence</h2>
+  
+      <a href="/tours" style="background-color: #FFD700; color: #1F2A2E; padding: 0.7rem 2.5rem; border-radius: 30px; text-decoration: none; font-size: 1rem; font-weight: 600; display: inline-block; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#E6C200'" onmouseout="this.style.backgroundColor='#FFD700'">Explore tours →</a>
+    </div>
+
+  </div>
+</Layout>
