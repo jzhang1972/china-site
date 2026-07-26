@@ -268,13 +268,20 @@ For additional security:
 
 ---
 
-## Video Guide
-
-Prefer watching instead?
-
-The following video shows exactly how to set up Alipay and make your first payment in China.
-
-**Video:** 视频链接
+<!-- ===== 视频嵌入 ===== -->
+<div style="margin: 1.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+  <iframe 
+    src="https://www.youtube.com/embed/OTQ3RTizPi0?si=PaqVcgya6XRC_GFg" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+    title="WeChat Pay vs. Alipay — which one do you need?"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen
+  ></iframe>
+</div>
+<p style="font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center;">
+  Video: 
+Foreigner's Guide to Paying in China with WeChat & Alipay
+</p>
 
 ---
 

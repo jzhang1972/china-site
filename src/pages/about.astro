@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="About - YOGOTOCHINA">
-  <div style="max-width: 700px; margin: 0 auto; padding: 2rem 1rem;">
-    <a href="/" style="display: inline-block; margin-bottom: 2rem; color: #2D6A4F;">← Back to Home</a>
+<Layout title="About - YOGOTOCHINA | Real, Honest China Travel Guides">
+  <article style="max-width: 700px; margin: 0 auto; padding: 2rem 1rem;">
+    <a href="/" style="display: inline-block; margin-bottom: 2rem; color: #2D6A4F; text-decoration: none;">
+      ← Back to Home
+    </a>
     
     <h1>About YOGOTOCHINA</h1>
     
@@ -15,5 +17,21 @@ import Layout from "../layouts/Layout.astro";
     <p>This site is for travelers who want to see China beyond the clichés. The real China. Not always easy to find, but always worth it.</p>
     
     <p>YOGOTOCHINA is independently run. No government affiliation. No travel agency. Just honest, practical, and up-to-date information from someone who knows the country inside out.</p>
-  </div>
+    
+    <!-- ✅ 新增：行动号召 -->
+    <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid #e5e5e5;">
+      <p style="font-weight: bold; margin-bottom: 1rem;">Ready to plan your trip?</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+        <a href="/blog" style="background: #2D6A4F; color: white; padding: 0.6rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          Read the Blog →
+        </a>
+        <a href="/findway" style="background: #333; color: white; padding: 0.6rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          Explore Routes →
+        </a>
+        <a href="/contact" style="background: transparent; color: #2D6A4F; padding: 0.6rem 1.5rem; border-radius: 6px; border: 2px solid #2D6A4F; text-decoration: none; font-weight: bold;">
+          Ask a Question →
+        </a>
+      </div>
+    </div>
+  </article>
 </Layout>

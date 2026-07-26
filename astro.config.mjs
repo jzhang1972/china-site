@@ -6,4 +6,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.yogotochina.com',
   integrations: [sitemap()],
+  redirects: {
+    '/blog/first-guide': '/blog/how-to-pay-in-china',
+  },
 });

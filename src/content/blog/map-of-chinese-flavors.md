@@ -76,6 +76,8 @@ The biggest line on China's food map is the Yangtze River.
 | Heavy sauces | Light sauces |
 | Lamb and pork | Pork and fish |
 
+[Read more: The Banquet of the Ba Kingdom →](/blog/china-chongqing-banquet-ba-kingdom)
+
 ---
 
 ## The Sweet-Salty Border

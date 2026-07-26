@@ -126,49 +126,55 @@ border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none;
   </>
 )}
 
-    <!-- Latest -->
-    {latestPosts.length > 0 && (
-      <>
-        <h2 style="font-size: 1.4rem; font-weight: 700; color: #1F2A2E; margin: 0 0 1rem 0;">📰 Latest Articles</h2>
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
-          {latestPosts.map((post, i) => (
-            <a
-              key={post.id}
-              href={`/blog/${post.id}`}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "1rem",
-                padding: "0.8rem 1.5rem",
-                textDecoration: "none",
-                color: "#1F2A2E",
-                borderBottom: i < latestPosts.length - 1 ? "1px solid #F0EDE5" : "none",
-                transition: "background-color 0.2s",
-              }}
-              onmouseover="this.style.backgroundColor='#F8F6F0'"
-              onmouseout="this.style.backgroundColor='transparent'"
-            >
-              <img
-                src={post.data.image || DEFAULT_IMAGE}
-                alt={post.data.title}
-                width="300"
-                height="300"
-                style={{ width: "320px", height: "180px", objectFit: "cover", borderRadius: "8px", flexShrink: "0" }}
-              />
-              <div style={{ flex: "1", minWidth: "0" }}>
-                <div style={{ fontSize: "0.95rem", fontWeight: "500" }}>
-                  {post.data.title}
-                </div>
-                <div style={{ fontSize: "0.8rem", color: "#a0a0a0", marginTop: "0.2rem" }}>
-                  {new Date(post.data.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-                </div>
-              </div>
-              <span style={{ fontSize: "0.8rem", color: "#C49E3A", fontWeight: "600", whiteSpace: "nowrap" }}>Read →</span>
-            </a>
-          ))}
-        </div>
-      </>
-    )}
+<!-- Latest -->
+{latestPosts.length > 0 && (
+  <>
+    <h2 style="font-size: 1.4rem; font-weight: 700; color: #1F2A2E; margin: 0 0 1rem 0;">📰 Latest Articles</h2>
+    <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+      {latestPosts.map((post, i) => (
+        <a
+          key={post.id}
+          href={`/blog/${post.id}`}
+          class="latest-item"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "1rem",
+            padding: "0.8rem 1.5rem",
+            textDecoration: "none",
+            color: "#1F2A2E",
+            borderBottom: i < latestPosts.length - 1 ? "1px solid #F0EDE5" : "none",
+            transition: "background-color 0.2s",
+          }}
+          onmouseover="this.style.backgroundColor='#F8F6F0'"
+          onmouseout="this.style.backgroundColor='transparent'"
+        >
+          <img
+            src={post.data.image || DEFAULT_IMAGE}
+            alt={post.data.title}
+            class="latest-image"
+            style={{
+              width: "120px",
+              height: "120px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              flexShrink: "0",
+            }}
+          />
+          <div style={{ flex: "1", minWidth: "0" }}>
+            <div style={{ fontSize: "0.95rem", fontWeight: "500" }}>
+              {post.data.title}
+            </div>
+            <div style={{ fontSize: "0.8rem", color: "#a0a0a0", marginTop: "0.2rem" }}>
+              {new Date(post.data.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+            </div>
+          </div>
+          <span style={{ fontSize: "0.8rem", color: "#C49E3A", fontWeight: "600", whiteSpace: "nowrap" }}>Read →</span>
+        </a>
+      ))}
+    </div>
+  </>
+)}
 
     <!-- CTA -->
     <div style="margin-top: 3rem; background: #2D6A4F; border-radius: 16px; padding: 2.5rem; text-align: center; color: white;">
@@ -179,3 +185,21 @@ border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none;
 
   </div>
 </Layout>
+
+<style is:global>
+  /* ===== 移动端 Latest 改为上图下文 ===== */
+  @media (max-width: 768px) {
+    .latest-item {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.5rem !important;
+      padding: 1rem !important;
+    }
+    .latest-item .latest-image {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9 !important;
+      border-radius: 8px !important;
+    }
+  }
+</style>
