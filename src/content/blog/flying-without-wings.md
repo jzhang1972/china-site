@@ -44,3 +44,13 @@ When I stepped off the train in Shanghai, I wasn't tired. No sore back, no dry t
 Later, I calculated the cost: £60. A taxi from central London to Heathrow would have been £50. For £10 more, I'd crossed the spine of a country that once took days to traverse.
 
 Back home, I tell people: "China's high-speed rail isn't just fast. It resets your expectations." Most don't believe me. But I know what I experienced. And I know I'll never look at a long-distance train the same way again.
+
+---
+
+**Ready for your trip to China?**
+Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+
+**Essential Guides:**
+- [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
+- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
+- [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)

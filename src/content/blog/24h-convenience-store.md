@@ -36,3 +36,13 @@ In my country, convenience stores have three employees on shift and still get ro
 </div>
 
 *Video: Shenzhen's cashier-less stores.*
+
+---
+
+**Ready for your trip to China?**
+Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+
+**Essential Guides:**
+- [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
+- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
+- [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)

@@ -54,3 +54,13 @@ That post got more likes than anything I had shared before.
 From then on, in every Chinese city I visited, I looked for a late-night barbecue stall. Not because I was hungry, but because that scene felt real, people shedding the day's stress, letting their guard down in the smoke and warmth. And I could sit among them, worry-free. No fear of pickpockets, no harassment, no anxiety.
 
 That, I think, is China's biggest surprise. Not the Great Wall. Not the pandas. But the freedom to walk alone at 2 AM, grab a skewer, and feel as safe as a local.
+
+---
+
+**Ready for your trip to China?**
+Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+
+**Essential Guides:**
+- [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
+- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
+- [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)

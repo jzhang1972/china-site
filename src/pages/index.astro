@@ -207,4 +207,45 @@ import HeroCarousel from "../components/HeroCarousel.astro";
       }
     }
   </style>
+
+
+  <!-- ===== 电脑端右下角悬浮 Checklist 按钮 ===== -->
+  <style>
+    .floating-checklist-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #2D6A4F;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .floating-checklist-btn:hover {
+      background: #1A4A35;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+    
+    /* 在手机屏幕上隐藏该按钮 */
+    @media (max-width: 768px) {
+      .floating-checklist-btn {
+        display: none !important;
+      }
+    }
+  </style>
+
+  <a href="/blog/china-travel-checklist/" class="floating-checklist-btn">
+    📋 Prep Checklist
+  </a>
+
+
 </Layout>

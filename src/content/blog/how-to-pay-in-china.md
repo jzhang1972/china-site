@@ -1,5 +1,5 @@
 ---
-title: "How to Pay in China: A Complete Guide for Foreign Travelers (2026)"
+title: "China Payment Methods for Tourists: Alipay, WeChat Pay & Cash (2026)"
 description: "Learn how to use Alipay and WeChat Pay in China with your foreign bank card. A complete step-by-step guide covering setup, QR code payments, fees, common problems, and travel tips."
 publishedAt: 2026-07-15
 category: "practical"
@@ -82,6 +82,7 @@ Your bank may ask you to approve a small verification transaction.
 
 Once completed, you're ready to pay.
 
+> **Need a more detailed walkthrough?** Read our full **[Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)**.
 ---
 
 # Setting Up WeChat Pay
@@ -111,6 +112,8 @@ Add your bank card.
 ### Step 5
 
 Complete verification if required.
+
+> **Need a more detailed walkthrough?** Read our full **[WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)**.
 
 ---
 
@@ -309,3 +312,17 @@ From street food stalls and taxis to luxury shopping malls and high-speed train 
 Spend a few minutes preparing before your trip, and you'll be able to travel around China with confidence—just like a local.
 
 Happy travels!
+
+**More Travel Guides:**
+- [How to Set Up Alipay as a Foreign Tourist](/blog/alipay-setup-for-tourists/)
+- [How to Set Up WeChat Pay as a Tourist](/blog/wechat-pay-tourist-guide/)
+
+---
+
+**Ready for your trip to China?**
+Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+
+**Essential Guides:**
+- [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
+- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
+- [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)

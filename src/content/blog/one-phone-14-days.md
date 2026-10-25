@@ -54,3 +54,13 @@ Later, when I needed to split dinner with new friends, I used **WeChat Pay (wēi
 Back in London, after my trip, I went to a café. I automatically reached for my phone to pay. The cashier looked at me strangely. "Card or cash only," she said. I fumbled for my wallet. It felt clumsy, slow, old-fashioned.
 
 I realised then: China hadn't just been a trip. It had reset my default.
+
+---
+
+**Ready for your trip to China?**
+Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+
+**Essential Guides:**
+- [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
+- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
+- [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
