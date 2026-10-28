@@ -278,6 +278,30 @@ languages: [
         font: inherit;
       }
 
+        /* ===== 修复手机端横向滚动问题 ===== */
+  
+  /* 1. 彻底防止页面被撑宽 */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* 2. 手机端强制多列网格变成单列 */
+  @media (max-width: 768px) {
+    /* 匹配所有内联写了多列的 grid（排除轮播图轨道） */
+    [style*="grid-template-columns"]:not(#food-carousel-track) {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+    }
+    
+    /* 确保子元素充满屏幕宽度 */
+    [style*="grid-template-columns"]:not(#food-carousel-track) > * {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+
       /* ========================================
          导航栏
          ======================================== */

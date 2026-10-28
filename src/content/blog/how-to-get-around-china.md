@@ -83,14 +83,7 @@ Before you fly, make sure you have:
 - [ ] Familiarized yourself with how to book trains on Trip.com.
 - [ ] Your passport ready for train security checks.
 
----
 
-**More Travel Guides:**
-- [Read our complete China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
-- [How to Pay in China: The Ultimate Guide](/blog/how-to-pay-in-china/)
-- [How to Stay Connected in China (eSIM & VPN)](/blog/china-esim-vpn-internet-guide/)
-
----
 
 **Ready for your trip to China?**
 Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.

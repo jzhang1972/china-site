@@ -175,7 +175,7 @@ Alipay charges a **3% international transaction fee** on single transactions ove
 ---
 
 **Next steps:**
-- [Back to Payment Guide](/blog/how-to-pay-in-china-guide-2026)
+- [Back to Payment Guide](/blog/how-to-pay-in-china/)
 - [How to Set Up WeChat Pay](/blog/wechat-pay-tourist-guide)
 
 ---

@@ -89,7 +89,7 @@ If you want to know how to prepare for your trip, check out our **[China Travel 
 ---
 
 **Ready for your next adventure?**
-- [Read our complete China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
+
 - [How to Pay in China: The Ultimate Guide](/blog/how-to-pay-in-china/)
 - [How to Stay Connected in China (eSIM & VPN)](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around China: Didi, Trains & Maps](/blog/how-to-get-around-china/)

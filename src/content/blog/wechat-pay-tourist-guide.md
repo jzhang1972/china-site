@@ -187,7 +187,7 @@ WeChat's verification process is manual, not automated like Alipay's. It require
 ---
 
 **Next steps:**
-- [Back to Payment Guide](/blog/how-to-pay-in-china-guide-2026)
+- [Back to Payment Guide](/blog/how-to-pay-in-china/)
 - [How to Set Up Alipay](/blog/alipay-setup-for-tourists)
 
 ---

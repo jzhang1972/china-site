@@ -69,9 +69,15 @@ Preparation is everything. If you tick off this checklist before you board your 
 
 Once your payments and internet are set up, you can relax and enjoy the incredible food, history, and culture.
 
-**Stuck on something?** Leave a comment below, and we'll help you out!
+**Stuck on something?** [Contact us](/contact/) and we'll help you out.
 
 ---
-**Need more help planning your trip?**
-- [Read our complete China Travel Guide](/blog/)
-- [How to Pay in China: The Ultimate Guide](/blog/how-to-pay-in-china/)
+
+**Ready for your trip to China?**
+Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+
+**Essential Guides:**
+- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+- [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
+- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
+- [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
