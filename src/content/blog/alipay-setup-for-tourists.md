@@ -1,6 +1,6 @@
 ---
 title: "How to Set Up Alipay as a Foreign Tourist in China (2026)"
-description: "Step-by-step guide to setting up Alipay with your foreign credit card. Download, register, link your card, verify your identity, and start paying in China."
+description: "How to set up Alipay as a foreign tourist in China: download the international app, register with your phone number, link your Visa or Mastercard, and complete passport verification. Includes troubleshooting for declined cards and failed facial scans."
 publishedAt: 2026-08-04
 category: "practical"
 image: "/images/blog/alipay-setup-for-tourists.webp"
@@ -176,14 +176,18 @@ Alipay charges a **3% international transaction fee** on single transactions ove
 
 **Next steps:**
 - [Back to Payment Guide](/blog/how-to-pay-in-china/)
-- [How to Set Up WeChat Pay](/blog/wechat-pay-tourist-guide)
+- [How to Set Up WeChat Pay](/blog/wechat-pay-tourist-guide/)
 
 ---
 
 **Ready for your trip to China?**
-Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+Make sure you have everything you need before you fly. Start with our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)**.
 
 **Essential Guides:**
+- [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
+- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+- [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)
+- [WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)

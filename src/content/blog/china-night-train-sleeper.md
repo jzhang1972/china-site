@@ -106,7 +106,7 @@ A 15-hour sleeper train ride isn't for everyone. But if you like the idea of mov
 
 If this story inspired you to try a night train in China, booking is easier than you think.
 
-<a href="https://www.trip.com/t/zfNycHqJfV2" target="_blank" rel="noopener noreferrer">👉 Check sleeper train prices on Trip.com →</a>
+<a href="https://www.trip.com/t/zfNycHqJfV2" target="_blank" rel="noopener noreferrer nofollow">👉 Check sleeper train prices on Trip.com →</a>
 
 Most routes have sleeper options. Just look for K, T, or Z trains when you search.
 ---
@@ -118,9 +118,13 @@ Most routes have sleeper options. Just look for K, T, or Z trains when you searc
 ---
 
 **Ready for your trip to China?**
-Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+Make sure you have everything you need before you fly. Start with our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)**.
 
 **Essential Guides:**
+- [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
+- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+- [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)
+- [WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)

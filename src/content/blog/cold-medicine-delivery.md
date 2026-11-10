@@ -1,5 +1,5 @@
 ---
-title: "Need cold medicine at midnight?"
+title: "Getting Medicine at Midnight in China: A Real Experience"
 description: "2 AM. 28 yuan. Delivery in 21 minutes. Getting cold medicine delivered in the middle of the night in Chengdu."
 publishedAt: 2026-07-12
 category: "stories"
@@ -40,9 +40,13 @@ China isn't just fast. It's thoughtful, even at 2 AM.
 ---
 
 **Ready for your trip to China?**
-Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+Make sure you have everything you need before you fly. Start with our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)**.
 
 **Essential Guides:**
+- [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
+- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+- [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)
+- [WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)

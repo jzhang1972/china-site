@@ -1,6 +1,6 @@
 ---
 title: "How to Set Up WeChat Pay as a Foreign Tourist in China (2026)"
-description: "Complete step-by-step guide to setting up WeChat Pay with your foreign credit card. Download, register, link your card, verify identity, and start paying."
+description: "How to set up WeChat Pay as a foreign tourist: register with your international phone number, activate the wallet, link your credit card, and complete identity verification. Note: WeChat verification can take 2-3 days, so start before you fly."
 publishedAt: 2026-08-04
 category: "practical"
 image: "/images/blog/wechat-pay-tourist-guide.webp"
@@ -188,14 +188,18 @@ WeChat's verification process is manual, not automated like Alipay's. It require
 
 **Next steps:**
 - [Back to Payment Guide](/blog/how-to-pay-in-china/)
-- [How to Set Up Alipay](/blog/alipay-setup-for-tourists)
+- [How to Set Up Alipay](/blog/alipay-setup-for-tourists/)
 
 ---
 
 **Ready for your trip to China?**
-Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+Make sure you have everything you need before you fly. Start with our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)**.
 
 **Essential Guides:**
+- [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
+- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+- [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)
+- [WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)

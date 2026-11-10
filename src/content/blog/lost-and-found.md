@@ -1,10 +1,10 @@
 ---
-title: "Trust is the default"
+title: "I Left My Bag in China. Here's What Happened."
 description: "I left my bag behind in a crowded tourist spot. The system brought it back. A story about trust and safety in China."
 publishedAt: 2026-07-15
 category: "stories"
 image: "/images/stories/story-lost-and-found-china.webp"
-featured: true
+featured: false
 ---
 
 
@@ -78,9 +78,13 @@ That's the China I now carry with me, not just the pandas and the skyscrapers, b
 ---
 
 **Ready for your trip to China?**
-Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+Make sure you have everything you need before you fly. Start with our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)**.
 
 **Essential Guides:**
+- [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
+- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+- [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)
+- [WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)

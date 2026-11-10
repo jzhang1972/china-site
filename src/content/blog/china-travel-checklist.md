@@ -73,11 +73,8 @@ Once your payments and internet are set up, you can relax and enjoy the incredib
 
 ---
 
-**Ready for your trip to China?**
-Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
-
-**Essential Guides:**
-- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+**Next steps:**
+Now that you know what to prepare, read the detailed guides:
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)

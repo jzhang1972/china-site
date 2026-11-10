@@ -271,10 +271,70 @@ Even if you have an e-ticket, keep the QR code accessible. Train staff may check
 ---
 
 **Ready for your trip to China?**
-Make sure you have everything you need before you fly. Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments, internet, and transport.
+Make sure you have everything you need before you fly. Start with our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)**.
 
 **Essential Guides:**
-- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+- [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
+- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+- [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)
+- [WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why was my passport number rejected when booking a China train ticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Make sure you're entering it without spaces or dashes. If you've used this passport to travel to China before, check your visa. Sometimes the name format is different."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I can't receive the SMS verification code. What should I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Make sure your phone has international roaming enabled. Some carriers block SMS from China. Try using your email to verify instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the 12306 app available in English?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trip.com defaults to English. For 12306, go to Settings, then Language, then English."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I choose a window seat on a China high-speed train?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. On Trip.com, you can usually request a window or aisle seat during the booking process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should I book China train tickets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Train tickets in China can sell out, especially during holidays like Chinese New Year, National Day, and May Day. Book at least a few days ahead during peak season."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a paper ticket to board a China high-speed train?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Most high-speed trains now use e-tickets. You scan your passport or QR code at the gate. Keep your passport with you at all times."
+      }
+    }
+  ]
+}
+</script>
