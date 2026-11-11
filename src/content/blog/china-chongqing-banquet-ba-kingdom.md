@@ -31,9 +31,7 @@ featured: true
 </div>
 <p style="font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center;">
   Video: Experience the Joy of Royalty in Chongqing — Huali Banquet · Banquet of the Ba Kingdom
-  <br>
-  <span style="font-size: 0.75rem;">Source: YouTube</span>
-</p>
+ </p>
 
 I didn't know what to expect when I was told I'd be attending a "royal banquet" in Chongqing. The city is famous for its hotpot, its neon skyline, and its monorail that punches through buildings. A quiet, ancient feast was the last thing on my mind.
 

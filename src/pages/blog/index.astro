@@ -8,9 +8,11 @@ const sortedPosts = allPosts.sort(
   (a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()
 );
 
-// ===== Featured 筛选（featured: true） =====
+// Editor's Pick
 const featuredPosts = sortedPosts.filter((post) => post.data.featured === true).slice(0, 2);
-const latestPosts = sortedPosts.filter((post) => post.data.featured !== true).slice(0, 6);
+
+// Latest 显示全部文章
+const latestPosts = sortedPosts;
 
 const categoryMap = {
   practical: { label: "Practical Guides", icon: "📚", slug: "practical" },
@@ -37,10 +39,7 @@ function truncate(text, length = 120) {
 }
 ---
 
-<Layout 
-  title="China Travel Blog: Guides, Stories & Culture (2026) | YOGOTOCHINA" 
-  description="Practical China travel guides, real traveler stories, and cultural insights. Learn about Alipay, eSIM, high-speed trains, and life in China."
->
+<Layout title="China Travel Blog: Guides, Stories & Culture (2026) | YOGOTOCHINA" description="Practical China travel guides, real traveler stories, and cultural insights. Learn about Alipay, eSIM, high-speed trains, and life in China.">
   <div style="max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem;">
 
     <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #6c757d; text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem;">
@@ -73,11 +72,7 @@ function truncate(text, length = 120) {
         return (
           <a
             href={`/blog/${slug}`}
-            style={`background: ${color.bg}; 
-
-border: 1px solid rgba(0,0,0,0.06);
-
-border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none; color: #1F2A2E; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease;`}
+            style={`background: ${color.bg}; border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none; color: #1F2A2E; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease;`}
             onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.10)';"
             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 16px rgba(0,0,0,0.04)';"
           >
@@ -139,8 +134,9 @@ border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none;
           key={post.id}
           href={`/blog/${post.id}`}
           class="latest-item"
+          data-index={i}
           style={{
-            display: "flex",
+            display: i >= 8 ? "none" : "flex",
             alignItems: "center",
             gap: "1rem",
             padding: "0.8rem 1.5rem",
@@ -176,6 +172,12 @@ border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none;
         </a>
       ))}
     </div>
+
+    <div id="view-all-container" style="text-align: center; margin-top: 1.5rem;">
+      <button id="view-all-btn" style="background: none; border: 2px solid #2D6A4F; color: #2D6A4F; padding: 0.6rem 2rem; border-radius: 30px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+        View All Articles →
+      </button>
+    </div>
   </>
 )}
 
@@ -188,6 +190,23 @@ border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none;
 
   </div>
 </Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('view-all-btn');
+    const container = document.getElementById('view-all-container');
+    if (!btn) return;
+    
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.latest-item').forEach(function(el, index) {
+        if (index >= 8) {
+          el.style.display = 'flex';
+        }
+      });
+      container.style.display = 'none';
+    });
+  });
+</script>
 
 <style is:global>
   /* ===== 移动端 Latest 改为上图下文 ===== */

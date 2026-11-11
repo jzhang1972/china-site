@@ -18,15 +18,22 @@ As an international traveler, I had heard a lot about China’s high-speed train
 
 This is what it was like.
 
-<div style="margin: 1.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-  <iframe 
-    src="https://www.youtube.com/embed/jA1KNPmjwYw" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    title="Riding a robotaxi in China"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen
-  ></iframe>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <div style="position: relative; width: 315px; max-width: 100%; margin: 0 auto; padding-bottom: 560px; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/jA1KNPmjwYw" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      title="Riding a driverless Robotaxi in Wuhan, China — full ride experience"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
+<p style="font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center;">
+  Video: Riding a driverless Robotaxi in Wuhan, China
+
+</p>
 
 ---
 

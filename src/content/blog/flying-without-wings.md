@@ -27,14 +27,17 @@ Two hours in, I ordered lunch from a trolley that passed by: a box of braised po
 Three hours later, the conductor announced we would arrive on time. I checked my phone. 4 hours and 28 minutes had passed. Beijing to Shanghai. 1,300 kilometres. Less time than two movies back-to-back.
 
 <!-- YouTube 短视频嵌入代码 - 高铁稳定性 -->
-<div style="margin: 0 0 1.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-  <iframe 
-    src="https://www.youtube.com/embed/zE2j88oej3E" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    title="Bullet Train in China Has an Incredible Stability"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen
-  ></iframe>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <div style="position: relative; width: 315px; max-width: 100%; margin: 0 auto; padding-bottom: 560px; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/zE2j88oej3E" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      title="Riding China's high-speed train at 350 km/h — Beijing to Shanghai in 4.5 hours."
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
 
 *Video: Riding China's high-speed train at 350 km/h — Beijing to Shanghai in 4.5 hours.*

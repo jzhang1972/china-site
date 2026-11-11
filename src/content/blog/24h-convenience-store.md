@@ -25,17 +25,20 @@ Later, I read that these stores use over a hundred cameras to track every item a
 In my country, convenience stores have three employees on shift and still get robbed. Here, nobody even watches the door. And somehow, it works.
 
 <!-- YouTube Shorts 视频嵌入 -->
-<div style="margin: 0 0 1.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-  <iframe 
-    src="https://www.youtube.com/embed/iojZxCmf9uw" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    title="Video: Shenzhen's cashier-less stores"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen
-  ></iframe>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <div style="position: relative; width: 315px; max-width: 100%; margin: 0 auto; padding-bottom: 560px; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/iojZxCmf9uw" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      title="Inside a 24-hour unmanned convenience store in China"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
 
-*Video: Shenzhen's cashier-less stores.*
+*Video: Inside a 24-hour unmanned convenience store in China.*
 
 ---
 

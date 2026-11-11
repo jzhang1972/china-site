@@ -36,17 +36,17 @@ On my way back to the hotel, I snapped a photo: Changsha's streets at 2 AM, smok
 That post got more likes than anything I had shared before.
 
 <!-- 视频嵌入代码 -->
-<div style="margin: 2.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-  <iframe 
-    src="https://www.youtube.com/embed/pXVrhFTVEn0" 
-    title="Video: A late-night street food adventure in Changsha, China" 
-    loading="lazy"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen
-  >
-  </iframe>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <div style="position: relative; width: 315px; max-width: 100%; margin: 0 auto; padding-bottom: 560px; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/pXVrhFTVEn0" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      title="A late-night street food adventure in Changsha, China"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
 
 *Video: A late-night street food adventure in Changsha, China.*

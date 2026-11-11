@@ -25,17 +25,20 @@ I sat in the hospital lobby, holding my tiny white bag of medicine, wondering wh
 
 
 <!-- YouTube Shorts 视频嵌入 -->
-<div style="margin: 0 0 1.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-  <iframe 
-    src="https://www.youtube.com/embed/37ciub_93UE" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    title="Video: A $2.39 hospital visit with a doctor in China"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen
-  ></iframe>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <div style="position: relative; width: 315px; max-width: 100%; margin: 0 auto; padding-bottom: 560px; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/37ciub_93UE" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      title="Seeing a doctor in China on the same day — what it's like"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
 
-*Video: A $2.39 hospital visit with a doctor in China.*
+*Video: Seeing a doctor in China on the same day — what it's like.*
 
 ---
 

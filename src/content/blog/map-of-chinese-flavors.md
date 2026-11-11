@@ -16,21 +16,21 @@ If you ask most foreigners what Chinese food is, they'll say: fried rice, sweet 
 
 The real China is a map of flavors — one that shifts with every province, every river, every mountain range. To understand it, you have to look at geography, climate, and history.
 
-<!-- ===== 视频占位 ===== -->
-<div style="margin: 1.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-  <iframe 
-    src="https://www.youtube.com/embed/2AFq35OCjYU?si=tMwkSnqZvz1qhOSw" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    title="YouTube video player"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen
-  ></iframe>
+<!-- ===== 视频 ===== -->
+<div style="margin: 1.5rem 0; text-align: center;">
+  <div style="position: relative; width: 315px; max-width: 100%; margin: 0 auto; padding-bottom: 560px; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/2AFq35OCjYU" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      title="A visual map of Chinese regional cuisines — from Sichuan to Guangdong"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
-<p style="font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center;">
-  Video: Understanding China's diverse culinary traditions. 
-  
-</p>
+
+*Video: A visual map of Chinese regional cuisines — from Sichuan to Guangdong.*
 
 ## The Four Pillars of Chinese Cuisine
 

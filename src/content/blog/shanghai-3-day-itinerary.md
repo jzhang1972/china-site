@@ -102,22 +102,20 @@ The goal isn't to check off attractions. It's to leave Shanghai feeling like you
 *You might also like: [How to Book a High-Speed Train Ticket in China (Without a Chinese ID)](/blog/book-high-speed-train-tickets-china-foreigners) — a practical guide that complements this itinerary.*
 
 <!-- YouTube 视频嵌入: Shanghai 3-Day Travel Guide -->
-<iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/7W-b-IV10Fc?si=c0KPnNS6qNOqbuhS" 
-  title="YouTube video player" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  referrerpolicy="strict-origin-when-cross-origin" 
-  allowfullscreen
-  loading="lazy"
-  style="width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 12px; display: block;"
-></iframe>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <div style="position: relative; width: 315px; max-width: 100%; margin: 0 auto; padding-bottom: 560px; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/7W-b-IV10Fc" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      title="Shanghai in 3 days — a visual itinerary for first-time visitors"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
 
-
-*Video: A practical 3-day guide to Shanghai — from the Bund to the French Concession.*
+*Video: Shanghai in 3 days — a visual itinerary for first-time visitors.*
 
 ---
 
