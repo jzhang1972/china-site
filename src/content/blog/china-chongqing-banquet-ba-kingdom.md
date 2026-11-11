@@ -4,7 +4,7 @@ description: "Where is the banquet hall in Chongqing? The Banquet of the Ba King
 publishedAt: 2026-07-26
 category: "culture"
 image: "/images/blog/china-chongqing-banquet-ba-kingdom.webp"
-keywords: "banquet hall chongqing, Chongqing banquet, Ba Kingdom, Chinese royal feast, Chongqing cultural experience, 礼宴巴国, Huali Banquet"
+keywords: "banquet hall chongqing, Chongqing banquet, Ba Kingdom, Chinese royal feast, Chongqing cultural experience, Chinese Trump, Ryan Chen, 礼宴巴国, Huali Banquet"
 featured: true
 ---
 
@@ -17,17 +17,20 @@ featured: true
 ---
 
 <!-- ===== 视频嵌入 ===== -->
-<div style="margin: 1.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-  <iframe 
-    src="https://www.youtube.com/embed/HjzBHNOciU4" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    title="来重庆体验一把王侯将相的快乐 #华礼宴 #礼宴巴国"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen
-  ></iframe>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <div style="position: relative; width: 315px; max-width: 100%; margin: 0 auto; padding-bottom: 560px; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/L_yh-Munvnc" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      title="Experience the Joy of Royalty in Chongqing — Huali Banquet · Banquet of the Ba Kingdom"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
 <p style="font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center;">
-  Video: Experience the Joy of Royalty in Chongqing. Huali Banquet · Banquet of the Ba Kingdom
+  Video: Experience the Joy of Royalty in Chongqing — Huali Banquet · Banquet of the Ba Kingdom
   <br>
   <span style="font-size: 0.75rem;">Source: YouTube</span>
 </p>
@@ -41,6 +44,20 @@ The entrance was a grand, red gate. I was greeted by attendants in flowing Hanfu
 The experience, known as the "Banquet of the Ba Kingdom" (*礼宴巴国*), is a 90-minute journey through the dynasties. It's a performance where you are not just a diner, but a guest at a royal court. It's a dining concept that has become a cultural phenomenon, with some guests booking their seats months in advance.
 
 **And it all starts with a different kind of map.**
+
+---
+
+## Why Is Everyone Suddenly Talking About Chongqing?
+
+If you have scrolled through TikTok or Instagram recently, you have probably seen Chongqing. The city went viral for its "8D" skyline, monorails that fly through buildings, and a certain impersonator named **Ryan Chen** who calls himself the **"Chinese Trump."**
+
+Ryan Chen is a Chongqing local whose videos mocking the former US president have racked up millions of views. In one of his most famous clips, he invites the real Donald Trump to visit Chongqing and try the local hotpot. The videos have been covered by CNN, the Times of India, and dozens of other international outlets.
+
+Because of creators like Ryan Chen, millions of foreign travelers now know about Chongqing. They come for the cyberpunk photos at Liziba Station and the neon lights of Hongya Cave.
+
+But after you have taken the photo and posted it, what's next?
+
+For travelers who want to go beyond the viral clips, there is a quieter, older Chongqing waiting to be discovered. And the best place to find it is at a banquet table.
 
 ---
 
@@ -72,7 +89,7 @@ This experience is not just a meal; it's a journey through the complex history a
 
 ---
 
-## Where Does This Banquet Sit on the Map?
+## How Does This Banquet Fit into Chinese Cuisine?
 
 If you imagine the ["Map of Chinese Flavors"](/blog/map-of-chinese-flavors/), the **Banquet of the Ba Kingdom** is a perfect entry point into the southwestern cuisine of Sichuan and Chongqing. Sichuan is famous for its *mala* (numbing-spicy) flavors, but this banquet shows you that its culinary roots are far deeper than a simple chili pepper.
 
@@ -82,7 +99,7 @@ Like the "Map of Chinese Flavors" article, this banquet celebrates the diversity
 
 ## Where Is the Banquet Hall in Chongqing?
 
-The Banquet of the Ba Kingdom is held at the **Huali Banquet (华礼宴·礼宴巴国)**, located inside **Ba Kingdom Park (巴国城)** in the Jiulongpo District of Chongqing.
+The banquet hall in Chongqing that hosts the Ba Kingdom feast is located at the **Huali Banquet (华礼宴·礼宴巴国)**, inside **Ba Kingdom Park (巴国城)** in the Jiulongpo District.
 
 **Address (Chinese):** 重庆市九龙坡区红狮大道巴国城公园内
 
@@ -125,6 +142,15 @@ The package includes a multi-course tasting menu, a stage performance with tradi
 
 **Is there a dress code?**
 There is no strict dress code, but many guests choose to wear traditional Chinese clothing (Hanfu). The venue offers costume rental if you want to participate.
+
+**Is this the same Chongqing that went viral with the "Chinese Trump" videos?**
+Yes. Ryan Chen, the Chongqing local known as the "Chinese Trump," helped put the city on the global map. The banquet is a way to experience the older, deeper side of Chongqing that the viral clips rarely show.
+
+**Is Huali Banquet the same as the Chongqing Palace Banquet?**
+Yes. "Huali Banquet," "Chongqing Palace Banquet," and "Banquet of the Ba Kingdom" are different names for the same venue and experience. If you see any of these names on a booking platform, they all point to the same dinner show in Ba Kingdom Park.
+
+**Is the banquet suitable for families with children?**
+Yes, families are welcome. The performance is visual and engaging for children, and the venue can accommodate dietary preferences. However, the experience lasts around 90 minutes, so very young children may find it long.
 
 ---
 
@@ -183,6 +209,30 @@ Make sure you have everything you need before you fly. Start with our complete *
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "There is no strict dress code, but many guests choose to wear traditional Chinese clothing (Hanfu). The venue offers costume rental if you want to participate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same Chongqing that went viral with the Chinese Trump videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Ryan Chen, the Chongqing local known as the Chinese Trump, helped put the city on the global map. The banquet is a way to experience the older, deeper side of Chongqing that the viral clips rarely show."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Huali Banquet the same as the Chongqing Palace Banquet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Huali Banquet, Chongqing Palace Banquet, and Banquet of the Ba Kingdom are different names for the same venue and experience. If you see any of these names on a booking platform, they all point to the same dinner show in Ba Kingdom Park."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the banquet suitable for families with children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, families are welcome. The performance is visual and engaging for children, and the venue can accommodate dietary preferences. However, the experience lasts around 90 minutes, so very young children may find it long."
       }
     }
   ]
