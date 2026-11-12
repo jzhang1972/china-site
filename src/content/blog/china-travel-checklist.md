@@ -74,7 +74,10 @@ Once your payments and internet are set up, you can relax and enjoy the incredib
 ---
 
 **Next steps:**
-Now that you know what to prepare, read the detailed guides:
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
+  - [Alipay Setup Guide](/blog/alipay-setup-for-tourists/)
+  - [WeChat Pay Setup Guide](/blog/wechat-pay-tourist-guide/)
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
+- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
+  - [Banquet Hall Chongqing: The Royal Feast of the Ba Kingdom](/blog/china-chongqing-banquet-ba-kingdom/)

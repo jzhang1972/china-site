@@ -247,14 +247,18 @@ import Layout from "../layouts/Layout.astro";
 
     </div>
 
-    <!-- ===== 底部 CTA (保持原样) ===== -->
-    <div style="margin-top: 3rem; background: #2D6A4F; border-radius: 16px; padding: 2rem; text-align: center; color: white;">
-      <p style="margin: 0 0 1rem 0; font-size: 1rem; color: rgba(255,255,255,0.9);">Ready to plan your trip?</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/visa" style="background-color: #FFD700; color: #1F2A2E; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-block; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#E6C200'" onmouseout="this.style.backgroundColor='#FFD700'">Check visa →</a>
-        <a href="/findway" style="background-color: rgba(255,255,255,0.12); color: white; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.12)'">Explore routes →</a>
-        <a href="/tours" style="background-color: rgba(255,255,255,0.12); color: white; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.12)'">Find a tour →</a>
-        <a href="/blog" style="background-color: rgba(255,255,255,0.12); color: white; padding: 0.6rem 2rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.12)'">Read on Blog →</a>
+    <!-- ===== 底部引导 ===== -->
+    <div style="margin-top: 3rem; text-align: center;">
+      <p style="font-size: 1rem; color: #1F2A2E; margin: 0 0 1rem 0; font-weight: 500;">
+        Got the apps? Now plan the trip.
+      </p>
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/blog/china-travel-checklist/" style="background: #2D6A4F; color: #FFFFFF; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-block;">
+          Read the Checklist →
+        </a>
+        <a href="/blog/" style="background: transparent; color: #2D6A4F; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-block; border: 1px solid #2D6A4F;">
+          Browse All Guides
+        </a>
       </div>
     </div>
 

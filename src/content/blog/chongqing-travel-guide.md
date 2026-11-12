@@ -89,11 +89,9 @@ Get your payment apps ready, download Amap, and embrace the 8D maze.
 **Ready for your trip to China?**
 Make sure you have everything you need before you fly. Start with our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)**.
 
-**Essential Guides:**
-- [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
-- [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
-- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
-- [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
-- [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
-- [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)
-- [WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)
+**Ready for your next adventure?**
+- [Read our complete China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
+- [How to Pay in China: The Ultimate Guide](/blog/how-to-pay-in-china/)
+- [How to Stay Connected in China (eSIM & VPN)](/blog/china-esim-vpn-internet-guide/)
+- [How to Get Around China: Didi, Trains & Maps](/blog/how-to-get-around-china/)
+- [Banquet Hall Chongqing: The Royal Feast of the Ba Kingdom](/blog/china-chongqing-banquet-ba-kingdom/)
