@@ -3,240 +3,141 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout 
-  title="China Tours & Local Guides · Book Your Trip" 
-  description="Group tours, private guides, and custom itineraries. Experience China with trusted local operators."
+  title="How to Choose a Tour in China: What to Know Before You Book | YOGOTOCHINA" 
+  description="When is a China tour worth it, when is it a trap, and how do you book one without overpaying? A practical guide for foreign travelers, with real mistakes to avoid."
 >
-    <a href="/" style="display: inline-block; margin-bottom: 2rem; color: #2D6A4F;">← Back to Home</a>
-    
-    <!-- 标题区 -->
-    <h1>Prefer a local guide?</h1>
-    <p style="font-size: 1.2rem; margin-bottom: 2.5rem;">Let someone else do the job. You just show up.</p>
-    
-    <!-- 分流区 -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem;">
-      
-      <!-- Group Tours 卡片 -->
-      <div style="background: #FFFFFF; border-radius: 16px; padding: 1.5rem; border: 1px solid #E2E0D4; text-align: center;">
-        <h3 style="margin: 0 0 0.3rem 0; font-size: 1.3rem;">🏛️ Group Tours</h3>
-        <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">Fixed dates · Travel with others</p>
-        <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #5a6b5a;">No planning needed. Just book and go.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center;">
-          <a href="https://www.trip.com/t/PEpvpRQHQV2" target="_blank" rel="noopener noreferrer" style="background-color: #0078FF; color: white; padding: 0.4rem 1.2rem; border-radius: 20px; text-decoration: none; font-size: 0.85rem; display: inline-block; border: 1px solid #0078FF; transition: background-color 0.2s, transform 0.1s;" onmouseover="this.style.backgroundColor='#0050CC'; this.style.transform='translateY(-1px)'" onmouseout="this.style.backgroundColor='#0078FF'; this.style.transform='translateY(0)'">Trip.com →</a>
-          <a href="https://gyg.me/xtOWfDVf" target="_blank" rel="noopener noreferrer" style="background-color: #00A651; color: white; padding: 0.4rem 1.2rem; border-radius: 20px; text-decoration: none; font-size: 0.85rem; display: inline-block; border: 1px solid #00A651; transition: background-color 0.2s, transform 0.1s;" onmouseover="this.style.backgroundColor='#008040'; this.style.transform='translateY(-1px)'" onmouseout="this.style.backgroundColor='#00A651'; this.style.transform='translateY(0)'">GetYourGuide →</a>
-        </div>
-      </div>
-      
-      <!-- Custom & Private 卡片 -->
-      <div style="background: #FFFFFF; border-radius: 16px; padding: 1.5rem; border: 1px solid #E2E0D4; text-align: center;">
-        <h3 style="margin: 0 0 0.3rem 0; font-size: 1.3rem;">🎯 Custom & Private</h3>
-        <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">Flexible itinerary · Your own pace</p>
-        <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #5a6b5a;">Private guide. Built around you.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center;">
-          <a href="https://www.trip.com/t/I1Mk9qyGQV2" target="_blank" rel="noopener noreferrer" style="background-color: #0078FF; color: white; padding: 0.4rem 1.2rem; border-radius: 20px; text-decoration: none; font-size: 0.85rem; display: inline-block; border: 1px solid #0078FF; transition: background-color 0.2s, transform 0.1s;" onmouseover="this.style.backgroundColor='#0050CC'; this.style.transform='translateY(-1px)'" onmouseout="this.style.backgroundColor='#0078FF'; this.style.transform='translateY(0)'">Trip.com →</a>
-          <a href="https://gyg.me/xtOWfDVf" target="_blank" rel="noopener noreferrer" style="background-color: #00A651; color: white; padding: 0.4rem 1.2rem; border-radius: 20px; text-decoration: none; font-size: 0.85rem; display: inline-block; border: 1px solid #00A651; transition: background-color 0.2s, transform 0.1s;" onmouseover="this.style.backgroundColor='#008040'; this.style.transform='translateY(-1px)'" onmouseout="this.style.backgroundColor='#00A651'; this.style.transform='translateY(0)'">GetYourGuide →</a>
-        </div>
-      </div>
-      
-    </div>
-    
-    <!-- 热门产品 -->
-    <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Popular Tours</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-      
-      <!-- 1. Classic China -->
-      <a href="https://www.trip.com/t/BO6cxHEzrW2" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/terracotta-warriors-xian-china-tour.webp" 
-            alt="Terracotta Warriors in Xi'an" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Classic China</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">8 days · Beijing → Xi'an → Shanghai</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Forbidden City, Great Wall, Terracotta Warriors, and modern Shanghai.</p>
-            <div style="margin-top: 0.8rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 2. Panda Explorer -->
-      <a href="https://www.trip.com/t/YZxaxVJzrW2" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/giant-panda-chengdu-china-tour.webp" 
-            alt="Giant panda in Chengdu" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Panda Explorer</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">5 days · Chengdu</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Giant pandas, Leshan Giant Buddha, spicy hotpot, and Sichuan culture.</p>
-            <div style="margin-top: 0.8rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 3. Yangtze River Cruise -->
-      <a href="https://www.trip.com/t/OOB18OOzrW2" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/yangtze-river-three-gorges-cruise-china-tour.webp" 
-            alt="Yangtze River Three Gorges" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Yangtze River Cruise</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">7 days · Chongqing + Yangtze River Three Gorges + Wuhan</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Three Gorges, onboard luxury, and ancient towns along the river.</p>
-            <div style="margin-top: 0.8rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 4. Zhangjiajie Avatar Tour -->
-      <a href="https://www.trip.com/package-tours/detail/66933224?city=27&Allianceid=5609710&SID=130343298&trip_sub1=&trip_sub3=D18582321" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/avatar-mountains-zhangjiajie-wulingyuan-china-tour.webp" 
-            alt="Avatar Mountains Zhangjiajie" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Zhangjiajie Avatar Tour</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">3-5 days · Zhangjiajie</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Walk among the floating mountains that inspired the movie Avatar.</p>
-            <div style="margin-top: 0.8rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 5. Tibet Group Tour -->
-      <a href="https://www.trip.com/package-tours/detail/68427915?city=41" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/potala-palace-lhasa-tibet-china-tour.webp" 
-            alt="Potala Palace Lhasa Tibet" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Tibet Group Tour</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">8-10 days · Lhasa → Everest Base Camp</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Potala Palace, Tibetan monasteries, and the roof of the world.</p>
-            <div style="margin-top: 0.8rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 6. Silk Road Explorer -->
-      <a href="https://www.trip.com/t/03i6HLO97X2" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/dunhuang-mogao-caves-silk-road-china-tour.webp" 
-            alt="Dunhuang Mogao Caves Silk Road" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Silk Road Explorer</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">10-14 days · Xi'an → Dunhuang → Kashgar</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Mogao Caves, desert camels, and the ancient Silk Road.</p>
-            <div style="margin-top: 0.8rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 7. Chengdu & Jiuzhaigou -->
-      <a href="https://www.getyourguide.com/chengdu-l1697/9-day-tour-through-wudangchengdudujiangyanzhangjiajie-t938590/?partner_id=JTUUOEV&utm_medium=travel_agent" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/jiuzhaigou-valley-autumn-sichuan-china-tour.webp" 
-            alt="Jiuzhaigou Valley autumn" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Chengdu & Jiuzhaigou</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">7-9 days · Chengdu → Jiuzhaigou</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Pandas, hotpot, and turquoise lakes. A UNESCO World Heritage site with waterfalls, colorful lakes, and snow-capped peaks.</p>
-            <div style="font-size: 0.8rem; color: #6c757d; background: #f8f6f0; padding: 0.5rem; border-radius: 6px; margin: 0.5rem 0;">
-              <strong>ℹ️ Visa note:</strong> Jiuzhaigou is not covered by the 240-hour transit visa. A standard tourist visa is required.
-            </div>
-            <div style="margin-top: 0.5rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 8. Yunnan Discovery -->
-      <a href="https://www.getyourguide.com/lijiang-l1075/8-day-kunming-dali-lijiang-shangri-la-small-group-tour-t1370637/?partner_id=JTUUOEV&utm_medium=travel_agent" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/lijiang-old-town-yunnan-china-tour.webp" 
-            alt="Lijiang Old Town Yunnan" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Yunnan Discovery</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">8-10 days · Kunming → Dali → Lijiang</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Slow travel through China's most colorful province. Cycle through Dali's rice fields, wander Lijiang's old town, and sip tea with the Bai people.</p>
-            <div style="margin-top: 0.8rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 9. Guangzhou & Macau -->
-      <a href="https://www.getyourguide.com/guangzhou-l184/guangzhou-adventure-culture-cuisine-5-day-trip-t965262/?partner_id=JTUUOEV&utm_medium=travel_agent" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column; min-height: 500px;">
-          <img 
-            src="/images/tours/guangzhou-tower-canton-china-tour.webp" 
-            alt="Guangzhou Tower" 
-            loading="lazy"
-            style="width: 100%; height: 160px; object-fit: cover; display: block;">
-          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
-            <h3 style="margin: 0 0 0.3rem 0;">Guangzhou & Macau City Break</h3>
-            <p style="margin: 0 0 0.3rem 0; font-size: 0.9rem; color: #5a6b5a;">5-7 days · Guangzhou → Macau</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; flex: 1;">Cantonese food, colonial history, and neon lights. Dim sum halls and the ferry to Macau.</p>
-            <div style="margin-top: 0.8rem;">
-              <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem;">View tour →</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-    </div>
-    
-    <!-- ===== 底部引导 ===== -->
-    <div style="margin-top: 3rem; text-align: center;">
-      <p style="font-size: 1rem; color: #1F2A2E; margin: 0 0 0.4rem 0; font-weight: 600;">
-        Before you book a tour…
+  <div style="max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem;">
+
+    <!-- 返回链接 -->
+    <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: #6c757d; text-decoration: none; font-size: 0.9rem;">
+      <span>←</span> Back to Home
+    </a>
+
+    <!-- ===== 标题区 ===== -->
+    <div style="margin-bottom: 2rem;">
+      <h1 style="font-size: 2.4rem; font-weight: 700; color: #1F2A2E; letter-spacing: -0.5px; margin: 0 0 1rem 0; line-height: 1.2;">
+        How to Choose a Tour in China: What to Know Before You Book
+      </h1>
+      <p style="font-size: 1.1rem; color: #4a4a4a; line-height: 1.7; margin: 0;">
+        Most cheap China tours are cheap for a reason: they make money from forced shopping stops. This page explains when a tour is worth it, when it isn't, and how to book one without overpaying.
       </p>
-      <p style="font-size: 0.9rem; color: #6c757d; margin: 0 0 1.2rem 0;">
-        Make sure your payments, eSIM, and transport are sorted first.
+      <p style="font-size: 0.95rem; color: #6c757d; line-height: 1.7; margin: 1rem 0 0 0;">
+        Still deciding where to go? Read our <a href="/findway/" style="color: #2D6A4F; font-weight: 600; text-decoration: underline;">China travel routes guide</a> first.
       </p>
-      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/blog/china-travel-checklist/" style="background: #2D6A4F; color: #FFFFFF; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-block;">
-          Read the Checklist →
-        </a>
-        <a href="/findway/" style="background: transparent; color: #2D6A4F; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-block; border: 1px solid #2D6A4F;">
-          Browse Routes
+    </div>
+
+    <!-- ===== 三个决策入口 ===== -->
+    <h2 style="font-size: 1.5rem; font-weight: 700; color: #1F2A2E; margin: 2.5rem 0 1rem 0;">
+      Start with your situation
+    </h2>
+
+    <div style="display: grid; gap: 1rem; margin-bottom: 2.5rem;">
+
+      <!-- 入口一：想跟团但怕购物团 -->
+      <div style="background: #FFFFFF; border: 1px solid #E2E0D4; border-radius: 16px; padding: 1.5rem;">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.5rem 0;">
+          You want a guide, but you don't want a shopping tour
+        </h3>
+        <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.7; margin: 0 0 1rem 0;">
+          How to spot a shopping tour before you pay, what a fair price looks like, and which platforms are safe to book through.
+        </p>
+        <a href="/blog/how-to-choose-a-tour-guide-china/" style="display: inline-block; background: #2D6A4F; color: #FFFFFF; padding: 0.6rem 1.4rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600;">
+          How to Choose a Tour Guide in China →
         </a>
       </div>
+
+      <!-- 入口二：想自己走 -->
+      <div style="background: #FFFFFF; border: 1px solid #E2E0D4; border-radius: 16px; padding: 1.5rem;">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.5rem 0;">
+          You'd rather go independent, but trains and payments worry you
+        </h3>
+        <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.7; margin: 0 0 1rem 0;">
+          China is easier to do alone than most people think. High-speed trains, Didi, and Alipay cover almost everything. Here is how to set them up.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+          <a href="/blog/how-to-get-around-china/" style="display: inline-block; background: #2D6A4F; color: #FFFFFF; padding: 0.6rem 1.4rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600;">
+            How to Get Around China →
+          </a>
+          <a href="/blog/how-to-pay-in-china/" style="display: inline-block; background: #F0F7F0; color: #2D6A4F; padding: 0.6rem 1.4rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600; border: 1px solid #D5E8D5;">
+            Payment Guide
+          </a>
+          <a href="/blog/china-esim-vpn-internet-guide/" style="display: inline-block; background: #F0F7F0; color: #2D6A4F; padding: 0.6rem 1.4rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600; border: 1px solid #D5E8D5;">
+            eSIM & Internet
+          </a>
+        </div>
+      </div>
+
+      <!-- 入口三：重庆文化体验 -->
+      <div style="background: #FFFFFF; border: 1px solid #E2E0D4; border-radius: 16px; padding: 1.5rem;">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.5rem 0;">
+          You're going to Chongqing and want one unforgettable cultural experience
+        </h3>
+        <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.7; margin: 0 0 1rem 0;">
+          The Banquet of the Ba Kingdom is a 90-minute royal feast with ancient performances. Here is what it costs, where it is, and how to book it.
+        </p>
+        <a href="/blog/china-chongqing-banquet-ba-kingdom/" style="display: inline-block; background: #2D6A4F; color: #FFFFFF; padding: 0.6rem 1.4rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600;">
+          The Ba Kingdom Banquet Guide →
+        </a>
+      </div>
+
     </div>
-    
 
+    <!-- ===== Common Mistakes ===== -->
+    <h2 style="font-size: 1.5rem; font-weight: 700; color: #1F2A2E; margin: 2.5rem 0 1rem 0;">
+      Common mistakes when booking a China tour
+    </h2>
 
+    <div style="background: #FFF8E7; border-left: 4px solid #C49E3A; border-radius: 8px; padding: 1.5rem; margin-bottom: 2.5rem;">
+      <ul style="margin: 0; padding-left: 1.2rem; color: #4a4a4a; font-size: 0.95rem; line-height: 1.9;">
+        <li style="margin-bottom: 0.8rem;">
+          <strong>Booking a tour that costs less than the train ticket and entrance fees combined.</strong> That price gap is not a discount. It is a shopping stop in disguise.
+        </li>
+        <li style="margin-bottom: 0.8rem;">
+          <strong>Not asking whether the tour includes shopping stops.</strong> Many tours labeled "no shopping" still list a jade factory or tea house in the small print. Ask before you pay.
+        </li>
+        <li style="margin-bottom: 0.8rem;">
+          <strong>Pre-booking everything before you land.</strong> Weather changes, some sights are not worth it, and cancellations cost money. Book only what sells out (Forbidden City, Terracotta Warriors) and buy the rest same-day.
+        </li>
+        <li style="margin-bottom: 0.8rem;">
+          <strong>Assuming the guide speaks fluent English.</strong> A licensed guide is not always a fluent one. Confirm the language level before booking, especially for private tours.
+        </li>
+        <li style="margin-bottom: 0.8rem;">
+          <strong>Paying the full amount before reading the cancellation policy.</strong> Refund terms matter more than the price. A cheap tour with no refund is more expensive than a fair tour with flexible cancellation.
+        </li>
+        <li>
+          <strong>Picking the wrong Great Wall section.</strong> Badaling is the most crowded. Mutianyu has fewer people and a toboggan, Jinshanling is better for photos, and Jiankou is only for serious hikers.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ===== 轻咨询出口 ===== -->
+    <div style="background: #F0F7F0; border-radius: 16px; padding: 2rem; text-align: center; margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.3rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.5rem 0;">
+        Not sure what fits your trip?
+      </h2>
+      <p style="font-size: 0.95rem; color: #4a4a4a; line-height: 1.7; margin: 0 0 1.2rem 0;">
+        Tell me your dates, who's traveling, and what you want to see. I'll point you in the right direction. No booking required.
+      </p>
+      <a href="mailto:hello@yogotochina.com" style="display: inline-block; background: #2D6A4F; color: #FFFFFF; padding: 0.7rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600;">
+        Email me →
+      </a>
+    </div>
+
+    <!-- ===== 底部 Essential Guides ===== -->
+    <div style="background: #FFFFFF; border: 1px solid #EDEAE0; border-radius: 16px; padding: 2rem; margin-bottom: 2rem;">
+      <h2 style="font-size: 1.2rem; font-weight: 700; color: #1F2A2E; margin: 0 0 1rem 0;">
+        Before you book anything
+      </h2>
+      <p style="font-size: 0.95rem; color: #6c757d; margin: 0 0 1.5rem 0;">
+        Make sure your payments, internet, and transport are sorted first. These guides cover everything you need before you fly.
+      </p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+        <a href="/blog/china-travel-checklist/" style="display: block; background: #2D6A4F; color: white; padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-align: center;">Pre-Departure Checklist</a>
+        <a href="/blog/how-to-pay-in-china/" style="display: block; background: #F8F6F0; color: #1F2A2E; padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-align: center; border: 1px solid #EDEAE0;">Payment Guide</a>
+        <a href="/blog/china-esim-vpn-internet-guide/" style="display: block; background: #F8F6F0; color: #1F2A2E; padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-align: center; border: 1px solid #EDEAE0;">eSIM & Internet</a>
+        <a href="/blog/how-to-get-around-china/" style="display: block; background: #F8F6F0; color: #1F2A2E; padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-align: center; border: 1px solid #EDEAE0;">Transport Guide</a>
+      </div>
+    </div>
+
+  </div>
 </Layout>

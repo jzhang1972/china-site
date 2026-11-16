@@ -3,123 +3,120 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout 
-  title="China Travel Routes · Find Your Way" 
-  description="Explore China by theme — tech, nature, culture, food, outdoor, slow, family. Find your perfect route."
+  title="China Travel Routes: 7 Itineraries by Days and Style | YOGOTOCHINA" 
+  description="Seven China travel routes with city lists, day counts, and who each one suits. Find the itinerary that fits your trip length and travel style."
 >
   <div style="max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem;">
-    
-    <h1>Where to go?</h1>
-    <p style="font-size: 1.2rem; margin-bottom: 2rem;">A path that shows you China and a different you.</p>
-    
-    <!-- 主题部分 -->
-    <h2>By Theme</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-      
-      <!-- Tech -->
-      <div class="card-item" style="overflow: hidden; padding: 0;">
-        <img 
-          src="/images/findway/findway-tech-shanghai-pudong-skyscraper-night-skyline-china.webp" 
-          alt="Shanghai Pudong skyline at night" 
-          loading="lazy"
-          style="width: 100%; height: 160px; object-fit: cover; display: block;">
-        <div style="padding: 1.2rem;">
-          <h3 style="margin: 0 0 0.3rem 0;">Tech</h3>
-          <p style="margin: 0 0 0.5rem 0;"><em>"The future isn't coming. It's already here."</em></p>
-          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #5a6b5a;">Visit drone light shows, AI factories, and robot restaurants.</p>
-          <a href="/theme/tech" style="color: #2D6A4F;">Explore tech routes →</a>
+
+    <!-- 返回链接 -->
+    <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: #6c757d; text-decoration: none; font-size: 0.9rem;">
+      <span>←</span> Back to Home
+    </a>
+
+    <!-- ===== 标题区 ===== -->
+    <div style="margin-bottom: 2rem;">
+      <h1 style="font-size: 2.4rem; font-weight: 700; color: #1F2A2E; letter-spacing: -0.5px; margin: 0 0 1rem 0; line-height: 1.2;">
+        China Travel Routes: 7 Itineraries by Days and Style
+      </h1>
+      <p style="font-size: 1.1rem; color: #4a4a4a; line-height: 1.7; margin: 0;">
+        Seven routes, built from what travelers actually do in China. Each card shows the cities, the days, and who it suits. Short on time? Tech and Slow Travel are the shortest routes.
+      </p>
+    </div>
+
+    <!-- ===== 七条路线卡片 ===== -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+
+      <!-- 1. Culture -->
+      <a href="/theme/culture/" style="text-decoration: none; color: inherit; display: flex;">
+        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column;">
+          <img src="/images/theme/culture/culture-beijing-forbidden-city-palace-museum-china.webp" alt="Forbidden City in Beijing, China" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
+            <h2 style="margin: 0 0 0.3rem 0; font-size: 1.2rem; font-weight: 700;">Beijing, Xi'an &amp; Chengdu</h2>
+            <p style="margin: 0 0 0.6rem 0; font-size: 0.8rem; color: #2D6A4F; font-weight: 600;">First trip · History · 15–20 days</p>
+            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.6; flex: 1;">For first-time visitors who want the classic China: imperial capitals, the Great Wall, Terracotta Warriors, and pandas.</p>
+            <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; align-self: flex-start;">See the route →</span>
+          </div>
         </div>
-      </div>
-      
-      <!-- Nature -->
-      <div class="card-item" style="overflow: hidden; padding: 0;">
-        <img 
-          src="/images/findway/findway-nature-zhangjiajie-avatar-mountains-mist-forest-hunan.webp" 
-          alt="Zhangjiajie Avatar mountains in mist" 
-          loading="lazy"
-          style="width: 100%; height: 160px; object-fit: cover; display: block;">
-        <div style="padding: 1.2rem;">
-          <h3 style="margin: 0 0 0.3rem 0;">Nature</h3>
-          <p style="margin: 0 0 0.5rem 0;"><em>"No CGI. This is real."</em></p>
-          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #5a6b5a;">Hike through floating mountains, kayak emerald rivers.</p>
-          <a href="/theme/nature" style="color: #2D6A4F;">Explore nature routes →</a>
+      </a>
+
+      <!-- 2. Tech -->
+      <a href="/theme/tech/" style="text-decoration: none; color: inherit; display: flex;">
+        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column;">
+          <img src="/images/theme/tech/tech-chongqing-hongyadong-night-cyberpunk-china.webp" alt="Hongyadong in Chongqing at night, China" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
+            <h2 style="margin: 0 0 0.3rem 0; font-size: 1.2rem; font-weight: 700;">Chongqing &amp; Shenzhen</h2>
+            <p style="margin: 0 0 0.6rem 0; font-size: 0.8rem; color: #2D6A4F; font-weight: 600;">Short trip · Cities · Neon · 7–10 days</p>
+            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.6; flex: 1;">For travelers short on time who want neon skylines, monorails through buildings, and China's tech hubs.</p>
+            <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; align-self: flex-start;">See the route →</span>
+          </div>
         </div>
-      </div>
-      
-      <!-- Culture -->
-      <div class="card-item" style="overflow: hidden; padding: 0;">
-        <img 
-          src="/images/findway/findway-culture-beijing-forbidden-city-imperial-palace-golden-roof.webp" 
-          alt="Forbidden City Beijing golden roof" 
-          loading="lazy"
-          style="width: 100%; height: 160px; object-fit: cover; display: block;">
-        <div style="padding: 1.2rem;">
-          <h3 style="margin: 0 0 0.3rem 0;">Culture</h3>
-          <p style="margin: 0 0 0.5rem 0;"><em>"5,000 years old. And still alive."</em></p>
-          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #5a6b5a;">Walk ancient towns, learn calligraphy, wear Hanfu.</p>
-          <a href="/theme/culture" style="color: #2D6A4F;">Explore culture routes →</a>
+      </a>
+
+      <!-- 3. Family -->
+      <a href="/theme/family/" style="text-decoration: none; color: inherit; display: flex;">
+        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column;">
+          <img src="/images/theme/family/family-chengdu-panda-base-giant-panda-china.webp" alt="Giant panda at the Chengdu Panda Base, China" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
+            <h2 style="margin: 0 0 0.3rem 0; font-size: 1.2rem; font-weight: 700;">Chengdu, Shanghai &amp; Sanya</h2>
+            <p style="margin: 0 0 0.6rem 0; font-size: 0.8rem; color: #2D6A4F; font-weight: 600;">With kids · Pandas · Beach · 12–16 days</p>
+            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.6; flex: 1;">For families with kids: pandas in the morning, Shanghai Disneyland, and a beach finish in Sanya.</p>
+            <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; align-self: flex-start;">See the route →</span>
+          </div>
         </div>
-      </div>
-      
-      <!-- Food -->
-      <div class="card-item" style="overflow: hidden; padding: 0;">
-        <img 
-          src="/images/findway/findway-food-chengdu-sichuan-hotpot-spicy-dinner-table.webp" 
-          alt="Sichuan hotpot in Chengdu" 
-          loading="lazy"
-          style="width: 100%; height: 160px; object-fit: cover; display: block;">
-        <div style="padding: 1.2rem;">
-          <h3 style="margin: 0 0 0.3rem 0;">Food</h3>
-          <p style="margin: 0 0 0.5rem 0;"><em>"There's more than fried rice."</em></p>
-          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #5a6b5a;">From street stalls to Michelin-starred hotpot.</p>
-          <a href="/theme/food" style="color: #2D6A4F;">Explore food routes →</a>
+      </a>
+
+      <!-- 4. Food -->
+      <a href="/theme/food/" style="text-decoration: none; color: inherit; display: flex;">
+        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column;">
+          <img src="/images/theme/food/food-hotpot-china.webp" alt="Chinese hotpot feast" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
+            <h2 style="margin: 0 0 0.3rem 0; font-size: 1.2rem; font-weight: 700;">Xi'an, Chengdu &amp; Guangzhou</h2>
+            <p style="margin: 0 0 0.6rem 0; font-size: 0.8rem; color: #2D6A4F; font-weight: 600;">Food-first ·Street food· 14–18 days</p>
+            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.6; flex: 1;">For travelers who plan trips around food: hand-pulled noodles, Sichuan hotpot, and Cantonese dim sum.</p>
+            <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; align-self: flex-start;">See the route →</span>
+          </div>
         </div>
-      </div>
-      
-      <!-- Outdoor -->
-      <div class="card-item" style="overflow: hidden; padding: 0;">
-        <img 
-          src="/images/findway/findway-outdoor-yangshuo-guilin-karst-climbing-sunset-rock.webp" 
-          alt="Rock climbing in Yangshuo karst mountains" 
-          loading="lazy"
-          style="width: 100%; height: 160px; object-fit: cover; display: block;">
-        <div style="padding: 1.2rem;">
-          <h3 style="margin: 0 0 0.3rem 0;">Outdoor</h3>
-          <p style="margin: 0 0 0.5rem 0;"><em>"No ceiling. No walls. Just you and nature."</em></p>
-          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #5a6b5a;">Rock climbing, white-water rafting, bamboo forest trekking.</p>
-          <a href="/theme/outdoor" style="color: #2D6A4F;">Explore outdoor routes →</a>
+      </a>
+
+      <!-- 5. Nature -->
+      <a href="/theme/nature/" style="text-decoration: none; color: inherit; display: flex;">
+        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column;">
+          <img src="/images/theme/nature/nature-zhangjiajie-tianmen-mountain-cave-china.webp" alt="Tianmen Mountain in Zhangjiajie, China" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
+            <h2 style="margin: 0 0 0.3rem 0; font-size: 1.2rem; font-weight: 700;">Zhangjiajie, Guilin &amp; Jiuzhaigou</h2>
+            <p style="margin: 0 0 0.6rem 0; font-size: 0.8rem; color: #2D6A4F; font-weight: 600;">Landscapes · Hiking · 10–12 days</p>
+            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.6; flex: 1;">For travelers who want China's most dramatic landscapes: Avatar mountains, karst rivers, and turquoise lakes.</p>
+            <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; align-self: flex-start;">See the route →</span>
+          </div>
         </div>
-      </div>
-      
-      <!-- Slow Travel -->
-      <div class="card-item" style="overflow: hidden; padding: 0;">
-        <img 
-          src="/images/findway/findway-slow-dali-yunnan-old-town-erhai-lake-cafe-morning.webp" 
-          alt="Dali old town morning in Yunnan" 
-          loading="lazy"
-          style="width: 100%; height: 160px; object-fit: cover; display: block;">
-        <div style="padding: 1.2rem;">
-          <h3 style="margin: 0 0 0.3rem 0;">Slow Travel</h3>
-          <p style="margin: 0 0 0.5rem 0;"><em>"Less rush. More China."</em></p>
-          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #5a6b5a;">Stay in local homestays, practice tai chi at sunrise.</p>
-          <a href="/theme/slow" style="color: #2D6A4F;">Explore slow travel routes →</a>
+      </a>
+
+      <!-- 6. Outdoor -->
+      <a href="/theme/outdoor/" style="text-decoration: none; color: inherit; display: flex;">
+        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column;">
+          <img src="/images/theme/outdoor/outdoor-xinjiang-yurt-grassland-mountains-china.webp" alt="Yurt on the grassland in Xinjiang, China" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
+            <h2 style="margin: 0 0 0.3rem 0; font-size: 1.2rem; font-weight: 700;">Yangshuo, Siguniang &amp; Xinjiang</h2>
+            <p style="margin: 0 0 0.6rem 0; font-size: 0.8rem; color: #2D6A4F; font-weight: 600;">Adventure · Climbing · 15–20 days</p>
+            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.6; flex: 1;">For adventurous travelers: rock climbing on karst cliffs, alpine hiking below snow peaks, and Silk Road history.</p>
+            <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; align-self: flex-start;">See the route →</span>
+          </div>
         </div>
-      </div>
-      
-      <!-- Family -->
-      <div class="card-item" style="overflow: hidden; padding: 0;">
-        <img 
-          src="/images/findway/findway-family-chengdu-panda-base-bamboo-feeding-cute-china.webp" 
-          alt="Giant panda eating bamboo in Chengdu" 
-          loading="lazy"
-          style="width: 100%; height: 160px; object-fit: cover; display: block;">
-        <div style="padding: 1.2rem;">
-          <h3 style="margin: 0 0 0.3rem 0;">Family</h3>
-          <p style="margin: 0 0 0.5rem 0;"><em>"No one gets bored. Seriously."</em></p>
-          <p style="margin: 0 0 0.8rem 0; font-size: 0.9rem; color: #5a6b5a;">Panda hugs, theme parks, and kid-friendly museums.</p>
-          <a href="/theme/family" style="color: #2D6A4F;">Explore family routes →</a>
+      </a>
+
+      <!-- 7. Slow Travel -->
+      <a href="/theme/slow/" style="text-decoration: none; color: inherit; display: flex;">
+        <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E2E0D4; width: 100%; display: flex; flex-direction: column;">
+          <img src="/images/theme/slow/slow-suzhou-classical-garden-pavilion-china.webp" alt="Classical garden in Suzhou, China" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 1.2rem; flex: 1; display: flex; flex-direction: column;">
+            <h2 style="margin: 0 0 0.3rem 0; font-size: 1.2rem; font-weight: 700;">Suzhou, Hangzhou &amp; Wuzhen</h2>
+            <p style="margin: 0 0 0.6rem 0; font-size: 0.8rem; color: #2D6A4F; font-weight: 600;">Unhurried · Gardens · 5–7 days</p>
+            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.6; flex: 1;">For travelers who want to slow down: classical gardens, canal towns, tea terraces, and no rush.</p>
+            <span style="display: inline-block; background-color: #2D6A4F; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; align-self: flex-start;">See the route →</span>
+          </div>
         </div>
-      </div>
-      
+      </a>
+
     </div>
 
     <!-- ===== 底部引导 ===== -->
@@ -130,32 +127,19 @@ import Layout from "../layouts/Layout.astro";
       <p style="font-size: 0.9rem; color: #6c757d; margin: 0 0 1.2rem 0;">
         Get your payments, eSIM, and transport ready before you go.
       </p>
-      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/blog/china-travel-checklist/" style="background: #2D6A4F; color: #FFFFFF; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-block;">
-          Read the Checklist →
-        </a>
-        <a href="/tours/" style="background: transparent; color: #2D6A4F; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-block; border: 1px solid #2D6A4F;">
-          Find a Tour
-        </a>
-      </div>
+      <a href="/blog/china-travel-checklist/" style="display: inline-block; background: #2D6A4F; color: #FFFFFF; padding: 0.7rem 2rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600; margin-bottom: 1.5rem;">
+        China Travel Checklist →
+      </a>
+      <p style="font-size: 0.85rem; color: #6c757d; margin: 0;">
+        Not sure yet? <a href="/tours/" style="color: #2D6A4F; font-weight: 600; text-decoration: underline;">See how to choose a China tour</a> or <a href="https://www.trip.com/webapp/tripmap/tripplanner?source=t_online_homepage&locale=en-XX&curr=USD&Allianceid=5609710&SID=130343298&trip_sub1=&trip_sub3=D18535988" target="_blank" rel="noopener noreferrer sponsored nofollow" style="color: #2D6A4F; font-weight: 600; text-decoration: underline;">try Trip.com's AI planner</a>.
+      </p>
     </div>
 
+  </div>
+</Layout>
 
 <style is:global>
   body {
     background: #F8F6F0;
   }
-  
-  .card-item {
-    background: #FFFFFF;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  
-  .card-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-  }
-</style></div>
-</Layout>
+</style>

@@ -113,13 +113,11 @@ I left a package on that shelf once, just to test it. It sat there for a full da
 
 ---
 
-**Ready for your trip to China?**
-Make sure you have everything you need before you fly. Start with our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)**.
 
 **Essential Guides:**
+- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
 - [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
-- [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
 - [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
 - [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)

@@ -1,6 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HeroCarousel from "../components/HeroCarousel.astro";
+
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+const latestPosts = allPosts
+  .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
+  .slice(0, 3);
+
+
 ---
 
 <Layout 
@@ -11,13 +20,13 @@ import HeroCarousel from "../components/HeroCarousel.astro";
   <div style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
 
     <!-- 大标题 -->
-    <div style="background-image: url('/images/hero/beijing-daxing-airport-international.webp'); background-size: cover; background-position: center; padding: 4rem 1rem; text-align: center; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="background-image: url('/images/hero/beijing-daxing-china-airport-international.webp'); background-size: cover; background-position: center; padding: 4rem 1rem; text-align: center; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
       <div style="max-width: 800px; margin: 0 auto;">
         <h1 style="font-size: 2.8rem; font-weight: 600; color: #FFFFFF; text-shadow: 0 2px 12px rgba(0,0,0,0.6); letter-spacing: 4px; margin: 0 0 0.8rem 0;">
           CHINA IS MORE OPEN THAN YOU THINK.
         </h1>
         <a href="/visa" style="display: inline-block; background-color: rgba(255,255,255,0.2); backdrop-filter: blur(4px); color: white; padding: 0.6rem 1.8rem; border-radius: 30px; text-decoration: none; font-size: 1rem; border: 1px solid rgba(255,255,255,0.3); transition: background-color 0.2s;">
-          Check your country →
+          Check your Visa →
         </a>
       </div>
     </div>
@@ -31,16 +40,38 @@ import HeroCarousel from "../components/HeroCarousel.astro";
 
   </div>
 
-  <!-- 核心宣言 -->
-  <div style="text-align: center; padding: 3rem 1rem; background: #F8F6F0;">
-    <p style="font-size: 1rem; font-weight: 300; letter-spacing: 4px; margin-bottom: 0.5rem; color: #1F2A2E;">IS CHINA DIFFICULT?</p>
-    <h2 style="font-size: 3rem; font-weight: 300; margin: 0; color: #1F2A2E; letter-spacing: 4px;">NO, JUST DIFFERENT.</h2>
+  <!-- ===== 网站定位 + 核心领域标签 ===== -->
+  <div style="text-align: center; padding: 2.5rem 1.5rem 1rem 1.5rem; background: #F8F6F0;">
+    
+    <!-- 居中短句 -->
+    <p style="font-size: 1.1rem; color: #1F2A2E; font-weight: 500; letter-spacing: 0.5px; margin: 0 0 1.5rem 0;">
+      Everything you need to travel China with confidence.
+    </p>
+
+    <!-- 居中的 5 个标签 -->
+    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; max-width: 920px; margin: 0 auto;">
+      <a href="/blog/how-to-pay-in-china/" style="background: #F0F7F0; color: #2D6A4F; border: 1px solid #D5E8D5; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s;" onmouseover="this.style.background='#2D6A4F'; this.style.color='#FFFFFF';" onmouseout="this.style.background='#F0F7F0'; this.style.color='#2D6A4F';">Alipay & WeChat Pay</a>
+      <a href="/blog/china-esim-vpn-internet-guide/" style="background: #F0F7F0; color: #2D6A4F; border: 1px solid #D5E8D5; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s;" onmouseover="this.style.background='#2D6A4F'; this.style.color='#FFFFFF';" onmouseout="this.style.background='#F0F7F0'; this.style.color='#2D6A4F';">eSIM & VPN</a>
+      <a href="/blog/book-high-speed-train-tickets-china-foreigners/" style="background: #F0F7F0; color: #2D6A4F; border: 1px solid #D5E8D5; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s;" onmouseover="this.style.background='#2D6A4F'; this.style.color='#FFFFFF';" onmouseout="this.style.background='#F0F7F0'; this.style.color='#2D6A4F';">High-Speed Trains</a>
+      <a href="/blog/how-to-get-around-china/" style="background: #F0F7F0; color: #2D6A4F; border: 1px solid #D5E8D5; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s;" onmouseover="this.style.background='#2D6A4F'; this.style.color='#FFFFFF';" onmouseout="this.style.background='#F0F7F0'; this.style.color='#2D6A4F';">Didi & City Navigation</a>
+      <a href="/blog/chongqing-travel-guide/" style="background: #F0F7F0; color: #2D6A4F; border: 1px solid #D5E8D5; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s;" onmouseover="this.style.background='#2D6A4F'; this.style.color='#FFFFFF';" onmouseout="this.style.background='#F0F7F0'; this.style.color='#2D6A4F';">Chongqing & Beyond</a>
+    </div>
+
   </div>
+
 
   <!-- 轮播图 -->
   <section id="carousel">
     <HeroCarousel />
   </section>
+
+  
+
+    <!-- 核心宣言 -->
+  <div style="text-align: center; padding: 3rem 1rem; background: #F8F6F0;">
+    <p style="font-size: 1rem; font-weight: 300; letter-spacing: 4px; margin-bottom: 0.5rem; color: #1F2A2E;">IS CHINA DIFFICULT?</p>
+    <h2 style="font-size: 3rem; font-weight: 300; margin: 0; color: #1F2A2E; letter-spacing: 4px;">NO, JUST DIFFERENT.</h2>
+  </div>
 
   <!-- 不规则网格 -->
   <div id="grid-start" style="max-width: 1400px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-template-rows: auto auto auto; gap: 1.5rem;">
@@ -54,8 +85,8 @@ import HeroCarousel from "../components/HeroCarousel.astro";
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <h2 style="font-size: 1.8rem; font-weight: 600; margin: 0 0 0.2rem 0;">Can you do this at home?</h2>
-        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); margin: 0 0 0.5rem 0;">Real stories from real travelers</p>
-        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A;">Learn more →</span>
+
+        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A;">China Travel Stories →</span>
       </div>
     </a>
 
@@ -68,7 +99,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0;">Think you know China?</h3>
-        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A; font-size: 0.9rem;">Learn more →</span>
+        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A; font-size: 0.9rem;">Explore China Myths →</span>
       </div>
     </a>
 
@@ -81,7 +112,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <h3 style="font-size: 1.5rem; font-weight: 600; margin: 0 0 0.2rem 0;">Prefer a local guide?</h3>
-        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A; font-size: 0.9rem;">Learn more →</span>
+        <span style="display: inline-block; margin-top: 0.5rem; font-weight: 500; border-bottom: 2px solid #C49E3A; font-size: 0.9rem;">How to Choose a China Tour →</span>
       </div>
     </a>
 
@@ -94,7 +125,8 @@ import HeroCarousel from "../components/HeroCarousel.astro";
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);">
         <h2 style="font-size: 1.8rem; font-weight: 600; margin: 0 0 0.3rem 0;">Where to go?</h2>
-        <span style="display: inline-block; margin-top: 0.8rem; font-weight: 500; border-bottom: 2px solid #C49E3A;">Learn more →</span>
+        <span style="display: inline-block; margin-top: 0.8rem; font-weight: 500; border-bottom: 2px solid #C49E3A;">China Travel Routes →</span>
+        
       </div>
     </a>
 
@@ -107,7 +139,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem;">
   <h2 style="font-size: 1.8rem; font-weight: 600; margin: 0 0 0.3rem 0; color: white; text-shadow: 0 0 30px rgba(0,0,0,0.7), 0 0 60px rgba(0,0,0,0.4), 0 0 120px rgba(0,0,0,0.2);">Blog</h2>
   <p style="font-size: 0.95rem; color: white; margin: 0 0 0.5rem 0; text-shadow: 0 0 20px rgba(0,0,0,0.6);">Travel stories, guides & culture</p>
-  <span style="display: inline-block; margin-top: 0.8rem; font-weight: 500; border-bottom: 2px solid #C49E3A; color: white; text-shadow: 0 0 20px rgba(0,0,0,0.6);">Learn more →</span>
+  <span style="display: inline-block; margin-top: 0.8rem; font-weight: 500; border-bottom: 2px solid #C49E3A; color: white; text-shadow: 0 0 20px rgba(0,0,0,0.6);">China Travel Blog →</span>
 </div>
 </a>
 
@@ -122,7 +154,7 @@ import HeroCarousel from "../components/HeroCarousel.astro";
           style="width: 50px; height: 50px; object-fit: contain; margin: 0 auto 0.5rem;">
         <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0; color: #FFFFFF;">What to pack?</h3>
         <p style="font-size: 0.85rem; color: #FFFFFF; opacity: 0.8; margin: 0;">Free downloads to help you prepare.</p>
-        <span style="display: inline-block; margin-top: 0.5rem; color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A;">Learn more →</span>
+        <span style="display: inline-block; margin-top: 0.5rem; color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A;">China Travel Checklist →</span>
       </a>
 
       <a href="/visa" style="flex: 1; border-radius: 20px; overflow: hidden; background: #1F2A2E; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; text-decoration: none; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
@@ -133,12 +165,93 @@ import HeroCarousel from "../components/HeroCarousel.astro";
           style="width: 50px; height: 50px; object-fit: contain; margin: 0 auto 0.5rem;">
         <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 0.2rem 0; color: #FFFFFF;">Do I need a visa?</h3>
         <p style="font-size: 0.85rem; color: #FFFFFF; opacity: 0.8; margin: 0;">Check your country in 5 seconds.</p>
-        <span style="display: inline-block; margin-top: 0.5rem; color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A;">Learn more →</span>
+        <span style="display: inline-block; margin-top: 0.5rem; color: #C49E3A; font-weight: 500; border-bottom: 2px solid #C49E3A;">Check China Visa Rules →</span>
       </a>
 
     </div>
 
-    
+
+
+  </div>
+
+    <!-- ===== Start Here 核心指南 ===== -->
+  <div style="max-width: 1100px; margin: 3rem auto; padding: 0 1.5rem;">
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+      <h2 style="font-size: 1.5rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.4rem 0; letter-spacing: -0.5px;">
+        Start Here
+      </h2>
+      <p style="font-size: 0.95rem; color: #6c757d; margin: 0;">
+        The two guides most travelers read first.
+      </p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+
+      <!-- eSIM -->
+      <a href="/blog/china-esim-vpn-internet-guide/" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #EDEAE0; border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <img src="/images/hero/china-tourist-qr-code-payment.webp" alt="Foreign tourist using a China eSIM on a phone" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; display: block;">
+        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+          <p style="font-size: 0.75rem; color: #2D6A4F; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 0.5rem 0;">Internet</p>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.5rem 0; line-height: 1.4;">China eSIM with VPN</h3>
+          <p style="font-size: 0.9rem; color: #6c757d; margin: 0 0 1rem 0; line-height: 1.5; flex: 1;">Which eSIMs actually bypass the firewall, and how to set one up before you fly.</p>
+          <span style="font-size: 0.85rem; color: #2D6A4F; font-weight: 600;">Read the eSIM guide →</span>
+        </div>
+      </a>
+
+      <!-- 巴国宴 -->
+      <a href="/blog/china-chongqing-banquet-ba-kingdom/" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #EDEAE0; border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <img src="/images/hero/chongqing-china-ba-kingdom-banquet.webp" alt="Ba Kingdom royal banquet performance in Chongqing, China" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; display: block;">
+        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+          <p style="font-size: 0.75rem; color: #C49E3A; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 0.5rem 0;">Culture</p>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.5rem 0; line-height: 1.4;">Banquet Hall Chongqing</h3>
+          <p style="font-size: 0.9rem; color: #6c757d; margin: 0 0 1rem 0; line-height: 1.5; flex: 1;">The Ba Kingdom royal feast: what it costs, where it is, and how to book it.</p>
+          <span style="font-size: 0.85rem; color: #C49E3A; font-weight: 600;">Read the banquet guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+   <!-- ===== 首页底部：最新文章 + Checklist 四宫格 ===== -->
+  <div style="max-width: 1200px; margin: 3rem auto 4rem auto; padding: 0 1.5rem;">
+
+      <!-- 新增的版块标题 -->
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2 style="font-size: 1.6rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.5rem 0; letter-spacing: -0.5px;">
+        Latest Guides & Stories
+      </h2>
+      <p style="font-size: 0.95rem; color: #6c757d; margin: 0;">
+        Fresh insights from China, updated weekly.
+      </p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+
+      <!-- 1-3：自动获取最新的三篇文章 -->
+      {latestPosts.map((post) => (
+        <a href={`/blog/${post.id}/`} style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #EDEAE0; border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+          <div style="height: 180px; overflow: hidden;">
+            <img src={post.data.image} alt={post.data.title} style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </div>
+          <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+            <h4 style="font-size: 1.1rem; font-weight: 700; color: #1F2A2E; margin: 0 0 0.5rem 0; line-height: 1.4;">{post.data.title}</h4>
+            <p style="font-size: 0.85rem; color: #6c757d; margin: 0 0 1rem 0; line-height: 1.5; flex: 1;">{post.data.description.slice(0, 80)}...</p>
+            <span style="font-size: 0.85rem; color: #C49E3A; font-weight: 600;">Read →</span>
+          </div>
+        </a>
+      ))}
+
+      <!-- 4：右下角 Checklist 转化方块 -->
+      <div style="background: #2D6A4F; border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; justify-content: center; text-align: center; box-shadow: 0 4px 20px rgba(45, 106, 79, 0.15);">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📋</div>
+        <h4 style="font-size: 1.3rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0;">Ready for your trip?</h4>
+        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin: 0 0 1.5rem 0; line-height: 1.5;">
+          Make sure you have everything you need before you fly.
+        </p>
+        <a href="/blog/china-travel-checklist/" style="display: inline-block; background: #FFD700; color: #1F2A2E; padding: 0.7rem 1.5rem; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: background 0.2s;" onmouseover="this.style.background='#E6C200'" onmouseout="this.style.background='#FFD700'">
+          Read the Checklist →
+        </a>
+      </div>
+
+    </div>
 
   </div>
 
