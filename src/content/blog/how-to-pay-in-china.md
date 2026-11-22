@@ -238,7 +238,6 @@ Not really. Alipay and WeChat are all you need. Some people also download a tran
 **Essential Guides:**
 - [How to Stay Connected: eSIM, VPN & Internet](/blog/china-esim-vpn-internet-guide/)
 - [China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)
-- [How to Pay in China: Alipay, WeChat Pay & Cash](/blog/how-to-pay-in-china/)
 - [How to Get Around: Didi, Trains & Maps](/blog/how-to-get-around-china/)
 - [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
 - [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)

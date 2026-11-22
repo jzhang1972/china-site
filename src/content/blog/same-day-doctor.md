@@ -38,7 +38,7 @@ I sat in the hospital lobby, holding my tiny white bag of medicine, wondering wh
   </div>
 </div>
 
-*Video: Seeing a doctor in China on the same day — what it's like.*
+*Video: Seeing a doctor in China on the same day.*
 
 ---
 

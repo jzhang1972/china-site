@@ -9,13 +9,6 @@ featured: false
 
 **Quick Answer:** The Li River karst landscape is what traditional Chinese ink paintings have depicted for over a thousand years, and it is printed on the back of the 20 yuan note. You have three ways to see it: the 4-hour cruise from Guilin to Yangshuo (¥200-500 per person), the Xingping bamboo raft (shorter, cheaper, better for the 20 yuan photo), or the Yangdi to Xingping hike (free, 3-4 hours). April to June and September to October are the best months.
 
-<img 
-  src="/images/blog/guilin-china-li-river-tourist-view.webp" 
-  alt="A foreign tourist sitting by the Li River in Guilin China, enjoying the misty karst mountain landscape" 
-  loading="lazy"
-  style="width: 100%; height: auto; border-radius: 12px; margin: 1.5rem 0;"
->
-
 > 💡 **Planning a trip to South China?** Read our complete **[China Travel Pre-Departure Checklist](/blog/china-travel-checklist/)** to set up your payments and internet before you fly.
 
 ---

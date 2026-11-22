@@ -175,7 +175,7 @@ Yes, families are welcome. The performance is visual and engaging for children, 
 - [Chongqing Travel Guide: Prep, Apps & Sights](/blog/chongqing-travel-guide/)
 - [Alipay Setup Guide for Foreign Tourists](/blog/alipay-setup-for-tourists/)
 - [WeChat Pay Setup Guide for Tourists](/blog/wechat-pay-tourist-guide/)
-- [Banquet Hall Chongqing: The Royal Feast of the Ba Kingdom](/blog/china-chongqing-banquet-ba-kingdom/)
+
 
 <script type="application/ld+json">
 {
